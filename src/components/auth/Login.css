@@ -1,0 +1,20 @@
+body {
+    color: white;
+}
+
+h2 {
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+fieldset, input, button {
+    border: none;
+    margin: none;
+}
+
+.reg {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}

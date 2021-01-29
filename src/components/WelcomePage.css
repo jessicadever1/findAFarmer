@@ -1,0 +1,13 @@
+#root {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.container--register, .container--login {
+    width: 40%;
+    margin: 1rem;
+    border: solid 3px #5BC9B9;
+    background-color: #178B7C;
+    border-radius: 10px;
+}
