@@ -2,11 +2,7 @@ body {
     color: white;
 }
 
-h2 {
-    color: white;
-    display: flex;
-    justify-content: center;
-}
+
 
 fieldset, input, button {
     border: none;

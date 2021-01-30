@@ -14,10 +14,12 @@ export const FarmList = () => {
 
     return (
         <div className="farms">
-            {farms.map(farm => {
-                console.log("farms", farms)
-                return <FarmCard key={farm.id} farm={farm} />
-            })}
+            {console.log("FarmList: Render", farms)}
+            {
+                farms.map(farm => {
+                    return <FarmCard key={farm.id} farm={farm} />
+            })
+            }
         </div>
     )
 }

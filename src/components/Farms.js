@@ -9,20 +9,22 @@ import "./Farms.css"
 export const Farms = () => (
 
     <>
-        <Route
-    render={() => {
-        if (localStorage.getItem("find-a-farmer_user")) {
-        return (
-            <>
-            <ApplicationViews />
-            </>
-        );
-        } else {
-        return <Redirect to="/welcome" />;
-        }
-    }}
-    />
-        <WelcomePage />
+    <ApplicationViews />
     </>
 
 )
+
+{/* <Route
+render={() => {
+if (localStorage.getItem("user")) {
+return (
+    <>
+    <ApplicationViews />
+    </>
+);
+} else {
+return <Redirect to="/welcome" />;
+}
+}}
+/>
+<WelcomePage /> */}
