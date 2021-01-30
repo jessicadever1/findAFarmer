@@ -22,7 +22,7 @@ export const Login = (props) => {
             .then(exists => {
                 if (exists) {
                     localStorage.setItem("find-a-farm_user", exists.id)
-                    history.push("/")
+                    history.push("/farms")
                 } else {
                     existDialog.current.showModal()
                 }

@@ -1,0 +1,49 @@
+body {
+    color: white;
+}
+
+.farm {
+    background-color: #5BC9B9;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: .5rem;
+    display: flex;
+}
+
+.farm__name {
+    margin-top: 0;
+}
+
+.farmPic {
+    margin: .5rem;
+    padding: .5rem;
+    width: 25%;
+    height: 25%;
+    border: double #FFBF69 5px;
+    border-radius: 5px;
+}
+
+.farmCardRight {
+    margin-left: 1rem;
+    margin-top: 1rem;
+    width: 75%;
+}
+
+.farm__buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: .75rem;
+    min-height: 2rem;
+}
+
+.farmDetailsBtn {
+    border-radius: 5px;
+    color: #178B7C; 
+    min-width: 33%;
+}
+.addReviewBtn {
+    margin-left: 1rem;
+    border-radius: 5px;
+    color: #178B7C; 
+    min-width: 33%;
+}
