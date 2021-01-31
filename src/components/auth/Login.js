@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import { useHistory } from "react-router-dom"
 import "./Login.css"
 
-export const Login = (props) => {
+export const Login = props => {
     const email = useRef()
     const password = useRef()
     const existDialog = useRef()
@@ -37,7 +37,7 @@ export const Login = (props) => {
             </dialog>
 
             <section className="userEntrance">
-                <form className="form--login" onSubmit={handleLogin}>
+                <div className="form--login" onSubmit={handleLogin}>
                     <h2>Welcome Back!</h2>
                     <fieldset>
                         <label htmlFor="inputEmail"> Email address </label>
@@ -52,7 +52,7 @@ export const Login = (props) => {
                             Log in
                         </button>
                     </fieldset>
-                </form>
+                </div>
             </section>
         </section>
     )

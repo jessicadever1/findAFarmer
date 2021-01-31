@@ -54,7 +54,7 @@ export const Register = (props) => {
                 <button className="button--close" onClick={e => conflictDialog.current.close()}>Close</button>
             </dialog>
 
-            <form className="form--login" onSubmit={handleRegister}>
+            <div className="form--login" onSubmit={handleRegister}>
                 <section className="reg">
                 <h2 className="h3 mb-3 font-weight-normal">Please Register for Find A Farmer</h2>
                     <fieldset>
@@ -73,7 +73,7 @@ export const Register = (props) => {
                         <button type="submit"> Log in </button>
                     </fieldset>
                 </section>
-            </form>
+            </div>
         </section>
     )
 }

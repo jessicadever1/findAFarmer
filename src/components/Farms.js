@@ -4,27 +4,34 @@ import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
 import { WelcomePage } from "./WelcomePage"
 import { ApplicationViews } from "./ApplicationViews"
+import { HeaderCard } from "./header/HeaderCard"
 import "./Farms.css"
 
 export const Farms = () => (
 
     <>
-    <ApplicationViews />
+        <HeaderCard />
+        <ApplicationViews />    
     </>
 
 )
 
-{/* <Route
-render={() => {
-if (localStorage.getItem("user")) {
-return (
-    <>
-    <ApplicationViews />
-    </>
-);
-} else {
-return <Redirect to="/welcome" />;
-}
-}}
-/>
-<WelcomePage /> */}
+/*
+<Route 
+            render={() => {
+                if (localStorage.getItem("find-a-farmer_user")) {
+                    return (
+                        <>
+                            <ApplicationViews />
+                        </>
+                    );
+            } else {
+            return (<Redirect to="/welcome" />);
+            }
+        }}
+        />
+        <Route path="/welcome">
+            <WelcomePage /> 
+        </Route>
+
+*/
