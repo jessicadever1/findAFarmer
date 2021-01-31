@@ -1,0 +1,47 @@
+h1 {
+    color: white;
+}
+
+.header {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.h2 {
+    display: flex;
+    justify-content: center;
+}
+
+.centerDefaultImg {
+    display: flex;
+}
+.profileDefault {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    border: solid #FF9F1C .5rem;
+    background-color: white;
+    margin-bottom: -8rem;
+    padding: 2rem;
+}
+
+.emptySpace {
+    width: 40%;
+}
+
+header {
+    background-color: #FF9F1C;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -2rem;
+    padding-top: 4rem;
+    margin-left: -2rem;
+    padding-left: 4rem;
+    margin-right: -2rem;
+    padding-right: 4rem;
+    padding-bottom: 2rem;
+    margin-bottom: 10rem;
+}

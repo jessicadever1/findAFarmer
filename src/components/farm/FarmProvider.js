@@ -11,9 +11,14 @@ export const FarmProvider = (props) => {
         .then(setFarms)
     }
 
+    const getFarmById = (id) => {
+        return fetch(`http://localhost:8014/farms/${id}`)
+        .then(res => res.json())
+    }
+
     return (
         <FarmContext.Provider value={{
-            farms, getFarms
+            farms, getFarms, getFarmById
         }}>
             {props.children}
         </FarmContext.Provider>

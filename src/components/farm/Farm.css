@@ -8,6 +8,7 @@ body {
     padding: 1rem;
     margin: .5rem;
     display: flex;
+    flex-direction: column;
 }
 
 .farm__name {
@@ -17,21 +18,37 @@ body {
 .farmPic {
     margin: .5rem;
     padding: .5rem;
-    width: 25%;
-    height: 25%;
+    width: 10rem;
+    height: 10rem;
     border: double #FFBF69 5px;
     border-radius: 5px;
+    background-color: white;
+}
+
+.farm__upperBox {
+    display: flex;
+    margin-bottom: 1rem;
 }
 
 .farmCardRight {
     margin-left: 1rem;
     margin-top: 1rem;
     width: 75%;
+    color: #178B7C;
+}
+
+.farm__upperDetails {
+    display: flex;
+}
+
+a:visited, a:active {
+    text-decoration: none;
 }
 
 .farm__buttons {
     display: flex;
     justify-content: center;
+    margin-bottom: .75rem;
     margin-top: .75rem;
     min-height: 2rem;
 }
@@ -40,10 +57,74 @@ body {
     border-radius: 5px;
     color: #178B7C; 
     min-width: 33%;
+    min-height: 2rem;
+    text-decoration: none;
 }
 .addReviewBtn {
     margin-left: 1rem;
     border-radius: 5px;
     color: #178B7C; 
     min-width: 33%;
+}
+
+.farm__instructionAndLists {
+    display: flex;
+}
+
+.farm__instructions {
+    padding: 1rem;
+    max-height: 8rem;
+    overflow: scroll;
+    background-color: white;
+    border-radius: 5px;
+    color: #178B7C
+}
+
+.farm__instructionsSection {
+    width: 50%;
+    padding: 1rem;
+    margin: .5rem;
+    background-color: #178B7C;
+    border-radius: 5px;
+}
+
+.farm__includeList {
+    color:#178B7C;
+    width: 25%;
+    padding: .5rem;
+    margin: .5rem;
+    background-color: white;
+    border-radius: 5px;
+    max-height: 15rem;
+    overflow: scroll;
+}
+
+.farm__excludeList {
+    color:#FF9F1C;
+    width: 25%;
+    max-height: 15rem;
+    padding: .5rem;
+    margin: .5rem;
+    background-color: white;
+    border-radius: 5px;
+    overflow: scroll;
+}
+
+.farm__include, .farm__exclude {
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 1rem;
+}
+
+.farm__reviews {
+    background-color: white;
+    border-radius: 5px;
+    color: #178B7C;
+    display: flex;
+    justify-content: center;
+    margin: .5rem;
 }
