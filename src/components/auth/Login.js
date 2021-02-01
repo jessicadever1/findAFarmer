@@ -1,5 +1,4 @@
 import React, { useRef } from "react"
-import { Link } from "react-router-dom"
 import { useHistory } from "react-router-dom"
 import "./Login.css"
 
@@ -37,7 +36,7 @@ export const Login = props => {
             </dialog>
 
             <section className="userEntrance">
-                <div className="form--login" onSubmit={handleLogin}>
+                <form className="form--login" onSubmit={handleLogin}>
                     <h2>Welcome Back!</h2>
                     <fieldset>
                         <label htmlFor="inputEmail"> Email address </label>
@@ -52,7 +51,7 @@ export const Login = props => {
                             Log in
                         </button>
                     </fieldset>
-                </div>
+                </form>
             </section>
         </section>
     )
