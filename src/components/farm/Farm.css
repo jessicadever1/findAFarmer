@@ -15,7 +15,7 @@ body {
     margin-top: 0;
 }
 
-.farmPic {
+.farmPic, .userDefaultPic {
     margin: .5rem;
     padding: .5rem;
     width: 10rem;

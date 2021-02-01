@@ -3,13 +3,17 @@ import { useHistory } from "react-router-dom"
 import { FarmCard } from "./FarmCard"
 import { FarmContext } from "./FarmProvider"
 import "./Farm.css"
+import { ReviewContext } from "../reviews/ReviewProvider"
 
 export const FarmList = () => {
     const {farms, getFarms} = useContext(FarmContext)
+    const {reviews, getReviews } = useContext(ReviewContext)
+    
     const history = useHistory()
 
     useEffect(() => {   
-        getFarms()
+        getReviews()
+        .then(getFarms)
     }, [])
 
     return (
@@ -17,7 +21,8 @@ export const FarmList = () => {
             {console.log("FarmList: Render", farms)}
             {
                 farms.map(farm => {
-                    return <FarmCard key={farm.id} farm={farm} />
+                    const reviews = farms.map(f => f.id === farm.reviewId)
+                    return <FarmCard key={farm.id} farm={farm} review={reviews}/>
             })
             }
         </div>

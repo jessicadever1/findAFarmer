@@ -6,7 +6,7 @@ export const FarmProvider = (props) => {
     const [farms, setFarms] = useState([])
 
     const getFarms = () => {
-        return fetch("http://localhost:8014/farms")
+        return fetch("http://localhost:8014/farms?_embed=review")
         .then(res => res.json())
         .then(setFarms)
     }

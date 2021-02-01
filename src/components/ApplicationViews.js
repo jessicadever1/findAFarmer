@@ -4,6 +4,7 @@ import { FarmProvider } from "./farm/FarmProvider"
 import { FarmList } from "./farm/FarmList"
 import { FarmDetail } from "./farm/FarmDetails"
 import { HeaderCard } from "./header/HeaderCard"
+import { ReviewProvider } from "./reviews/ReviewProvider"
 
 export const ApplicationViews = () => {
     
@@ -12,15 +13,16 @@ export const ApplicationViews = () => {
     return (
         <>
 
-        <FarmProvider>
-            <Route exact path="/farms">
-                <FarmList />
-            </Route>
-            <Route exact path="/farms/detail/:farmId(\d+)">
-                <FarmDetail />
-            </Route>
-        </FarmProvider>
-
+        <ReviewProvider>
+            <FarmProvider>
+                <Route exact path="/farms">
+                    <FarmList />
+                </Route>
+                <Route exact path="/farms/detail/:farmId(\d+)">
+                    <FarmDetail />
+                </Route>
+            </FarmProvider>
+        </ReviewProvider>
         </>
     )
 }

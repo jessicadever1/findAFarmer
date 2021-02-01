@@ -4,6 +4,8 @@ import "./Farm.css"
 import { useParams, useHistory } from "react-router-dom"
 import { Link } from "react-router-dom"
 import Pig from "../images/Pig.png"
+import user from "../images/user.png"
+
 
 export const FarmDetail = () => {
     const { getFarmById } = useContext(FarmContext)
@@ -23,6 +25,8 @@ export const FarmDetail = () => {
         let defaultFarmPic = Pig
         farm.farmPic = defaultFarmPic
     }
+
+    const userPic = user
 
     return (
         <section className="farm">
@@ -94,7 +98,15 @@ export const FarmDetail = () => {
                 </section>
                 <article className="farm__reviews">
                     <h3>Reviews</h3>
-                    <div></div>
+                    <div className="farm__reviewCard">
+                        <h3 className="review__name">{farm.review?.name}</h3>
+                        <section className="review__userInfo">
+                            <img className="userDefaultPic" src={userPic} alt="user default pic"></img>
+                            
+                            <div className="review__date">{farm.review?.date}</div>
+                        </section>
+                        <p className="review__reviewText">{farm.review?.reviewText}</p>
+                    </div>
                 </article>
             </div>
         </section>
