@@ -27,7 +27,7 @@ export const FarmCard = ( { farm } ) =>  {
             </div>
             <section className="farm__buttons">
                 <button className="farmDetailsBtn"><Link to={`/farms/detail/${farm.id}`}>See Details</Link></button>
-                <button className="addReviewBtn" onClick={() => {history.push("/reviews/create")}}>
+                <button id={farm.id} className="addReviewBtn" onClick={() => {history.push("/reviews/create")}}>
                     Add Review
                 </button>
             </section>

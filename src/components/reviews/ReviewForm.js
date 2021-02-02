@@ -2,12 +2,12 @@ import React, { useContext, useEffect, useState } from "react"
 import { ReviewContext } from "../reviews/ReviewProvider"
 import { FarmContext } from "../farm/FarmProvider"
 import { UserContext } from "../users/UserProvider"
-import { useHistory } from "react-router-dom"
+import { useHistory, useParams } from "react-router-dom"
 import "./Review.css"
 
 
 export const ReviewForm = () => {
-    const { addReview } = useContext(ReviewContext)
+    const { addReview, getReviewById } = useContext(ReviewContext)
     const { farms, getFarms } = useContext(FarmContext)
     const { users, getUsers } = useContext(UserContext)
 
@@ -20,10 +20,18 @@ export const ReviewForm = () => {
         "reviewText": ""
     })
 
+    const { reviewId } = useParams()
     const history = useHistory()
 
     useEffect(() => {
-        getFarms().then(getUsers)
+        getFarms().then(getUsers).then(() => {
+            if (reviewId){
+                getReviewById(reviewId)
+                .then(review => {
+                    setReview(review)
+                })
+            }
+        })
     }, [])
 
     const handleControlledInputChange = (event) => {
@@ -39,14 +47,22 @@ export const ReviewForm = () => {
     const handleClickSaveReview = (event) => {
         event.preventDefault()
 
-            addReview(review)
+            addReview({
+                userId: parseInt(review.userId),
+                username: review.userId.username,
+                farmId: parseInt(review.farmId),
+                date: review.date,
+                name: review.name,
+                reviewText:review.reviewText,
+            })
             .then(() => history.push("/farms"))
         }
     
 
     return (
+        <div className="formCenterDiv">
             <form className="reviewForm">
-                <h2 className="reviewForm__title">New Review</h2>
+                <h2 className="reviewForm__title">Review</h2>
                 <fieldset>
                     <div className="form-group">
                         <label htmlFor="name">Review name:</label>
@@ -74,5 +90,6 @@ export const ReviewForm = () => {
                     </button>
                 </div>
             </form> 
+        </div>
     )
 }

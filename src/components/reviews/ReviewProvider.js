@@ -22,6 +22,11 @@ export const ReviewProvider = (props) => {
         .then(response => response.json())
     }
 
+    const getReviewById = (id) => {
+        return fetch (`http://localhost:8014/reviews/${id}?_expand=farm&_expand=user`)
+        .then(res => res.json())
+    }
+
     return (
         <ReviewContext.Provider value={{
             reviews, getReviews, addReview
