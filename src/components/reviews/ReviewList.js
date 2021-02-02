@@ -15,7 +15,7 @@ export const ReviewList = () => {
 
     return (
         <div className="reviews">
-            <h2>Reviews</h2>
+            
             {reviews.map(review => {
                 return <ReviewCard key={review.id} review={review}/>
                 })

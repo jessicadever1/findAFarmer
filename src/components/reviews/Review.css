@@ -1,0 +1,49 @@
+.reviewForm {
+    background-color: #178B7C;
+    max-width: 80%;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.reviewForm__title {
+    display: flex;
+    justify-content: center;
+}
+
+.form-group {
+    display: flex;
+    width: 100%;
+}
+
+.name {
+    min-width: 40%;
+}
+#reviewName {
+    min-width: 50%;
+}
+
+.centerReviewSubmitBtn {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.reviewTextArea {
+    display: flex;
+    flex-direction: column;
+}
+
+#submitReviewBtn {
+    border-radius: 5px;
+    color: #178B7C; 
+    min-width: 33%;
+    min-height: 2rem;
+    text-decoration: none;
+}
+
+#reviewText {
+    min-height: 9rem;
+    display: flex;
+    justify-content: start;
+    margin-top: .5rem;
+}
