@@ -39,13 +39,10 @@ export const ReviewForm = () => {
     const handleClickSaveReview = (event) => {
         event.preventDefault()
 
-        if  (review.name === "" || review.reviewText === "") {
-            window.alert("Please be sure to name your review, and tell us all about your experience!")
-        } else {
             addReview(review)
             .then(() => history.push("/farms"))
         }
-    }
+    
 
     return (
             <form className="reviewForm">
@@ -53,13 +50,13 @@ export const ReviewForm = () => {
                 <fieldset>
                     <div className="form-group">
                         <label htmlFor="name">Review name:</label>
-                        <input type="text" id="reviewName" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Review name" value={review.name}/>
+                        <input type="text" id="name" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Review name" defaultValue={review.name}/>
                     </div>
                 </fieldset>
                 <fieldset>
                     <div className="form-group">
                         <label htmlFor="date">Date Visited:</label>
-                        <input type="date" id="date" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Animal breed" value={review.date}/>
+                        <input type="date" id="date" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="" value={review.date}/>
                     </div>
                 </fieldset>
                 <fieldset>
