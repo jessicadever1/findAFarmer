@@ -7,13 +7,15 @@ import "./WelcomePage.css"
 
 export const WelcomePage = () => {
     return (
-        <>
+        <section className="welcome">
+            <>
 
-            <Route path="/welcome">
-                <Register />
-                <Login />
-            </Route>
+                <Route path="/welcome">
+                    <Register />
+                    <Login />
+                </Route>
 
-        </>
+                </>
+        </section>
     )
 }

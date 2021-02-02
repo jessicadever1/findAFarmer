@@ -97,15 +97,14 @@ export const FarmDetail = () => {
                     </div>
                 </section>
                 <article className="farm__reviews">
-                    <h3>Reviews</h3>
+                    <h2 className="farm__reviewHeader">Reviews</h2>
                     <div className="farm__reviewCard">
-                        <h3 className="review__name">{farm.review?.name}</h3>
-                        <section className="review__userInfo">
-                            <img className="userDefaultPic" src={userPic} alt="user default pic"></img>
-                            
+                        <img className="userDefaultPic" src={userPic} alt="user default pic"></img>
+                        <section className="farm__reviewInfo">
+                            <h3 className="review__name">{farm.review?.name}</h3>
                             <div className="review__date">{farm.review?.date}</div>
+                            <p className="review__reviewText">{farm.review?.reviewText}</p>
                         </section>
-                        <p className="review__reviewText">{farm.review?.reviewText}</p>
                     </div>
                 </article>
             </div>
