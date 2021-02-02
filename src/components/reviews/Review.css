@@ -1,0 +1,81 @@
+#root {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.formCenterDiv {
+    display: flex;
+    justify-content: center;
+}
+.reviewForm {
+    background-color: #178B7C;
+    min-width: 80%;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.reviewForm__title {
+    display: flex;
+    justify-content: center;
+}
+
+.form-group {
+    display: flex;
+    width: 100%;
+}
+
+.name {
+    min-width: 40%;
+}
+#name {
+    min-width: 50%;
+}
+
+.centerReviewSubmitBtn {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.reviewTextArea {
+    display: flex;
+    flex-direction: column;
+}
+
+#submitReviewBtn {
+    border-radius: 5px;
+    color: #178B7C; 
+    min-width: 33%;
+    min-height: 2rem;
+    text-decoration: none;
+}
+
+#reviewText {
+    min-height: 9rem;
+    margin-top: .5rem;
+    padding-bottom: 65px;
+    padding-top: 0;
+}
+
+.reviewerProfilePic {
+    margin: .5rem;
+    padding: .5rem;
+    width: 10rem;
+    height: 10rem;
+    border: double #FFBF69 5px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.review {
+    background-color: #178B7C;
+    color: white;
+    border-radius: 5px;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.review__date {
+    color: white;
+}

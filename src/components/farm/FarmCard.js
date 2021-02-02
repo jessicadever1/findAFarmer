@@ -1,6 +1,8 @@
 import React from "react"
 import "./Farm.css"
 import { Link } from "react-router-dom"
+import {useHistory } from "react-router-dom"
+
 import Pig from '../images/Pig.png'
 
 export const FarmCard = ( { farm } ) =>  {
@@ -8,6 +10,8 @@ export const FarmCard = ( { farm } ) =>  {
         let defaultFarmPic = Pig
         farm.farmPic = defaultFarmPic
     }
+
+    const history = useHistory()
     
     return (
         <section className="farm">
@@ -23,7 +27,9 @@ export const FarmCard = ( { farm } ) =>  {
             </div>
             <section className="farm__buttons">
                 <button className="farmDetailsBtn"><Link to={`/farms/detail/${farm.id}`}>See Details</Link></button>
-                <button className="addReviewBtn">Add Review</button>
+                <button id={farm.id} className="addReviewBtn" onClick={() => {history.push("/reviews/create")}}>
+                    Add Review
+                </button>
             </section>
         </section>
     )

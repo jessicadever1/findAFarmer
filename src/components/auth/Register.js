@@ -56,22 +56,24 @@ export const Register = (props) => {
 
             <form className="form--login" onSubmit={handleRegister}>
                 <section className="reg">
-                <h2 className="h3 mb-3 font-weight-normal">Please Register for Find A Farmer</h2>
-                    <fieldset>
-                        <label htmlFor="firstName"> First Name </label>
-                        <input ref={firstName} type="text" name="firstName" className="form-control" placeholder="First name" required autoFocus />
-                    </fieldset>
-                    <fieldset>
-                        <label htmlFor="lastName"> Last Name </label>
-                        <input ref={lastName} type="text" name="lastName" className="form-control" placeholder="Last name" required />
-                    </fieldset>
-                    <fieldset>
-                        <label htmlFor="inputEmail"> Email address </label>
-                        <input ref={email} type="email" name="email" className="form-control" placeholder="Email address" required />
-                    </fieldset>
-                    <fieldset>
-                        <button type="submit"> Log in </button>
-                    </fieldset>
+                <h2 className="h3 mb-3 font-weight-normal">Get Started</h2>
+                    <section className="form--reg">
+                        <fieldset>
+                            <label htmlFor="firstName"> First Name </label>
+                            <input ref={firstName} type="text" name="firstName" className="form-control form-name" placeholder="First name" required autoFocus />
+                        </fieldset>
+                        <fieldset>
+                            <label htmlFor="lastName"> Last Name </label>
+                            <input ref={lastName} type="text" name="lastName" className="form-control form-name" placeholder="Last name" required />
+                        </fieldset>
+                        <fieldset>
+                            <label htmlFor="inputEmail"> Email address </label>
+                            <input ref={email} type="email" name="email" className="form-control" placeholder="Email address" required />
+                        </fieldset>
+                        <fieldset className="loginBtnFieldset">
+                            <button className="loginBtn" type="submit"> Log in </button>
+                        </fieldset>
+                    </section>
                 </section>
             </form>
         </section>

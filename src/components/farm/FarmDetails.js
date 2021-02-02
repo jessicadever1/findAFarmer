@@ -4,12 +4,24 @@ import "./Farm.css"
 import { useParams, useHistory } from "react-router-dom"
 import { Link } from "react-router-dom"
 import Pig from "../images/Pig.png"
+import user from "../images/user.png"
+import { ReviewContext, ReviewProvider } from "../reviews/ReviewProvider"
+import { ReviewCard } from "../reviews/ReviewCard"
+
 
 export const FarmDetail = () => {
     const { getFarmById } = useContext(FarmContext)
     const [ farm, setFarm ] = useState({})
+    const { reviews, getReviews } = useContext(ReviewContext)
+    const { farms, getFarms } = useContext(FarmContext)
     const { farmId } = useParams()
     const history = useHistory()
+
+
+    const currentFarmReviews = reviews.filter((currentReview) => {
+        debugger
+        return currentReview.farmId === parseInt(farmId)
+    } )
 
     useEffect(() => {
         console.log("useEffect", farmId)
@@ -19,10 +31,16 @@ export const FarmDetail = () => {
         })
     }, [])
 
+    useEffect(() => {
+        getReviews().then(getFarms)
+    }, [])
+
     if (farm.farmPic === "") {
         let defaultFarmPic = Pig
         farm.farmPic = defaultFarmPic
     }
+
+    const userPic = user
 
     return (
         <section className="farm">
@@ -38,7 +56,7 @@ export const FarmDetail = () => {
             </div>
                 <section className="farm__buttons">
                     <button className="farmDetailsBtn"><Link className="a" to={`/farms`}>Back to All Farms</Link></button>
-                    <button className="addReviewBtn">Add Review</button>
+                    <button className="addReviewBtn"><Link className="a" to={`/reviews/create`}>Add Review</Link></button>
                 </section>
                         
             <div>
@@ -93,10 +111,31 @@ export const FarmDetail = () => {
                     </div>
                 </section>
                 <article className="farm__reviews">
-                    <h3>Reviews</h3>
-                    <div></div>
+                    <h2 className="farm__reviewHeader">Reviews</h2>
+                    <div>
+                        {
+                            currentFarmReviews.map(review => {
+                                
+                                return <ReviewCard key={review.id} farm={farm} review={review}/>
+                        })
+                        }
+                    </div>
                 </article>
             </div>
         </section>
     )
 }
+
+/*
+Saving for farm__reviews, just in case:
+
+                    <div className="farm__reviewCard">
+                        <img className="userDefaultPic" src={userPic} alt="user default pic"></img>
+                        <section className="farm__reviewInfo">
+                            <h3 className="review__name">{farm.review?.name}</h3>
+                            <div className="review__date">{farm.review?.date}</div>
+                            <p className="review__reviewText">{farm.review?.reviewText}</p>
+                        </section>
+                    </div>
+
+*/
