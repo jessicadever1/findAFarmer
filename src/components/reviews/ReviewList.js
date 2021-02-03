@@ -19,6 +19,12 @@ export const ReviewList = () => {
         .then(getReviews)
     }, [])
 
+    const currentFarmReviews = reviews.find((currentReview) => {
+        return (
+            currentReview.farmId === parseInt(farmId)
+            )
+    } )
+
     return (
         <div className="reviews">
             

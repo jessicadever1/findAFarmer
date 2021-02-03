@@ -6,6 +6,7 @@ export const ReviewCard = ({ review, user, farm }) => {
 
     const userPic = userPicture
     console.log("review", review)
+    console.log("farmID", farm.id)
     return (
         <article className="review">
             <h3 className="review__name">{review.name}</h3>

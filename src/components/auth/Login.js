@@ -1,5 +1,6 @@
 import React, { useRef } from "react"
 import { useHistory } from "react-router-dom"
+import { Link } from "react-router-dom"
 import "./Login.css"
 
 export const Login = props => {
@@ -14,6 +15,8 @@ export const Login = props => {
         .then(user => user.length ? user[0] : false)
     }
 
+    
+
     const handleLogin = (e) => {
         e.preventDefault()
 
@@ -21,7 +24,7 @@ export const Login = props => {
             .then(exists => {
                 if (exists) {
                     localStorage.setItem("find-a-farm_user", exists.id)
-                    history.push("/farms")
+                    history.push(`/farms/${exists.id}`)
                 } else {
                     existDialog.current.showModal()
                 }
@@ -47,9 +50,10 @@ export const Login = props => {
                             required autoFocus />
                     </fieldset>
                     <fieldset className="loginBtnFieldset">
-                        <button className="loginBtn" type="submit" id="userLogin">
+                        <Link to={`/farms/${1}`}><button className="loginBtn" type="submit" id="userLogin">
                             Log in
-                        </button>
+                            </button>
+                        </Link>
                     </fieldset>
                 </form>
             </section>

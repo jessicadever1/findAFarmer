@@ -20,6 +20,8 @@ export const ReviewForm = () => {
         "reviewText": ""
     })
 
+    const { farmId } = useParams()
+    console.log("Stop. Did I really get the farm id?", farmId)
     const { reviewId } = useParams()
     const history = useHistory()
 
@@ -46,11 +48,11 @@ export const ReviewForm = () => {
 
     const handleClickSaveReview = (event) => {
         event.preventDefault()
-
+        
             addReview({
                 userId: parseInt(review.userId),
                 username: review.userId.username,
-                farmId: parseInt(review.farmId),
+                farmId: parseInt(farmId),
                 date: review.date,
                 name: review.name,
                 reviewText:review.reviewText,
@@ -61,7 +63,7 @@ export const ReviewForm = () => {
 
     return (
         <div className="formCenterDiv">
-            <form className="reviewForm">
+            <form className="reviewForm" id={farms.id}>
                 <h2 className="reviewForm__title">Review</h2>
                 <fieldset>
                     <div className="form-group">
@@ -84,8 +86,10 @@ export const ReviewForm = () => {
                     </div>
                 </fieldset>
                 <div className="centerReviewSubmitBtn">
-                    <button id="submitReviewBtn" className="btn btn-primary"
-                        onClick={handleClickSaveReview}>
+                    <button id={review.farmId} className="btn btn-primary"
+                        onClick={
+                            handleClickSaveReview
+                            }>
                         Submit Review
                     </button>
                 </div>

@@ -7,6 +7,7 @@ import { HeaderCard } from "./header/HeaderCard"
 import { ReviewProvider } from "./reviews/ReviewProvider"
 import { ReviewForm } from "./reviews/ReviewForm"
 import { UserProvider } from "./users/UserProvider"
+import { UserCard } from "./users/UserCard"
 
 export const ApplicationViews = () => {
     
@@ -18,13 +19,14 @@ export const ApplicationViews = () => {
         <UserProvider>
             <ReviewProvider>
                 <FarmProvider>
-                    <Route exact path="/farms">
+                    <Route exact path="/farms/:userId(\d+)">
+                        
                         <FarmList />
                     </Route>
                     <Route exact path="/farms/detail/:farmId(\d+)">
                         <FarmDetail />
                     </Route>
-                    <Route exact path="/reviews/create">
+                    <Route exact path="/reviews/create/:farmId(\d+)">
                         <ReviewForm />
                     </Route>
                 </FarmProvider>

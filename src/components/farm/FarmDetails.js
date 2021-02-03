@@ -19,7 +19,6 @@ export const FarmDetail = () => {
 
 
     const currentFarmReviews = reviews.filter((currentReview) => {
-        debugger
         return currentReview.farmId === parseInt(farmId)
     } )
 
@@ -56,7 +55,7 @@ export const FarmDetail = () => {
             </div>
                 <section className="farm__buttons">
                     <button className="farmDetailsBtn"><Link className="a" to={`/farms`}>Back to All Farms</Link></button>
-                    <button className="addReviewBtn"><Link className="a" to={`/reviews/create`}>Add Review</Link></button>
+                    <button className="addReviewBtn"><Link className="a" to={`/reviews/create/${farm.id}`}>Add Review</Link></button>
                 </section>
                         
             <div>
