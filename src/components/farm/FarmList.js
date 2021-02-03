@@ -4,6 +4,7 @@ import { FarmCard } from "./FarmCard"
 import { FarmContext } from "./FarmProvider"
 import "./Farm.css"
 import { ReviewContext } from "../reviews/ReviewProvider"
+import { FarmFilter } from "./FarmFilter"
 
 export const FarmList = () => {
     const {farms, getFarms} = useContext(FarmContext)
@@ -15,9 +16,20 @@ export const FarmList = () => {
         getReviews()
         .then(getFarms)
     }, [])
+    
+    let filteredFarms = []
 
+    filteredFarms = (event) => {
+        if (event.target.value === "37174") {
+            filteredFarms.push()
+        } 
+    }
 
     return (
+        <>
+        <div className="farmFilter">
+            <FarmFilter />
+        </div>
         <div className="farms">
             {console.log("FarmList: Render", farms)}
             {
@@ -27,5 +39,6 @@ export const FarmList = () => {
             })
             }
         </div>
+        </>
     )
 }
