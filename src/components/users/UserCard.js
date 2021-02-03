@@ -1,11 +1,11 @@
 import React from "react"
 import "./User.css"
-import userPic from "../images/user.png"
+import userPicDefault from "../images/user.png"
 
 export const UserCard = ( { user }) => {
 
     if (user.userPic === "") {
-        let defaultUserPic = userPic
+        let defaultUserPic = userPicDefault
         user.userPic = defaultUserPic
     }
 

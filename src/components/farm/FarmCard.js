@@ -4,8 +4,9 @@ import { Link } from "react-router-dom"
 import {useHistory } from "react-router-dom"
 
 import Pig from '../images/Pig.png'
+import { ReviewContext } from "../reviews/ReviewProvider"
 
-export const FarmCard = ( { farm } ) =>  {
+export const FarmCard = ( { farm, review } ) =>  {
     if (farm.farmPic === "") {
         let defaultFarmPic = Pig
         farm.farmPic = defaultFarmPic
@@ -27,9 +28,9 @@ export const FarmCard = ( { farm } ) =>  {
             </div>
             <section className="farm__buttons">
                 <button className="farmDetailsBtn"><Link to={`/farms/detail/${farm.id}`}>See Details</Link></button>
-                <button id={farm.id} className="addReviewBtn" onClick={() => {history.push("/reviews/create")}}>
+                <Link to={`/reviews/create/${farm.id}`}>
                     Add Review
-                </button>
+                </Link>
             </section>
         </section>
     )

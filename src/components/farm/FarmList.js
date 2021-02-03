@@ -16,13 +16,14 @@ export const FarmList = () => {
         .then(getFarms)
     }, [])
 
+
     return (
         <div className="farms">
             {console.log("FarmList: Render", farms)}
             {
                 farms.map(farm => {
                     const reviews = farms.map(f => f.id === farm.reviewId)
-                    return <FarmCard key={farm.id} farm={farm} review={reviews}/>
+                    return <FarmCard key={farm.id} farm={farm} review={reviews} />
             })
             }
         </div>
