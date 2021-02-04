@@ -5,6 +5,7 @@ import { ApplicationViews } from "./ApplicationViews"
 import { HeaderCard } from "./header/HeaderCard"
 import "./Farms.css"
 
+
 export const Farms = () => (
 
     <>

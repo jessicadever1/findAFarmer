@@ -111,7 +111,7 @@ export const FarmDetail = () => {
                 </section>
                 <article className="farm__reviews">
                     <h2 className="farm__reviewHeader">Reviews</h2>
-                    <div>
+                    <div className="reviews">
                         {
                             currentFarmReviews.map(review => {
                                 

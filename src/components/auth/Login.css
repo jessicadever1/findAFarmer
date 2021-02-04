@@ -61,3 +61,11 @@ label {
     justify-content: center;
     margin-top: 1rem;
 }
+
+.loginBtnWB {
+    border-radius: 5px;
+    color: #178B7C; 
+    min-width: 100%;
+    min-height: 2rem;
+    text-decoration: none;
+}

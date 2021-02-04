@@ -28,9 +28,9 @@ export const FarmCard = ( { farm, review } ) =>  {
             </div>
             <section className="farm__buttons">
                 <button className="farmDetailsBtn"><Link to={`/farms/detail/${farm.id}`}>See Details</Link></button>
-                <Link to={`/reviews/create/${farm.id}`}>
+                <Link to={`/reviews/create/${farm.id}`}><button className="addRevBtn">
                     Add Review
-                </Link>
+                </button></Link>
             </section>
         </section>
     )

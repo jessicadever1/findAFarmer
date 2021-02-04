@@ -28,7 +28,9 @@ export const ReviewList = () => {
     return (
         <div className="reviews">
             
-            {reviews.map(review => {
+            {reviews.sort((currentReview, nextReview) =>
+                    Date.parse(currentReview.date) - Date.parse(nextReview.date))
+            .map(review => {
                 const user = users.find(u => u.id === review.userId)
                 const farm = farms.find(f => f.id === review.farmId)
                 return <ReviewCard key={review.id} review={review} user={user} farm={farm}/>
