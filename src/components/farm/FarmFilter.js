@@ -5,33 +5,16 @@ import { FarmContext } from "./FarmProvider"
 
 export const FarmFilter = () => {
 
-    // const { farms, getFarms } = useContext(FarmContext)
-    // const { farmZip } = useParams()
-    // const [ farm, setFarm ] = useState({
-    //     "id": 0,
-    //     "userId": 0,
-    //     "ownerName": "",
-    //     "ownerEmail": "@gmail.com",
-    //     "streetAddress": "",
-    //     "city": "",
-    //     "state": "",
-    //     "zip": 0
-    // })
+    const { getFarmByZip } = useContext(FarmContext)
 
-    // const filterByZip = (event) => {
-    //     const newFarm = { ...farm }
-    //     let selectedVal = event.target.value
-    //     if (event.target.value === "37174") {
-    //         selectedVal = parseInt(selectedVal)
-    //     }
-    //     newFarm[event.target.value] = selectedVal
-    //     setFarm(newFarm)
+    const handleFilterSelection = (event) => {
+        console.log(event.target.value)
+        getFarmByZip(event.target.value)
+    }
 
-    // }
-    
     return (
         <>
-            <select className="farmFilterSelect">
+            <select onChange={handleFilterSelection} className="farmFilterSelect">
                 <option value="0">  Find A Farm By County</option>
                 <option value="37174">Maury</option>
                 <option value="37015">Cheatham</option>

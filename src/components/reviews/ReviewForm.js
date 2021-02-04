@@ -13,7 +13,7 @@ export const ReviewForm = () => {
 
     const [review, setReview] = useState({
         "id": 0,
-        "userId": 0,
+        "userId": localStorage.getItem("find-a-farm_user"),
         "farmId": 0,
         "date": "",
         "name": "",
@@ -22,32 +22,7 @@ export const ReviewForm = () => {
     })
 
     const [farm, setFarm] = useState(
-        {
-            "id": 0,
-            "userId": 0,
-            "ownerName": "",
-            "ownerEmail": "",
-            "streetAddress": "",
-            "city": "",
-            "state": "",
-            "zip": 0,
-            "farmPic": "",
-            "name": "",
-            "website": "",
-            "instructions": "",
-            "includeList": {
-                "onions": true,
-                "preparedFood": true,
-                "vegetableScraps": true,
-                "coffeeGrounds": false,
-                "eggShells": true
-            },
-            "excludeList": {
-                "humanRemains": true,
-                "coffeeGrounds": true,
-                "rawMeat": true
-            }
-        }
+        {}
     )
 
     const { farmId } = useParams()
@@ -61,12 +36,12 @@ export const ReviewForm = () => {
                 getReviewById(reviewId)
                 .then(review => {
                     setReview(review)
-                getFarmById(farmId)
-                .then(farm => {
-                    setFarm(farm)
-                })
                 })
             }
+        })
+        getFarmById(farmId)
+        .then(farm => {
+            setFarm(farm)
         })
     }, [])
 
@@ -95,13 +70,11 @@ export const ReviewForm = () => {
             .then(() => history.push("/farms"))
         }
     
-        let farmName = farm.name
-        console.log("farm name:", farmName)
 
     return (
         <div className="formCenterDiv">
             <form className="reviewForm" id={farms.id}>
-                <h2 className="reviewForm__title">{review.farm.name} Review</h2>
+                <h2 className="reviewForm__title">{farm.name} Review</h2>
                 <fieldset>
                     <div className="form-group">
                         <label htmlFor="name">Review name:</label>

@@ -1,10 +1,9 @@
-import React from "react"
-import { Route, Redirect } from "react-router-dom"
-import { WelcomePage } from "./WelcomePage"
-import { ApplicationViews } from "./ApplicationViews"
-import { HeaderCard } from "./header/HeaderCard"
-import "./Farms.css"
-
+import React from "react";
+import { Route, Redirect } from "react-router-dom";
+import { WelcomePage } from "./WelcomePage";
+import { ApplicationViews } from "./ApplicationViews";
+import { HeaderCard } from "./header/HeaderCard";
+import "./Farms.css";
 
 export const Farms = () => (
 
@@ -19,14 +18,13 @@ export const Farms = () => (
                         </>
                     );
             } else {
-            return (<Redirect to="/welcome" />);
+            return <Redirect to="/welcome" />;
             }
         }}
-        />
+    />
         
         <Route path="/welcome">
             <WelcomePage /> 
         </Route>  
     </>
-
 )

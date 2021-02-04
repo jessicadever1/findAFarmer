@@ -17,13 +17,7 @@ export const FarmList = () => {
         .then(getFarms)
     }, [])
     
-    let filteredFarms = []
-
-    filteredFarms = (event) => {
-        if (event.target.value === "37174") {
-            filteredFarms.push()
-        } 
-    }
+    
 
     return (
         <>
