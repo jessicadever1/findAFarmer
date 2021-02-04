@@ -11,6 +11,10 @@ export const UserProvider = (props) => {
         .then(setUsers)
     }
 
+    const getUserById = () => {
+        
+    }
+
     return (
         <UserContext.Provider value={{
             users, getUsers

@@ -1,7 +1,10 @@
 import React, { useContext, useEffect } from "react"
 import { useParams } from "react-router-dom"
+import { AllFarmsBtn } from "./AllFarmsBtn"
 import "./Farm.css"
 import { FarmContext } from "./FarmProvider"
+import { Link } from "react-router-dom"
+
 
 export const FarmFilter = () => {
 
@@ -13,6 +16,7 @@ export const FarmFilter = () => {
     }
 
     return (
+    
         <>
             <select onChange={handleFilterSelection} className="farmFilterSelect">
                 <option value="0">  Find A Farm By County</option>

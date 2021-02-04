@@ -5,6 +5,7 @@ import { FarmContext } from "./FarmProvider"
 import "./Farm.css"
 import { ReviewContext } from "../reviews/ReviewProvider"
 import { FarmFilter } from "./FarmFilter"
+import { AllFarmsBtn } from "./AllFarmsBtn"
 
 export const FarmList = () => {
     const {farms, getFarms} = useContext(FarmContext)
@@ -23,6 +24,7 @@ export const FarmList = () => {
         <>
         <div className="farmFilter">
             <FarmFilter />
+            <AllFarmsBtn />
         </div>
         <div className="farms">
             {console.log("FarmList: Render", farms)}

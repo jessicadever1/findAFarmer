@@ -2,8 +2,12 @@ body {
     color: white;
 }
 
+.farmFilter {
+    display: flex;
+    justify-content: center;
+}
+
 .farmFilterSelect {
-    margin-left: 3rem;
     margin-bottom: 1rem;
     min-width: 33%;
     min-height: 2rem;
@@ -12,6 +16,20 @@ body {
     border-radius: 5px;
     display: flex;
     padding-left: .5rem;
+}
+
+.allFarmsBtnDiv {
+    min-width: 33%;
+    margin-left: 1rem;
+}
+
+.allFarmsBtn {
+    width: 100%;
+    min-height: 2rem;
+    color: #178B7C;
+    border: solid 1px #178B7C;
+    border-radius: 5px;
+    background-color: white;
 }
 
 .farm {
@@ -68,7 +86,9 @@ a:visited, a:active, .a:visited, .a:active {
 
 a {
     min-width: 33%;
+    text-decoration: none;
 }
+
 .farmDetailsBtn {
     border-radius: 5px;
     color: #178B7C; 

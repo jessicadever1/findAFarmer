@@ -11,9 +11,11 @@ export const ReviewForm = () => {
     const { farms, getFarms, getFarmById } = useContext(FarmContext)
     const { users, getUsers } = useContext(UserContext)
 
+    const currentUser = localStorage.getItem("find-a-farm_user")
+
     const [review, setReview] = useState({
         "id": 0,
-        "userId": localStorage.getItem("find-a-farm_user"),
+        "userId": currentUser,
         "farmId": 0,
         "date": "",
         "name": "",
