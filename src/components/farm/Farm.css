@@ -186,4 +186,5 @@ ul {
 
 .review__date, .review__reviewText {
     color: white;
+    margin-left: 0;
 }

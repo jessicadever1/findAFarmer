@@ -8,7 +8,7 @@ import "./Review.css"
 
 export const ReviewForm = () => {
     const { addReview, getReviewById } = useContext(ReviewContext)
-    const { farms, getFarms } = useContext(FarmContext)
+    const { farms, getFarms, getFarmById } = useContext(FarmContext)
     const { users, getUsers } = useContext(UserContext)
 
     const [review, setReview] = useState({
@@ -17,8 +17,38 @@ export const ReviewForm = () => {
         "farmId": 0,
         "date": "",
         "name": "",
-        "reviewText": ""
+        "reviewText": "",
+        "farm": ""
     })
+
+    const [farm, setFarm] = useState(
+        {
+            "id": 0,
+            "userId": 0,
+            "ownerName": "",
+            "ownerEmail": "",
+            "streetAddress": "",
+            "city": "",
+            "state": "",
+            "zip": 0,
+            "farmPic": "",
+            "name": "",
+            "website": "",
+            "instructions": "",
+            "includeList": {
+                "onions": true,
+                "preparedFood": true,
+                "vegetableScraps": true,
+                "coffeeGrounds": false,
+                "eggShells": true
+            },
+            "excludeList": {
+                "humanRemains": true,
+                "coffeeGrounds": true,
+                "rawMeat": true
+            }
+        }
+    )
 
     const { farmId } = useParams()
     console.log("Stop. Did I really get the farm id?", farmId)
@@ -31,6 +61,10 @@ export const ReviewForm = () => {
                 getReviewById(reviewId)
                 .then(review => {
                     setReview(review)
+                getFarmById(farmId)
+                .then(farm => {
+                    setFarm(farm)
+                })
                 })
             }
         })
@@ -56,15 +90,18 @@ export const ReviewForm = () => {
                 date: review.date,
                 name: review.name,
                 reviewText:review.reviewText,
+                farm: farm.name
             })
             .then(() => history.push("/farms"))
         }
     
+        let farmName = farm.name
+        console.log("farm name:", farmName)
 
     return (
         <div className="formCenterDiv">
             <form className="reviewForm" id={farms.id}>
-                <h2 className="reviewForm__title">Review</h2>
+                <h2 className="reviewForm__title">{review.farm.name} Review</h2>
                 <fieldset>
                     <div className="form-group">
                         <label htmlFor="name">Review name:</label>

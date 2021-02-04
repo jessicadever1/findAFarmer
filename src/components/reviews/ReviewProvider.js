@@ -6,7 +6,7 @@ export const ReviewProvider = (props) => {
     const [reviews, setReviews] = useState([])
 
     const getReviews = () => {
-        return fetch(`http://localhost:8014/reviews?_embed=farm`)
+        return fetch(`http://localhost:8014/reviews?_expand=farm`)
         .then(res => res.json())
         .then(setReviews)
     }
