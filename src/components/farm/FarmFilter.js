@@ -32,7 +32,7 @@ export const FarmFilter = () => {
     return (
         <>
             <select className="farmFilterSelect">
-                <option value="0">Find A Farm By County</option>
+                <option value="0">  Find A Farm By County</option>
                 <option value="37174">Maury</option>
                 <option value="37015">Cheatham</option>
                 <option value="37055">Dickson</option>

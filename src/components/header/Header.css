@@ -45,3 +45,15 @@ header {
     padding-bottom: 2rem;
     margin-bottom: 10rem;
 }
+
+.logOutBtn {
+    position: absolute;
+    right: 1rem;
+    min-width: 10%;
+    min-height: 2rem;
+    border-radius: 5px;
+    background-color: white;
+    color: #FF9F1C;
+    font-size: 18px;
+    font-weight: bold;
+}

@@ -2,6 +2,18 @@ body {
     color: white;
 }
 
+.farmFilterSelect {
+    margin-left: 3rem;
+    margin-bottom: 1rem;
+    min-width: 33%;
+    min-height: 2rem;
+    color: #178B7C;
+    border: solid 1px #178B7C;
+    border-radius: 5px;
+    display: flex;
+    padding-left: .5rem;
+}
+
 .farm {
     background-color: #5BC9B9;
     border-radius: 10px;
@@ -41,8 +53,9 @@ body {
     display: flex;
 }
 
-a:visited, a:active {
+a:visited, a:active, .a:visited, .a:active {
     text-decoration: none;
+    color: #178B7C;
 }
 
 .farm__buttons {
@@ -53,6 +66,9 @@ a:visited, a:active {
     min-height: 2rem;
 }
 
+a {
+    min-width: 33%;
+}
 .farmDetailsBtn {
     border-radius: 5px;
     color: #178B7C; 
@@ -61,11 +77,20 @@ a:visited, a:active {
     text-decoration: none;
 }
 
+.addRevBtn {
+    margin-left: 1rem;
+    border-radius: 5px;
+    color: #178B7C; 
+    min-width: 100%;
+    min-height: 2rem;
+}
+
 .addReviewBtn {
     margin-left: 1rem;
     border-radius: 5px;
     color: #178B7C; 
     min-width: 33%;
+    min-height: 2rem;
 }
 
 .farm__instructionAndLists {
@@ -97,7 +122,15 @@ a:visited, a:active {
     background-color: white;
     border-radius: 5px;
     max-height: 15rem;
+}
+
+ul {
     overflow: scroll;
+    max-height: 9rem;
+}
+
+p {
+    margin-left: 1rem;
 }
 
 .farm__excludeList {
@@ -108,7 +141,6 @@ a:visited, a:active {
     margin: .5rem;
     background-color: white;
     border-radius: 5px;
-    overflow: scroll;
 }
 
 .farm__include, .farm__exclude {

@@ -38,6 +38,11 @@
     margin-top: 1rem;
 }
 
+.reviews {
+    max-height: 20rem;
+    overflow: scroll;
+}
+
 .reviewTextArea {
     display: flex;
     flex-direction: column;
@@ -78,4 +83,31 @@
 
 .review__date {
     color: white;
+}
+
+.reviewForm {
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    border-radius: 5px;
+    color: #178B7C; 
+    min-width: 33%;
+    min-height: 2rem;
+    text-decoration: none;
+}
+
+a:visited, a:active, .a:visited, .a:active, .farmDetailsBtn {
+    color: #178B7C;
+    text-decoration: none;
+}
+
+.review {
+    display: flex;
+}
+
+.review__userInfo {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
 }

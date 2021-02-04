@@ -9,13 +9,15 @@ export const ReviewCard = ({ review, user, farm }) => {
     console.log("farmID", farm.id)
     return (
         <article className="review">
-            <h3 className="review__name">{review.name}</h3>
+            <img className="reviewerProfilePic" src={userPic} alt="user default pic"></img>
+            
             <section className="review__userInfo">
-                <img className="reviewerProfilePic" src={userPic} alt="user default pic"></img>
+                <h3 className="review__name">{review.name}</h3>
                 <div className="review__username">{user?.username}</div>
                 <div className="review__date">{review.date}</div>
+                <p className="review__reviewText">{review.reviewText}</p>
             </section>
-            <p className="review__reviewText">{review.reviewText}</p>
+            
         </article>
     )
 }
