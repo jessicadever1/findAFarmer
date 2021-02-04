@@ -17,8 +17,9 @@ export const FarmProvider = (props) => {
     }
 
     const getFarmByZip = (zip) => {
-        return fetch(`http://localhost:8014/farms/${zip}?_embed=review&_embed=user`)
+        return fetch(`http://localhost:8014/farms?_embed=review&_embed=user&zip=${zip}`)
         .then(res => res.json())
+        .then(setFarms)
     }
 
     return (

@@ -1,6 +1,7 @@
 import React from "react"
 import "./Review.css"
 import userPicture from "../images/user.png"
+import trashIcon from "../images/trash.png"
 
 export const ReviewCard = ({ review, user, farm }) => {
 
@@ -17,7 +18,7 @@ export const ReviewCard = ({ review, user, farm }) => {
                 <div className="review__date">{review.date}</div>
                 <p className="review__reviewText">{review.reviewText}</p>
             </section>
-            
+            <img className="" src="" alt="delete icon"></img>
         </article>
     )
 }
