@@ -1,19 +1,23 @@
-import React, { useContext, useEffect } from "react"
-import { useParams } from "react-router-dom"
-import { AllFarmsBtn } from "./AllFarmsBtn"
+import React, { useContext } from "react"
 import "./Farm.css"
 import { FarmContext } from "./FarmProvider"
-import { Link } from "react-router-dom"
 
+/* -------------------- Allows user to see farms in preferred County -------------------- */
 
 export const FarmFilter = () => {
 
+/* -------------------- Makes the getFarmByZip code available for use -------------------- */
+
     const { getFarmByZip } = useContext(FarmContext)
+
+/* -------------------- When user selects a county, it will render the farms within that county -------------------- */
 
     const handleFilterSelection = (event) => {
         console.log(event.target.value)
         getFarmByZip(event.target.value)
     }
+
+/* -------------------- Contents of the Filter button -------------------- */
 
     return (
     

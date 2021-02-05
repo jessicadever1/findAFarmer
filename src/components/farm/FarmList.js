@@ -8,10 +8,12 @@ import { FarmFilter } from "./FarmFilter"
 import { AllFarmsBtn } from "./AllFarmsBtn"
 
 export const FarmList = () => {
+
+/* -------------------- To have access to farms and reviews -------------------- */
     const {farms, getFarms} = useContext(FarmContext)
     const {reviews, getReviews } = useContext(ReviewContext)
     
-    const history = useHistory()
+
 
     useEffect(() => {   
         getReviews()
