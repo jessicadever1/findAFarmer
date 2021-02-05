@@ -2,6 +2,8 @@ import React, { useState, createContext } from "react"
 
 export const FarmContext = createContext()
 
+/* -------------------- To have access to farms, and specific farms based on their properties -------------------- */
+
 export const FarmProvider = (props) => {
     const [farms, setFarms] = useState([])
 
@@ -21,6 +23,8 @@ export const FarmProvider = (props) => {
         .then(res => res.json())
         .then(setFarms)
     }
+
+/* -------------------- To make the farms, and their farm varieties available to other components -------------------- */
 
     return (
         <FarmContext.Provider value={{

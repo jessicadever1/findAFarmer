@@ -7,6 +7,8 @@ import { useHistory } from "react-router-dom"
 
 export const ReviewCard = ({ review, user, farm }) => {
 
+/* -------------------- Provide reviews for each farm, and delete them upon click -------------------- */
+
     const { deleteReview } = useContext(ReviewContext)
 
     const userPic = userPicture
@@ -25,6 +27,8 @@ export const ReviewCard = ({ review, user, farm }) => {
             })
         }
     }
+
+/* -------------------- Contents of individual reviews -------------------- */
 
     return (
         <article className="review">

@@ -3,6 +3,9 @@ import React, {useState, createContext } from "react"
 export const UserContext = createContext()
 
 export const UserProvider = (props) => {
+
+/* -------------------- to access the users from the API -------------------- */    
+
     const [users, setUsers] = useState([])
 
     const getUsers = () => {

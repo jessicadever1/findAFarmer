@@ -10,17 +10,16 @@ import { AllFarmsBtn } from "./AllFarmsBtn"
 export const FarmList = () => {
 
 /* -------------------- To have access to farms and reviews -------------------- */
+
     const {farms, getFarms} = useContext(FarmContext)
     const {reviews, getReviews } = useContext(ReviewContext)
-    
-
 
     useEffect(() => {   
         getReviews()
         .then(getFarms)
     }, [])
     
-    
+/* -------------------- To have access to the filter, see all farms btn & all of the farms -------------------- */    
 
     return (
         <>

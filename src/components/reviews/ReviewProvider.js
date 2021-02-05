@@ -2,6 +2,8 @@ import React, { useState, createContext } from "react"
 
 export const ReviewContext = createContext()
 
+/* -------------------- To have reviews, to add new reviews and delete others, to target reviews by Id -------------------- */
+
 export const ReviewProvider = (props) => {
     const [reviews, setReviews] = useState([])
 
@@ -34,9 +36,11 @@ export const ReviewProvider = (props) => {
         .then(getReviews)
     }
 
+/* -------------------- To give access to these reviews to all other components -------------------- */
+
     return (
         <ReviewContext.Provider value={{
-            reviews, getReviews, addReview, deleteReview
+            reviews, getReviews, addReview, deleteReview, getReviewById
         }}>
             {props.children}
         </ReviewContext.Provider>

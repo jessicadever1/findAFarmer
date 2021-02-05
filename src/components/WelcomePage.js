@@ -5,6 +5,8 @@ import { HeaderCard } from "./header/HeaderCard"
 import { Login } from "./auth/Login"
 import "./WelcomePage.css"
 
+/* -------------------- To render the login and register info on the same page -------------------- */    
+
 export const WelcomePage = () => {
     return (
         <section className="welcome">
@@ -15,7 +17,7 @@ export const WelcomePage = () => {
                     <Login />
                 </Route>
 
-                </>
+            </>
         </section>
     )
 }

@@ -3,6 +3,8 @@ import "./Header.css"
 import Pig from '../images/Pig.png'
 import {Link} from 'react-router-dom'
 
+/* -------------------- To give all pages a uniform header -------------------- */
+
 export const HeaderCard = () => {
     return (
         <>
