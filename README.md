@@ -1,3 +1,36 @@
+# Find A Farmer
+
+Find A Farmer is designed for those who want to address environmental 
+issues around food waste, but for any number of reasons cannot compost 
+some, or any of their food waste. It will share the locations of 
+farmers who (1) opted in to the program and (2) have pigs that can eat 
+just about anything. The environmentally savvy users will have the 
+option to feed their waste to the pigs, thus keeping food waste from 
+going to landfills, while helping the farmer supply the pigs with a 
+nutritious diet.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
