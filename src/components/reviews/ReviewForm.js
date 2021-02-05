@@ -69,7 +69,7 @@ export const ReviewForm = () => {
                 reviewText:review.reviewText,
                 farm: farm.name
             })
-            .then(() => history.push("/farms"))
+            .then(() => history.push(`/farms/detail/${farmId}`))
         }
     
         

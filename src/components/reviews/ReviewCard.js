@@ -21,7 +21,7 @@ export const ReviewCard = ({ review, user, farm }) => {
         if (currentUser === review.userId) {
             deleteReview(review.id)
             .then(() => {
-                history.push("/farms/detail/${farm.id}")
+                history.push(`/farms/detail`)
             })
         }
     }

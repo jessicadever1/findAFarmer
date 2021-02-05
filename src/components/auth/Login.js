@@ -50,10 +50,10 @@ export const Login = props => {
                             required autoFocus />
                     </fieldset>
                     <fieldset className="loginBtnFieldset">
-                        <Link to={`/farms`}><button className="loginBtnWB" type="submit" id="userLogin">
+                        <button className="loginBtnWB" type="submit" id="userLogin">
                             Log in
                             </button>
-                        </Link>
+                        
                     </fieldset>
                 </form>
             </section>

@@ -5,7 +5,7 @@ import { useParams, useHistory } from "react-router-dom"
 import { Link } from "react-router-dom"
 import Pig from "../images/Pig.png"
 import user from "../images/user.png"
-import { ReviewContext, ReviewProvider } from "../reviews/ReviewProvider"
+import { ReviewContext } from "../reviews/ReviewProvider"
 import { ReviewCard } from "../reviews/ReviewCard"
 
 
@@ -15,6 +15,7 @@ export const FarmDetail = () => {
     const { reviews, getReviews } = useContext(ReviewContext)
     const { farms, getFarms } = useContext(FarmContext)
     const { farmId } = useParams()
+    let userId = localStorage.getItem("find-a-farm_user")
     const history = useHistory()
 
 
@@ -54,7 +55,7 @@ export const FarmDetail = () => {
                 </div>
             </div>
                 <section className="farm__buttons">
-                    <button className="farmDetailsBtn"><Link className="a" to={`/farms`}>Back to All Farms</Link></button>
+                    <button className="farmDetailsBtn"><Link className="a" to={`/farms/${userId}`}>Back to All Farms</Link></button>
                     <button className="addReviewBtn"><Link className="a" to={`/reviews/create/${farm.id}`}>Add Review</Link></button>
                 </section>
                         

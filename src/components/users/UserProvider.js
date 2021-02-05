@@ -11,13 +11,20 @@ export const UserProvider = (props) => {
         .then(setUsers)
     }
 
-    const getUserById = () => {
-        
+    const addUser = (userObj) => {
+        return fetch ("http://localhost:8014/users", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(userObj)
+        })
+        .then(getUsers)
     }
 
     return (
         <UserContext.Provider value={{
-            users, getUsers
+            users, getUsers, addUser
         }}>
             {props.children}
         </UserContext.Provider>
