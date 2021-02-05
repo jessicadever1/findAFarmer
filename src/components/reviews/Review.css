@@ -109,4 +109,28 @@ a:visited, a:active, .a:visited, .a:active, .farmDetailsBtn {
     display: flex;
     flex-direction: column;
     margin-left: 1rem;
+    width: 60%;
 }
+
+.trashIcon {
+    position: relative;
+    right: 0rem;
+    top: 0rem;
+}
+
+.trashBtn {
+    background-color: #178B7C;
+    height: 20%;
+    border: #178B7C;
+}
+
+.trashBtn:hover {
+    transform: scale(1.5);
+    border: none;
+}
+
+.trashBtn:active {
+    border: none;
+}
+
+button:focus {outline:0;}

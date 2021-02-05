@@ -72,6 +72,8 @@ export const ReviewForm = () => {
             .then(() => history.push("/farms"))
         }
     
+        
+
 
     return (
         <div className="formCenterDiv">

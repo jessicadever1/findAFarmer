@@ -27,9 +27,16 @@ export const ReviewProvider = (props) => {
         .then(res => res.json())
     }
 
+    const deleteReview = reviewId => {
+        return fetch(`http://localhost:8014/reviews/${reviewId}`, {
+            method: "DELETE"
+        })
+        .then(getReviews)
+    }
+
     return (
         <ReviewContext.Provider value={{
-            reviews, getReviews, addReview
+            reviews, getReviews, addReview, deleteReview
         }}>
             {props.children}
         </ReviewContext.Provider>
