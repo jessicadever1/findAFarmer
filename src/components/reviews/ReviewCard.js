@@ -11,7 +11,7 @@ export const ReviewCard = ({ review, user, farm }) => {
 
     const userPic = userPicture
 
-    const currentUser = localStorage.getItem("find-a-farm_user")
+    const currentUser = parseInt(localStorage.getItem("find-a-farm_user"))
     const history = useHistory()
 
     const handleClickDeleteReview = () => {
@@ -21,7 +21,7 @@ export const ReviewCard = ({ review, user, farm }) => {
         if (currentUser === review.userId) {
             deleteReview(review.id)
             .then(() => {
-                history.push(`/farms/detail`)
+                history.push(`/farms/detail/${farm.id}`)
             })
         }
     }
