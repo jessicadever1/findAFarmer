@@ -7,9 +7,13 @@ import "./Review.css"
 
 
 export const ReviewForm = () => {
+
+/* -------------------- To have access to farms and reviews -------------------- */
+
     const { addReview, getReviewById } = useContext(ReviewContext)
     const { farms, getFarms, getFarmById } = useContext(FarmContext)
-    const { users, getUsers } = useContext(UserContext)
+
+/* -------------------- To access userId, and set userId to each review -------------------- */
 
     const currentUser = localStorage.getItem("find-a-farm_user")
 
@@ -23,17 +27,22 @@ export const ReviewForm = () => {
         "farm": ""
     })
 
+/* -------------------- To have access individual farm that has been selected -------------------- */
+
     const [farm, setFarm] = useState(
         {}
     )
 
+/* -------------------- Use the URL to set the farmId and reviewId -------------------- */
+
     const { farmId } = useParams()
-    console.log("Stop. Did I really get the farm id?", farmId)
     const { reviewId } = useParams()
     const history = useHistory()
 
+/* -------------------- To use the farms and get the individual farms by the reviewId, and then to get specific farm -------------------- */
+
     useEffect(() => {
-        getFarms().then(getUsers).then(() => {
+        getFarms().then(() => {
             if (reviewId){
                 getReviewById(reviewId)
                 .then(review => {
@@ -47,6 +56,8 @@ export const ReviewForm = () => {
         })
     }, [])
 
+/* -------------------- To capture and render the inputs to the form -------------------- */
+
     const handleControlledInputChange = (event) => {
         const newReview = { ...review }
         let selectedVal = event.target.value
@@ -56,6 +67,8 @@ export const ReviewForm = () => {
         newReview[event.target.id] = selectedVal
         setReview(newReview)
     }
+
+/* -------------------- To save all of the reviews and then send the user back to the farm they reviewed -------------------- */
 
     const handleClickSaveReview = (event) => {
         event.preventDefault()
@@ -72,8 +85,7 @@ export const ReviewForm = () => {
             .then(() => history.push(`/farms/detail/${farmId}`))
         }
     
-        
-
+/* -------------------- The contents of the form -------------------- */
 
     return (
         <div className="formCenterDiv">

@@ -6,14 +6,16 @@ import {useHistory } from "react-router-dom"
 import Pig from '../images/Pig.png'
 import { ReviewContext } from "../reviews/ReviewProvider"
 
+/* -------------------- To always have a default farm picture available, if user doesn't have a farm pic -------------------- */
+
 export const FarmCard = ( { farm, review } ) =>  {
     if (farm.farmPic === "") {
         let defaultFarmPic = Pig
         farm.farmPic = defaultFarmPic
     }
-
-    const history = useHistory()
     
+/* -------------------- The content of individual farm cards -------------------- */
+
     return (
         <section className="farm">
             <div className="farm__upperBox">

@@ -9,13 +9,15 @@ export const Login = props => {
     const existDialog = useRef()
     const history = useHistory()
 
+/* -------------------- To check if user already exists -------------------- */
+
     const existingUserCheck = () => {
         return fetch (`http://localhost:8014/users?email=${email.current.value}`)
         .then(res => res.json())
         .then(user => user.length ? user[0] : false)
     }
 
-    
+/* -------------------- To switch to logged in page, if user exists -------------------- */
 
     const handleLogin = (e) => {
         e.preventDefault()
@@ -30,6 +32,8 @@ export const Login = props => {
                 }
             })
     }
+
+/* -------------------- The contents of the log in form -------------------- */
 
     return (
         <section className="container--login">

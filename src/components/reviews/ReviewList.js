@@ -1,5 +1,4 @@
 import React, { useContext, useEffect } from "react"
-import { useHistory } from "react-router-dom"
 import { ReviewCard } from "./ReviewCard"
 import { ReviewContext } from "./ReviewProvider"
 import "./Review.css"
@@ -7,11 +6,13 @@ import { FarmContext } from "../farm/FarmProvider"
 import { UserContext } from "../users/UserProvider"
 
 export const ReviewList = () => {
+
+/* -------------------- To have access to farms, reviews and user info -------------------- */
+
     const { reviews, getReviews } = useContext(ReviewContext)
     const { farms, getFarms } = useContext(FarmContext)
     const { users, getUsers } = useContext(UserContext)
 
-    const history = useHistory()
 
     useEffect(() => {
         getUsers()
@@ -19,20 +20,12 @@ export const ReviewList = () => {
         .then(getReviews)
     }, [])
 
-    const currentFarmReviews = reviews.find((currentReview) => {
-        return (
-            currentReview.farmId === parseInt(farmId)
-            )
-    } )
-
-    
+/* -------------------- To list the review cards that are associated with the farm selected -------------------- */
 
     return (
         <div className="reviews">
             
-            {reviews.sort((currentReview, nextReview) =>
-                    Date.parse(currentReview.date) - Date.parse(nextReview.date))
-            .map(review => {
+            {reviews.map(review => {
                 const user = users.find(u => u.id === review.userId)
                 const farm = farms.find(f => f.id === review.farmId)
                 return <ReviewCard key={review.id} review={review} user={user} farm={farm}/>

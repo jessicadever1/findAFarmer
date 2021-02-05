@@ -10,6 +10,9 @@ import { ReviewCard } from "../reviews/ReviewCard"
 
 
 export const FarmDetail = () => {
+
+/* -------------------- To have access to farms, reviews and the userId -------------------- */
+
     const { getFarmById } = useContext(FarmContext)
     const [ farm, setFarm ] = useState({})
     const { reviews, getReviews } = useContext(ReviewContext)
@@ -18,10 +21,13 @@ export const FarmDetail = () => {
     let userId = localStorage.getItem("find-a-farm_user")
     const history = useHistory()
 
+/* -------------------- To be able to see only the reviews associated with current farm -------------------- */
 
     const currentFarmReviews = reviews.filter((currentReview) => {
         return currentReview.farmId === parseInt(farmId)
     } )
+
+/* -------------------- To get the current farm selected, and the reviews associated with it -------------------- */
 
     useEffect(() => {
         console.log("useEffect", farmId)
@@ -35,12 +41,14 @@ export const FarmDetail = () => {
         getReviews().then(getFarms)
     }, [])
 
+/* -------------------- To make sure every farm detail has a default profile pic, if no profile pic exists -------------------- */
+
     if (farm.farmPic === "") {
         let defaultFarmPic = Pig
         farm.farmPic = defaultFarmPic
     }
 
-    const userPic = user
+/* -------------------- The contents of all of the farm details for selected farm -------------------- */
 
     return (
         <section className="farm">

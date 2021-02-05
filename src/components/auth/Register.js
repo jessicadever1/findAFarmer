@@ -10,11 +10,15 @@ export const Register = (props) => {
     const conflictDialog = useRef()
     const history = useHistory()
 
+/* -------------------- To check if user already exists -------------------- */
+
     const existingUserCheck = () => {
         return fetch(`http://localhost:8014/users?email=${email.current.value}`)
             .then(res => res.json())
             .then(user => !!user.length)
     }
+
+/* -------------------- If user does not exist, then register the user and direct them to logged in page -------------------- */
 
     const handleRegister = (e) => {
         e.preventDefault()
@@ -45,6 +49,8 @@ export const Register = (props) => {
                 }
             })
     }
+
+/* -------------------- The contents of the register user box -------------------- */
 
     return (
         <section className="container--register" style={{ textAlign: "center" }}>

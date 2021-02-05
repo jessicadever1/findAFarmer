@@ -11,7 +11,7 @@ import { UserCard } from "./users/UserCard"
 
 export const ApplicationViews = () => {
     
-    
+/* -------------------- To display the FarmList, Details and Forms on their individual URLs -------------------- */    
 
     return (
         <>
@@ -19,16 +19,19 @@ export const ApplicationViews = () => {
         <UserProvider>
             <ReviewProvider>
                 <FarmProvider>
+
                     <Route exact path="/farms/:userId(\d+)">
-                        
                         <FarmList />
                     </Route>
+
                     <Route exact path="/farms/detail/:farmId(\d+)">
                         <FarmDetail />
                     </Route>
+
                     <Route exact path="/reviews/create/:farmId(\d+)">
                         <ReviewForm />
                     </Route>
+
                 </FarmProvider>
             </ReviewProvider>
         </UserProvider>

@@ -4,6 +4,9 @@ import { UserCard } from "./UserCard"
 import "./User.css"
 
 export const UserList = () => {
+
+/* -------------------- to have access to users, and display them on the page -------------------- */    
+
     const { users, getUsers } = useContext(UserContext)
 
     useEffect(() => {
