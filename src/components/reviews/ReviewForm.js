@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react"
 import { ReviewContext } from "../reviews/ReviewProvider"
 import { FarmContext } from "../farm/FarmProvider"
-import { UserContext } from "../users/UserProvider"
 import { useHistory, useParams } from "react-router-dom"
 import "./Review.css"
 
@@ -10,7 +9,7 @@ export const ReviewForm = () => {
 
 /* -------------------- To have access to farms and reviews -------------------- */
 
-    const { addReview, getReviewById } = useContext(ReviewContext)
+    const { addReview, getReviewById, editReview } = useContext(ReviewContext)
     const { farms, getFarms, getFarmById } = useContext(FarmContext)
 
 /* -------------------- To access userId, and set userId to each review -------------------- */
@@ -26,6 +25,8 @@ export const ReviewForm = () => {
         "reviewText": "",
         "farm": ""
     })
+
+    const [isLoading, setIsLoading] = useState(true)
 
 /* -------------------- To have access individual farm that has been selected -------------------- */
 
@@ -47,7 +48,10 @@ export const ReviewForm = () => {
                 getReviewById(reviewId)
                 .then(review => {
                     setReview(review)
+                    setIsLoading(false)
                 })
+            } else {
+                setIsLoading(false)
             }
         })
         getFarmById(farmId)
@@ -70,8 +74,23 @@ export const ReviewForm = () => {
 
 /* -------------------- To save all of the reviews and then send the user back to the farm they reviewed -------------------- */
 
-    const handleClickSaveReview = (event) => {
-        event.preventDefault()
+    const handleClickSaveReview = () => {
+        setIsLoading(true)
+
+        if (reviewId !== 0) {
+            editReview(
+                {
+                    userId: parseInt(review.userId),
+                    username: review.userId.username,
+                    farmId: parseInt(farmId),
+                    date: review.date,
+                    name: review.name,
+                    reviewText:review.reviewText,
+                    farm: farm.name,
+                    id: review.id
+                }
+            ).then(() => history.push(`/farms/detail/${farmId}`))
+        } else {
         
             addReview({
                 userId: parseInt(review.userId),
@@ -83,7 +102,7 @@ export const ReviewForm = () => {
                 farm: farm.name
             })
             .then(() => history.push(`/farms/detail/${farmId}`))
-        }
+        }}
     
 /* -------------------- The contents of the form -------------------- */
 
@@ -94,7 +113,7 @@ export const ReviewForm = () => {
                 <fieldset>
                     <div className="form-group">
                         <label htmlFor="name">Review name:</label>
-                        <input type="text" id="name" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Review name" defaultValue={review.name}/>
+                        <input type="text" id="name" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Review name" value={review.name}/>
                     </div>
                 </fieldset>
                 <fieldset>
@@ -108,15 +127,17 @@ export const ReviewForm = () => {
                         <div className="">
                             <label htmlFor="reviewText">Share your experience:</label>
                         </div>
-                        <input type="textarea" id="reviewText" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Tell us all about it!" value={review.reviewText}/>
+                        <textarea type="textarea" id="reviewText" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Tell us all about it!" value={review.reviewText}/>
                     </div>
                 </fieldset>
                 <div className="centerReviewSubmitBtn">
                     <button id={review.farmId} className="btn btn-primary"
-                        onClick={
-                            handleClickSaveReview
-                            }>
-                        Submit Review
+                        disabled={isLoading}
+                        onClick={ event => {
+                            event.preventDefault()
+                            handleClickSaveReview()
+                        }}>
+                        {"Save Review"}
                     </button>
                 </div>
             </form> 
