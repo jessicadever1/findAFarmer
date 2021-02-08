@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react"
-import { UserContext } from "./CustomerProvider"
+import { UserContext } from "./UserProvider"
 import { UserCard } from "./UserCard"
 import "./User.css"
 

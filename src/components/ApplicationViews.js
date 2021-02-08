@@ -32,6 +32,10 @@ export const ApplicationViews = () => {
                         <ReviewForm />
                     </Route>
 
+                    <Route exact path="/reviews/edit/:farmId(\d+)">
+                        <ReviewForm />
+                    </Route>
+
                 </FarmProvider>
             </ReviewProvider>
         </UserProvider>
