@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react"
-import { FarmContext, getFarmById } from "./FarmProvider"
+import { FarmContext } from "./FarmProvider"
 import "./Farm.css"
 import { useParams, useHistory } from "react-router-dom"
 import { Link } from "react-router-dom"
@@ -16,10 +16,8 @@ export const FarmDetail = () => {
     const { getFarmById } = useContext(FarmContext)
     const [ farm, setFarm ] = useState({})
     const { reviews, getReviews } = useContext(ReviewContext)
-    const { farms, getFarms } = useContext(FarmContext)
     const { farmId } = useParams()
     let userId = localStorage.getItem("find-a-farm_user")
-    const history = useHistory()
 
 /* -------------------- To be able to see only the reviews associated with current farm -------------------- */
 
@@ -30,7 +28,6 @@ export const FarmDetail = () => {
 /* -------------------- To get the current farm selected, and the reviews associated with it -------------------- */
 
     useEffect(() => {
-        console.log("useEffect", farmId)
         getFarmById(farmId)
         .then((response) => {
             setFarm(response)
@@ -38,7 +35,7 @@ export const FarmDetail = () => {
     }, [])
 
     useEffect(() => {
-        getReviews().then(getFarms)
+        getReviews()
     }, [])
 
 /* -------------------- To make sure every farm detail has a default profile pic, if no profile pic exists -------------------- */
@@ -63,7 +60,7 @@ export const FarmDetail = () => {
                 </div>
             </div>
                 <section className="farm__buttons">
-                    <button className="farmDetailsBtn"><Link className="a" to={`/farms/${userId}`}>Back to All Farms</Link></button>
+                    <button className="farmDetailsBtn"><Link className="a" to={`/farms`}>Back to All Farms</Link></button>
                     <button className="addReviewBtn"><Link className="a" to={`/reviews/create/${farm.id}`}>Add Review</Link></button>
                 </section>
                         
