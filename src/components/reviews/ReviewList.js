@@ -6,7 +6,7 @@ import { FarmContext } from "../farm/FarmProvider"
 import { UserContext } from "../users/UserProvider"
 
 export const ReviewList = () => {
-debugger
+
 /* -------------------- To have access to farms, reviews and user info -------------------- */
 
     const { reviews, getReviews } = useContext(ReviewContext)

@@ -49,14 +49,11 @@ export const ReviewForm = () => {
                 })
             } 
         })
-    }, [])
-
-    useEffect(() => {
         getFarmById(farmId)
         .then(farm => {
             setFarm(farm)
         })
-    }) 
+    }, [])
 
 /* -------------------- To capture and render the inputs to the form -------------------- */
 
