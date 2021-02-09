@@ -7,7 +7,7 @@ import { HeaderCard } from "./header/HeaderCard"
 import { ReviewProvider } from "./reviews/ReviewProvider"
 import { ReviewForm } from "./reviews/ReviewForm"
 import { UserProvider } from "./users/UserProvider"
-import { UserCard } from "./users/UserCard"
+import { ReviewEditForm } from "./reviews/ReviewEditForm"
 
 export const ApplicationViews = () => {
     
@@ -30,6 +30,10 @@ export const ApplicationViews = () => {
 
                     <Route exact path="/reviews/create/:farmId(\d+)">
                         <ReviewForm />
+                    </Route>
+
+                    <Route exact path="/reviews/edit/:reviewId(\d+)">
+                        <ReviewEditForm />
                     </Route>
 
                 </FarmProvider>

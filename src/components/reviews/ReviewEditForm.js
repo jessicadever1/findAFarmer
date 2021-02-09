@@ -5,11 +5,11 @@ import { useHistory, useParams } from "react-router-dom"
 import "./Review.css"
 
 
-export const ReviewForm = () => {
+export const ReviewEditForm = () => {
 
 /* -------------------- To have access to farms and reviews -------------------- */
 
-    const { addReview, getReviewById } = useContext(ReviewContext)
+    const { getReviewById, editReview } = useContext(ReviewContext)
     const { farms, getFarms, getFarmById } = useContext(FarmContext)
 
 /* -------------------- To access userId, and set userId to each review -------------------- */
@@ -26,6 +26,8 @@ export const ReviewForm = () => {
         "farm": ""
     })
 
+    const [isLoading, setIsLoading] = useState(true)
+
 /* -------------------- To have access individual farm that has been selected -------------------- */
 
     const [farm, setFarm] = useState(
@@ -34,8 +36,8 @@ export const ReviewForm = () => {
 
 /* -------------------- Use the URL to set the farmId and reviewId -------------------- */
 
-    const { farmId } = useParams()
     const { reviewId } = useParams()
+    console.log("this is the reviewID", reviewId)
     const history = useHistory()
 
 /* -------------------- To use the farms and get the individual farms by the reviewId, and then to get specific farm -------------------- */
@@ -43,20 +45,19 @@ export const ReviewForm = () => {
     useEffect(() => {
         getFarms().then(() => {
             if (reviewId){
-                getReviewById(reviewId)
+            
+                getReviewById(parseInt(reviewId))
                 .then(review => {
+                    console.log("review", review)
                     setReview(review)
+                    
+                    // setIsLoading(false)
                 })
-            } 
+            } else {
+                console.log("yup it's broken")
+            }
         })
     }, [])
-
-    useEffect(() => {
-        getFarmById(farmId)
-        .then(farm => {
-            setFarm(farm)
-        })
-    }) 
 
 /* -------------------- To capture and render the inputs to the form -------------------- */
 
@@ -72,20 +73,23 @@ export const ReviewForm = () => {
 
 /* -------------------- To save all of the reviews and then send the user back to the farm they reviewed -------------------- */
 
-    const handleClickSaveReview = (event) => {
-        event.preventDefault()
-        
-            addReview({
-                userId: parseInt(review.userId),
-                username: review.userId.username,
-                farmId: parseInt(farmId),
-                date: review.date,
-                name: review.name,
-                reviewText:review.reviewText,
-                farm: farm.name
-            })
-            .then(() => history.push(`/farms/detail/${farmId}`))
-        }
+    const handleClickSaveReview = () => {
+        // setIsLoading(true)
+
+        if (reviewId) {
+            editReview(
+                {
+                    userId: parseInt(review.userId),
+                    username: review.userId.username,
+                    farmId: parseInt(review.farm.id),
+                    date: review.date,
+                    name: review.name,
+                    reviewText:review.reviewText,
+                    farm: farm.name,
+                    id: review.id
+                }
+            ).then(() => history.push(`/farms/detail/${review.farmId}`))
+        } }
     
 /* -------------------- The contents of the form -------------------- */
 
@@ -114,11 +118,13 @@ export const ReviewForm = () => {
                     </div>
                 </fieldset>
                 <div className="centerReviewSubmitBtn">
-                    <button id={review.farmId} className="btn btn-primary"
-                        onClick={ 
-                            handleClickSaveReview
-                        }>
-                        Save Review
+                    <button id={review.farm.id} className="btn btn-primary"
+                        // disabled={isLoading}
+                        onClick={ event => {
+                            event.preventDefault()
+                            handleClickSaveReview()
+                        }}>
+                        {"Save Review"}
                     </button>
                 </div>
             </form> 

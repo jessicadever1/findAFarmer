@@ -8,7 +8,7 @@ export const ReviewProvider = (props) => {
     const [reviews, setReviews] = useState([])
 
     const getReviews = () => {
-        return fetch(`http://localhost:8014/reviews?_expand=farm`)
+        return fetch(`http://localhost:8014/reviews?_expand=farm&_expand=user`)
         .then(res => res.json())
         .then(setReviews)
     }
@@ -36,11 +36,24 @@ export const ReviewProvider = (props) => {
         .then(getReviews)
     }
 
+    const editReview = review => {
+        console.log(review)
+        return fetch(`http://localhost:8014/reviews/${review.id}`, {
+            method: "PUT",
+            headers: {
+            "Content-Type": "application/json"
+            },
+            body: JSON.stringify(review)
+        })
+        .then(response => response.json())
+        .then(getReviews)
+    }
+
 /* -------------------- To give access to these reviews to all other components -------------------- */
 
     return (
         <ReviewContext.Provider value={{
-            reviews, getReviews, addReview, deleteReview, getReviewById
+            reviews, getReviews, addReview, deleteReview, getReviewById, editReview
         }}>
             {props.children}
         </ReviewContext.Provider>
