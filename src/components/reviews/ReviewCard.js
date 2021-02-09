@@ -5,7 +5,7 @@ import trashIcon from "../images/trash.png"
 import editIcon from "../images/editIcon.png"
 import { ReviewContext } from "./ReviewProvider"
 import { useHistory } from "react-router-dom"
-import { UserContext } from "../users/UserProvider"
+import { ReviewBtns } from "./ReviewBtns"
 
 export const ReviewCard = ({ review, user, farm }) => {
 
@@ -33,6 +33,16 @@ export const ReviewCard = ({ review, user, farm }) => {
         }
     }
 
+    const hideButtons = () => {
+        if (currentUser === review.userId) {
+            return (
+                <>
+                    <ReviewBtns key={review.id} review={review} user={user} farm={farm} />
+                </>
+            )
+        }
+    } 
+
 /* -------------------- Contents of individual reviews -------------------- */
 
     return (
@@ -47,10 +57,9 @@ export const ReviewCard = ({ review, user, farm }) => {
                 <div className="review__date">{review.date}</div>
                 <p className="review__reviewText">{review.reviewText}</p>
             </section>
-            <section className="reviewBtns">
-                <button onClick={handleClickDeleteReview} className="trashBtn"><img className="trashIcon" src={trashIcon} width="25" height="25" alt="delete icon"></img></button>
-                <button onClick={handleClickEditReview} className="editBtn"><img className="editIcon" src={editIcon} width="25" height="25" alt="edit icon"></img></button>
-            </section>
+            <div className="reviewBtnsDiv">
+                {hideButtons()}
+            </div>
         </article>
     )
 }

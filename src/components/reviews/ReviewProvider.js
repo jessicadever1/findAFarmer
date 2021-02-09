@@ -37,7 +37,6 @@ export const ReviewProvider = (props) => {
     }
 
     const editReview = review => {
-        console.log(review)
         return fetch(`http://localhost:8014/reviews/${review.id}`, {
             method: "PUT",
             headers: {

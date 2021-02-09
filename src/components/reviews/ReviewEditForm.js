@@ -37,7 +37,6 @@ export const ReviewEditForm = () => {
 /* -------------------- Use the URL to set the farmId and reviewId -------------------- */
 
     const { reviewId } = useParams()
-    console.log("this is the reviewID", reviewId)
     const history = useHistory()
 
 /* -------------------- To use the farms and get the individual farms by the reviewId, and then to get specific farm -------------------- */
@@ -50,8 +49,6 @@ export const ReviewEditForm = () => {
                 .then(review => {
                     console.log("review", review)
                     setReview(review)
-                    
-                    // setIsLoading(false)
                 })
             } else {
                 console.log("yup it's broken")
