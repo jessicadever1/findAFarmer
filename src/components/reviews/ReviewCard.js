@@ -29,7 +29,7 @@ export const ReviewCard = ({ review, user, farm }) => {
 
     const handleClickEditReview = () => {
         if (currentUser === review.userId) {
-            history.push(`/reviews/edit/${farm.id}`)
+            history.push(`/reviews/edit/${review.id}`)
         }
     }
 
