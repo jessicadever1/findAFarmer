@@ -48,6 +48,7 @@ header {
 
 .logOutBtn {
     position: absolute;
+    top: 1rem;
     right: 1rem;
     min-width: 10%;
     min-height: 2rem;

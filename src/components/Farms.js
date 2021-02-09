@@ -22,8 +22,8 @@ export const Farms = () => (
             }
         }}
     />
-        
         <Route path="/welcome">
+            <HeaderCard />
             <WelcomePage /> 
         </Route>  
     </>

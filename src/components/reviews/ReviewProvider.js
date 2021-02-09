@@ -37,13 +37,15 @@ export const ReviewProvider = (props) => {
     }
 
     const editReview = review => {
-        return fetch(`http://localhost:8014/reviews/`, {
+        console.log(review)
+        return fetch(`http://localhost:8014/reviews/${review.id}`, {
             method: "PUT",
             headers: {
             "Content-Type": "application/json"
             },
             body: JSON.stringify(review)
         })
+        .then(response => response.json())
         .then(getReviews)
     }
 
