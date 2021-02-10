@@ -1,7 +1,6 @@
 import React from "react"
 import { Route } from "react-router-dom"
 import { Register } from "./auth/Register"
-import { HeaderCard } from "./header/HeaderCard"
 import { Login } from "./auth/Login"
 import "./WelcomePage.css"
 

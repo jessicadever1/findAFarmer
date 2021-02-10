@@ -4,6 +4,8 @@ import { WelcomePage } from "./WelcomePage";
 import { ApplicationViews } from "./ApplicationViews";
 import { HeaderCard } from "./header/HeaderCard";
 import "./Farms.css";
+import { EcoList } from "./eco/EcoList";
+import { EcoProvider } from "./eco/EcoProvider";
 
 export const Farms = () => (
 
@@ -22,9 +24,12 @@ export const Farms = () => (
             }
         }}
     />
+    <EcoProvider>
         <Route path="/welcome">
             <HeaderCard />
+            <EcoList />
             <WelcomePage /> 
         </Route>  
+    </EcoProvider>
     </>
 )
