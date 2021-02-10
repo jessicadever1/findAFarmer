@@ -31,7 +31,7 @@ export const ReviewProvider = (props) => {
 
     const deleteReview = reviewId => {
         return fetch(`http://localhost:8014/reviews/${reviewId}`, {
-            method: "DELETE"
+            method: ""
         })
         .then(getReviews)
     }
