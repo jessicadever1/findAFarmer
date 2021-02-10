@@ -70,50 +70,52 @@ export const FarmDetail = () => {
                         <h3>Instructions: </h3>
                         <div className="farm__instructions">{farm.instructions}</div>
                     </article>
-                    <div className="farm__includeList">
-                        <h3 className="farm__include">Include</h3>
-                        <ul>
-                            <li>Vegetables*</li>
-                            <li>Fruit*</li>
-                            <li>Grains</li>
-                            <li>Nuts & Seeds</li>
-                            <li>Prepared Food</li>
-                            <li>Vegetables*</li>
-                            <li>Fruit*</li>
-                            <li>Grains</li>
-                            <li>Nuts & Seeds</li>
-                            <li>Prepared Food</li>
-                            <li>Vegetables*</li>
-                            <li>Fruit*</li>
-                            <li>Grains</li>
-                            <li>Nuts & Seeds</li>
-                            <li>Prepared Food</li>
-                        </ul>
-                        <p>*See exclusions</p>
-                    </div>
-                    <div className="farm__excludeList">
-                        <h3 className="farm__exclude">Exclude</h3>
-                        <ul>
-                            <li>Raw Meat</li>
-                            <li>Human Remains</li>
-                            <li>Food Stickers</li>
-                            <li>Plastic</li>
-                            <li>Canned Beans</li>
-                            <li>Avocado (all parts)</li>
-                            <li>Cherries</li>
-                            <li>Chocolate</li>
-                            <li>Kale</li>
-                            <li>Raw Meat</li>
-                            <li>Human Remains</li>
-                            <li>Food Stickers</li>
-                            <li>Plastic</li>
-                            <li>Canned Beans</li>
-                            <li>Avocado (all parts)</li>
-                            <li>Cherries</li>
-                            <li>Chocolate</li>
-                            <li>Kale</li>
-                        </ul>
-                    </div>
+                    <section className="includeExcludeDivs">
+                        <div className="farm__includeList">
+                            <h3 className="farm__include">Include</h3>
+                            <ul>
+                                <li>Vegetables*</li>
+                                <li>Fruit*</li>
+                                <li>Grains</li>
+                                <li>Nuts & Seeds</li>
+                                <li>Prepared Food</li>
+                                <li>Vegetables*</li>
+                                <li>Fruit*</li>
+                                <li>Grains</li>
+                                <li>Nuts & Seeds</li>
+                                <li>Prepared Food</li>
+                                <li>Vegetables*</li>
+                                <li>Fruit*</li>
+                                <li>Grains</li>
+                                <li>Nuts & Seeds</li>
+                                <li>Prepared Food</li>
+                            </ul>
+                            <p>*See exclusions</p>
+                        </div>
+                        <div className="farm__excludeList">
+                            <h3 className="farm__exclude">Exclude</h3>
+                            <ul>
+                                <li>Raw Meat</li>
+                                <li>Human Remains</li>
+                                <li>Food Stickers</li>
+                                <li>Plastic</li>
+                                <li>Canned Beans</li>
+                                <li>Avocado (all parts)</li>
+                                <li>Cherries</li>
+                                <li>Chocolate</li>
+                                <li>Kale</li>
+                                <li>Raw Meat</li>
+                                <li>Human Remains</li>
+                                <li>Food Stickers</li>
+                                <li>Plastic</li>
+                                <li>Canned Beans</li>
+                                <li>Avocado (all parts)</li>
+                                <li>Cherries</li>
+                                <li>Chocolate</li>
+                                <li>Kale</li>
+                            </ul>
+                        </div>
+                    </section>
                 </section>
                 <article className="farm__reviews">
                     <h2 className="farm__reviewHeader">Reviews</h2>

@@ -154,3 +154,7 @@ button:focus {outline:0;}
     display: flex;
     justify-content: flex-end;
 }
+
+.reviewBtnsDiv {
+    width: 10%;
+}

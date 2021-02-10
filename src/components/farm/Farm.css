@@ -115,6 +115,7 @@ a {
 
 .farm__instructionAndLists {
     display: flex;
+    justify-content: center;
 }
 
 .farm__instructions {
@@ -127,16 +128,17 @@ a {
 }
 
 .farm__instructionsSection {
-    width: 50%;
+    width: 45.5%;
     padding: 1rem;
     margin: .5rem;
     background-color: #178B7C;
     border-radius: 5px;
+    max-height: 15rem;
 }
 
 .farm__includeList {
     color:#178B7C;
-    width: 25%;
+    width: 45%;
     padding: .5rem;
     margin: .5rem;
     background-color: white;
@@ -155,7 +157,7 @@ p {
 
 .farm__excludeList {
     color:#FF9F1C;
-    width: 25%;
+    width: 45%;
     max-height: 15rem;
     padding: .5rem;
     margin: .5rem;
@@ -207,4 +209,12 @@ ul {
 .review__date, .review__reviewText {
     color: white;
     margin-left: 0;
+}
+
+.includeExcludeDivs {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    
+    margin-left: 1rem;
 }
