@@ -2,7 +2,9 @@ body {
     color: white;
 }
 
-
+.form--nonFarmerLogin {
+    background-color: #5BC9B9;
+}
 
 fieldset, input, button {
     border: none;
@@ -105,4 +107,13 @@ label {
 .center {
     display: flex;
     justify-content: center;
+}
+
+.regInfoStack {
+    display: flex;
+    flex-direction: column;
+}
+
+.firstNameLastName {
+    display: flex;
 }
