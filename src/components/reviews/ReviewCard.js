@@ -43,11 +43,16 @@ export const ReviewCard = ({ review, user, farm }) => {
         }
     } 
 
+    if (review.user.imageURL === "") {
+        let defaultUserPic = userPicture
+        review.user.imageURL = defaultUserPic
+    }
+
 /* -------------------- Contents of individual reviews -------------------- */
 
     return (
         <article className="review">
-            <img className="reviewerProfilePic" src={userPic} alt="user default pic"></img>
+            <img className="reviewerProfilePic" src={review.user.imageURL} alt="user default pic"></img>
             
             <section className="review__userInfo">
                 <div className="reviewBy">

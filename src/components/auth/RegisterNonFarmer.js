@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react"
 import { useHistory } from "react-router-dom"
 import "./Login.css"
+import {Image, Video, Transformation, CloudinaryContext} from 'cloudinary-react';
 
 export const RegisterNonFarmer = (props) => {
     const firstName = useRef()
@@ -12,7 +13,6 @@ export const RegisterNonFarmer = (props) => {
     const conflictDialog = useRef()
     const history = useHistory()
 
-    const [isLoading, setIsLoading] = useState(true)
     const [imageURL, setImageURL] = useState("")
 
     const [loading, setLoading] = useState(false)
@@ -57,7 +57,7 @@ export const RegisterNonFarmer = (props) => {
                         body: JSON.stringify({
                             email: email.current.value,
                             name: `${firstName.current.value} ${lastName.current.value}`,
-                            imageURL: ""
+                            imageURL: imageURL
                         })
                     })
                     .then(res => res.json())
