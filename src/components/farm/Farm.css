@@ -82,6 +82,8 @@ a:visited, a:active, .a:visited, .a:active {
     margin-bottom: .75rem;
     margin-top: .75rem;
     min-height: 2rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
 }
 
 a {
@@ -217,4 +219,14 @@ ul {
     justify-content: center;
     
     margin-left: 1rem;
+}
+
+.farms {
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.farmFilter {
+    padding-left: 5rem;
+    padding-right: 5rem;
 }

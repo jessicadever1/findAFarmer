@@ -2,7 +2,7 @@ import React, { useRef } from "react"
 import { useHistory } from "react-router-dom"
 import "./Login.css"
 
-export const Register = (props) => {
+export const RegisterNonFarmer = (props) => {
     const firstName = useRef()
     const lastName = useRef()
     const email = useRef()

@@ -1,6 +1,7 @@
 import React from "react"
 import { Route } from "react-router-dom"
-import { Register } from "./auth/Register"
+import { Register } from "./auth/RegisterNonFarmer"
+import { RegisterBtns } from "./auth/InitalRegister"
 import { Login } from "./auth/Login"
 import "./WelcomePage.css"
 
@@ -12,7 +13,7 @@ export const WelcomePage = () => {
             <>
 
                 <Route path="/welcome">
-                    <Register />
+                    <RegisterBtns />
                     <Login />
                 </Route>
 

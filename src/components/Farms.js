@@ -6,6 +6,8 @@ import { HeaderCard } from "./header/HeaderCard";
 import "./Farms.css";
 import { EcoList } from "./eco/EcoList";
 import { EcoProvider } from "./eco/EcoProvider";
+import { RegisterFarmer } from "./auth/RegisterFarmer"
+import { RegisterNonFarmer } from "./auth/RegisterNonFarmer"
 
 export const Farms = () => (
 
@@ -33,5 +35,13 @@ export const Farms = () => (
             </section>
         </Route>  
     </EcoProvider>
+    <Route exact path="/registerFarmer">
+        <HeaderCard />
+        <RegisterFarmer />
+    </Route>
+    <Route exact path="/registerNonFarmer">
+        <HeaderCard />
+        <RegisterNonFarmer />
+    </Route>
     </>
 )

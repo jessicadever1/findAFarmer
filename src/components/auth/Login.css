@@ -73,3 +73,36 @@ label {
 .userEntrance {
     align-content: center;
 }
+
+.getStarted {
+    text-align: center;
+}
+
+.notAFarmer {
+    border-radius: 5px;
+    color: #178B7C; 
+    min-width: 45%;
+    min-height: 2rem;
+    text-decoration: none;
+    margin: 1rem;
+}
+
+.iAmAFarmer {
+    border-radius: 5px;
+    color: #178B7C; 
+    min-width: 45%;
+    min-height: 2rem;
+    text-decoration: none;
+    margin: 1rem;
+}
+
+.initialLoginBtns {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
