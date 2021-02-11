@@ -27,8 +27,10 @@ export const Farms = () => (
     <EcoProvider>
         <Route path="/welcome">
             <HeaderCard />
-            <EcoList />
-            <WelcomePage /> 
+            <section className="landingPageLeftAndRight">
+                <EcoList />
+                <WelcomePage /> 
+            </section>
         </Route>  
     </EcoProvider>
     </>

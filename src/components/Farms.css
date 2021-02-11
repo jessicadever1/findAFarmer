@@ -3,3 +3,10 @@
     flex-direction: column;
     justify-content: center;
 }
+
+.landingPageLeftAndRight {
+    display: flex;
+    justify-content: center;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}

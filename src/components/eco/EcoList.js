@@ -13,15 +13,16 @@ export const EcoList = () => {
 
     return (
         <>
-
-            <div className="ecoTips">
-                {
-                    ecoTips.map(ecoTip => {
-                        return <EcoCard key={ecoTip.id} ecoTip={ecoTip} />
-                    })
-                }
-            </div>
-
+            <section className="ecoContainer">
+                <h2 className="ecoHeader">Eco Tips</h2>
+                <div className="ecoTips"> 
+                    {
+                        ecoTips.map(ecoTip => {
+                            return <EcoCard key={ecoTip.id} ecoTip={ecoTip} />
+                        })
+                    }
+                </div>
+            </section>
         </>
     )
 
