@@ -60,6 +60,7 @@
 .reviewTextArea {
     display: flex;
     flex-direction: column;
+    white-space: pre-wrap;
 }
 
 #submitReviewBtn {

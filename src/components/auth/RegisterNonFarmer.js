@@ -77,8 +77,9 @@ export const RegisterNonFarmer = (props) => {
 /* -------------------- The contents of the register user box -------------------- */
 
     return (
-        
+        <>
         <section className="container--registerNonFarmer" style={{ textAlign: "center" }}>
+        <div className="leftSidePadding"></div>
 
             <dialog className="dialog dialog--password" ref={conflictDialog}>
                 <div>Account with that email address already exists</div>
@@ -91,23 +92,23 @@ export const RegisterNonFarmer = (props) => {
                     <section className="form--regNonFarmer">
                             <section className="firstNameLastName">
                                 <fieldset className="regInfoStack">
-                                    <label htmlFor="firstName"> First Name </label>
-                                    <input ref={firstName} type="text" name="firstName" className="form-control form-name" placeholder="First name" required autoFocus />
+                                    <label htmlFor="firstName" className="firstName"> First Name </label>
+                                    <input ref={firstName} type="text" name="firstName" className="form-control form-name firstNameLabel" placeholder="First name" required autoFocus />
                                 </fieldset>
                                 <fieldset className="regInfoStack">
-                                    <label htmlFor="lastName"> Last Name </label>
-                                    <input ref={lastName} type="text" name="lastName" className="form-control form-name" placeholder="Last name" required />
+                                    <label htmlFor="lastName" className="lastName"> Last Name </label>
+                                    <input ref={lastName} type="text" name="lastName" className="form-control form-name lastNameLabel" placeholder="Last name" required />
                                 </fieldset>
                             </section>
                     </section>
                     <section className="usernameAndImage">
                         <fieldset className="regInfoStack">
-                            <label htmlFor="username"> Username </label>
-                            <input ref={username} type="text" name="username" className="form-control form-username" placeholder="Username" required />
+                            <label htmlFor="username" className="userName"> Username </label>
+                            <input ref={username} type="text" name="username" id="userNameLabel" className="form-control form-username userNameLabel" placeholder="Username" required />
                         </fieldset>
                         <div className="image">
-                            <div>Upload Image</div>
-                                <input type="file" name="file" placeholder="Upload an image" onChange={uploadImage}/>
+                            <div className="uploadImg">Upload Image</div>
+                                <input className="chooseFileBtn" type="file" name="file" placeholder="Upload an image" onChange={uploadImage}/>
                                 {loading ? (
                                     <h3>Loading...</h3>
                                 ) : (
@@ -115,13 +116,13 @@ export const RegisterNonFarmer = (props) => {
                                     )}
                         </div>
                     </section>
-                    <fieldset>
-                        <label htmlFor="zip"></label>
-                        <input ref={zip} type="text" name="zip" className="form-control" placeholder="Zip Code" required />
+                    <fieldset className="regInfoStack">
+                        <label htmlFor="zip" className="zipCode">Zip Code</label>
+                        <input ref={zip} type="text" name="zip" className="form-control zipCodeLabel" placeholder="Zip Code" required />
                     </fieldset>
                     <fieldset className="regInfoStack">
-                        <label htmlFor="inputEmail"> Email address </label>
-                        <input ref={email} type="email" name="email" className="form-control" placeholder="Email address" required />
+                        <label htmlFor="inputEmail" className="emailAddress"> Email address </label>
+                        <input ref={email} type="email" name="email" className="form-control emailAddressLabel" placeholder="Email address" required />
                     </fieldset>
                     <fieldset className="loginBtnFieldset">
                         <button className="loginBtn" type="submit"> Register </button>
@@ -129,6 +130,8 @@ export const RegisterNonFarmer = (props) => {
                     
                 
             </form>
+        <div className="rightSidePadding"></div>
         </section>
+    </>
     )
 }

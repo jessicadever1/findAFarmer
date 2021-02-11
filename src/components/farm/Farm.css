@@ -211,6 +211,7 @@ ul {
 .review__date, .review__reviewText {
     color: white;
     margin-left: 0;
+    white-space: pre-wrap;
 }
 
 .includeExcludeDivs {

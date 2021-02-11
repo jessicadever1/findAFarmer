@@ -3,8 +3,31 @@ body {
 }
 
 .form--nonFarmerLogin {
-    background-color: #5BC9B9;
+    background-color:white;
+    color:#178B7C;
+    width: 60%;
 }
+
+.firstNameLabel, .lastNameLabel, .userNameLabel, .zipCodeLabel, .emailAddressLabel {
+    border: .05rem dotted #178B7C;
+    width: 40%;
+    align-content: center;
+}
+
+.firstName, .lastName, .userName, .zipCode, .emailAddress, .uploadImg {
+    text-align: left;
+    margin-bottom: 1rem;
+    margin-left: 3rem;
+}
+
+#userNameLabel {
+    margin-left: 3rem;
+}
+
+input#file-upload-button {
+    border: none;
+}
+input { border: none }
 
 fieldset, input, button {
     border: none;
@@ -112,8 +135,28 @@ label {
 .regInfoStack {
     display: flex;
     flex-direction: column;
+    width: 50%;
 }
 
 .firstNameLastName {
     display: flex;
+}
+
+.usernameAndImage {
+    display: flex;
+}
+
+.rightSidePadding {
+    width: 20%;
+    background-color: #178B7C;
+}
+
+.leftSidePadding {
+    width: 20%;
+    background-color: #178B7C;
+}
+
+.container--registerNonFarmer {
+    display: flex;
+    justify-content: center;
 }
