@@ -57,3 +57,23 @@
     font-size: 3rem;
     margin-bottom: 0;
 }
+
+.leftArrow {
+    display: none;
+}
+
+.leftArrow:hover {
+    position: relative;
+    top: 15rem;
+    margin-left: 0rem;
+}
+
+.rightArrow {
+    display: none;
+}
+
+.rightArrow:hover {
+    position: relative;
+    top: 15rem;
+    margin-right: 1rem;
+}
