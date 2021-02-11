@@ -47,11 +47,19 @@ export const Login = props => {
                     <h2 className="form--heading">Welcome Back!</h2>
                         <section className="loginFields">
                             <fieldset>
-                                <label htmlFor="inputEmail"> Email address </label>
+                                <label htmlFor="inputEmail"> </label>
                                 <input ref={email} type="email"
                                     id="email"
                                     className="form-control"
                                     placeholder="Email address"
+                                    required autoFocus />
+                            </fieldset>
+                            <fieldset>
+                                <label htmlFor="inputPassword"> </label>
+                                <input type="text"
+                                    id="password"
+                                    className="form-control"
+                                    placeholder="Password"
                                     required autoFocus />
                             </fieldset>
                             <fieldset className="loginBtnFieldset">

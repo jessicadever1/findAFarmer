@@ -11,7 +11,7 @@ fieldset, input, button {
 
 fieldset {
     display: flex;
-    justify-content: left;
+    justify-content: center;
 }
 
 .form-control {
