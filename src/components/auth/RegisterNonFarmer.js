@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react"
 import { useHistory } from "react-router-dom"
 import "./Login.css"
 import {Image, Video, Transformation, CloudinaryContext} from 'cloudinary-react';
+import audioTag from "../audio/snort.mp3"
 
 export const RegisterNonFarmer = (props) => {
     const firstName = useRef()
@@ -9,6 +10,7 @@ export const RegisterNonFarmer = (props) => {
     const username = useRef()
     const email = useRef()
     const zip = useRef()
+    const audioTag = useRef()
     const verifyPassword = useRef()
     const conflictDialog = useRef()
     const history = useHistory()
@@ -57,7 +59,9 @@ export const RegisterNonFarmer = (props) => {
                         body: JSON.stringify({
                             email: email.current.value,
                             name: `${firstName.current.value} ${lastName.current.value}`,
-                            imageURL: imageURL
+                            imageURL: imageURL,
+                            username: username.current.value,
+                            zip: zip.current.value
                         })
                     })
                     .then(res => res.json())
@@ -74,6 +78,13 @@ export const RegisterNonFarmer = (props) => {
             })
     }
 
+    
+        let audio = new Audio(audioTag)
+        
+        const start = () => {
+            audio.play()
+        }
+        
 /* -------------------- The contents of the register user box -------------------- */
 
     return (
@@ -93,19 +104,15 @@ export const RegisterNonFarmer = (props) => {
                             <section className="firstNameLastName">
                                 <fieldset className="regInfoStack">
                                     <label htmlFor="firstName" className="firstName"> First Name </label>
-                                    <input ref={firstName} type="text" name="firstName" className="form-control form-name firstNameLabel" placeholder="First name" required autoFocus />
+                                    <input ref={firstName} id="firstNameLabel" type="text" name="firstName" className="form-control form-name firstNameLabel" placeholder="First name" required autoFocus />
                                 </fieldset>
                                 <fieldset className="regInfoStack">
                                     <label htmlFor="lastName" className="lastName"> Last Name </label>
-                                    <input ref={lastName} type="text" name="lastName" className="form-control form-name lastNameLabel" placeholder="Last name" required />
+                                    <input ref={lastName} id="lastNameLabel" type="text" name="lastName" className="form-control form-name lastNameLabel" placeholder="Last name" required />
                                 </fieldset>
                             </section>
                     </section>
-                    <section className="usernameAndImage">
-                        <fieldset className="regInfoStack">
-                            <label htmlFor="username" className="userName"> Username </label>
-                            <input ref={username} type="text" name="username" id="userNameLabel" className="form-control form-username userNameLabel" placeholder="Username" required />
-                        </fieldset>
+                    <section className="usernameImage">
                         <div className="image">
                             <div className="uploadImg">Upload Image</div>
                                 <input className="chooseFileBtn" type="file" name="file" placeholder="Upload an image" onChange={uploadImage}/>
@@ -115,19 +122,24 @@ export const RegisterNonFarmer = (props) => {
                                         <img src={imageURL} style={{ width: "100px" }} />
                                     )}
                         </div>
-                    </section>
-                    <fieldset className="regInfoStack">
-                        <label htmlFor="zip" className="zipCode">Zip Code</label>
-                        <input ref={zip} type="text" name="zip" className="form-control zipCodeLabel" placeholder="Zip Code" required />
-                    </fieldset>
-                    <fieldset className="regInfoStack">
-                        <label htmlFor="inputEmail" className="emailAddress"> Email address </label>
-                        <input ref={email} type="email" name="email" className="form-control emailAddressLabel" placeholder="Email address" required />
-                    </fieldset>
-                    <fieldset className="loginBtnFieldset">
-                        <button className="loginBtn" type="submit"> Register </button>
-                    </fieldset>
-                    
+                        <div className="loginLeft">
+                            <fieldset className="regInfoStack">
+                                <label htmlFor="username" className="userName"> Username </label>
+                                <input ref={username} type="text" name="username" id="userNameLabel" className="form-control form-username userNameLabel" placeholder="Username" required />
+                            </fieldset>
+                            <fieldset className="regInfoStack">
+                                <label htmlFor="zip" className="zipCode">Zip Code</label>
+                                <input ref={zip} type="text" name="zip" id="zipCodeLabel" className="form-control zipCodeLabel" placeholder="Zip Code" required />
+                            </fieldset>
+                            <fieldset className="regInfoStack">
+                                <label htmlFor="inputEmail" className="emailAddress"> Email address </label>
+                                <input ref={email} type="email" name="email" id="emailAddressLabel" className="form-control emailAddressLabel" placeholder="Email address" required />
+                            </fieldset>
+                        </div>
+                </section>
+                            <fieldset className="loginBtnFieldset">
+                                <button className="loginBtn" type="submit" onClick={start}> Register </button>
+                            </fieldset>
                 
             </form>
         <div className="rightSidePadding"></div>

@@ -17,21 +17,21 @@ export const ReviewCard = ({ review, user, farm }) => {
     const currentUser = parseInt(localStorage.getItem("find-a-farm_user"))
     const history = useHistory()
 
-    const handleClickDeleteReview = () => {
+    // const handleClickDeleteReview = () => {
         
-        if (currentUser === review.userId) {
-            deleteReview(review.id)
-            .then(() => {
-                history.push(`/farms/detail/${farm.id}`)
-            })
-        }
-    }
+    //     if (currentUser === review.userId) {
+    //         deleteReview(review.id)
+    //         .then(() => {
+    //             history.push(`/farms/detail/${farm.id}`)
+    //         })
+    //     }
+    // }
 
-    const handleClickEditReview = () => {
-        if (currentUser === review.userId) {
-            history.push(`/reviews/edit/${review.id}`)
-        }
-    }
+    // const handleClickEditReview = () => {
+    //     if (currentUser === review.userId) {
+    //         history.push(`/reviews/edit/${review.id}`)
+    //     }
+    // }
 
     const hideButtons = () => {
         if (currentUser === review.userId) {

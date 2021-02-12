@@ -6,22 +6,36 @@ body {
     background-color:white;
     color:#178B7C;
     width: 60%;
+    margin-right: 4rem;
+    margin-left: 3rem;
 }
 
 .firstNameLabel, .lastNameLabel, .userNameLabel, .zipCodeLabel, .emailAddressLabel {
     border: .05rem dotted #178B7C;
-    width: 40%;
+    width: 100%;
     align-content: center;
+    margin-left: 0rem;
 }
 
-.firstName, .lastName, .userName, .zipCode, .emailAddress, .uploadImg {
+.firstName, .lastName {
     text-align: left;
     margin-bottom: 1rem;
-    margin-left: 3rem;
+    margin-left: 1rem;
 }
 
-#userNameLabel {
-    margin-left: 3rem;
+.userName, .zipCode, .emailAddress {
+    text-align: left;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+.zipCodeLabel {
+    margin-left: -3rem;
+}
+
+#userNameLabel, #firstNameLabel, #lastNameLabel {
+    margin-left: 1rem;
+    min-width: 17rem;
 }
 
 input#file-upload-button {
@@ -136,27 +150,59 @@ label {
     display: flex;
     flex-direction: column;
     width: 50%;
+    text-align: left;
 }
 
 .firstNameLastName {
     display: flex;
 }
 
-.usernameAndImage {
-    display: flex;
-}
-
 .rightSidePadding {
     width: 20%;
     background-color: #178B7C;
+    margin-top: -10rem;
+    margin-bottom: -20rem;
 }
 
 .leftSidePadding {
     width: 20%;
     background-color: #178B7C;
+    margin-top: -10rem;
+    margin-bottom: -20rem;
 }
 
 .container--registerNonFarmer {
     display: flex;
     justify-content: center;
+}
+
+#zipCodeLabel, #emailAddressLabel {
+    margin-left: 1rem;
+    width: 18.5rem;
+}
+
+.usernameImage {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.loginLeft {
+    width: 100%;
+}
+
+.image {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.uploadImg {
+    margin-bottom: 1rem;
+}
+
+.chooseFileBtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1rem;
 }
