@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react"
 import { useHistory } from "react-router-dom"
 import "./Login.css"
 import {Image, Video, Transformation, CloudinaryContext} from 'cloudinary-react';
-import audioTag from "../audio/snort.mp3"
+
 
 export const RegisterNonFarmer = (props) => {
     const firstName = useRef()
@@ -10,7 +10,6 @@ export const RegisterNonFarmer = (props) => {
     const username = useRef()
     const email = useRef()
     const zip = useRef()
-    const audioTag = useRef()
     const verifyPassword = useRef()
     const conflictDialog = useRef()
     const history = useHistory()
@@ -77,13 +76,6 @@ export const RegisterNonFarmer = (props) => {
                 }
             })
     }
-
-    
-        let audio = new Audio(audioTag)
-        
-        const start = () => {
-            audio.play()
-        }
         
 /* -------------------- The contents of the register user box -------------------- */
 
@@ -138,7 +130,7 @@ export const RegisterNonFarmer = (props) => {
                         </div>
                 </section>
                             <fieldset className="loginBtnFieldset">
-                                <button className="loginBtn" type="submit" onClick={start}> Register </button>
+                                <button className="loginBtn" type="submit"> Register </button>
                             </fieldset>
                 
             </form>
