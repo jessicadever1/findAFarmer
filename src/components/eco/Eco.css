@@ -1,0 +1,79 @@
+.EcoTipsCard {
+    color: #178B7C;
+    margin: 1.75rem;
+    border-radius: 10px;
+    padding: 1rem;
+    min-width: 83%;
+    border: .25rem solid #178B7C;
+    background-color: white;
+    height: 29rem;
+    /* animation-duration: 20s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    animation: slidein 20s timing-function 3s infinite reverse ease-in-out; */
+
+}
+
+/* @keyframes slidein { from {margin-left: 10%} to { margin-left: 100%; }} */
+
+.ecoText {
+    font-size: 2rem;
+    padding-left: 1rem;
+    max-height: 50%;
+    overflow: scroll;
+}
+
+.ecoTitle {
+    font-size: 3rem;
+    text-align: center;
+    background-color: #178B7C;
+    color: white;
+    overflow: hidden;
+    padding: 3rem 1rem;
+    margin-top: -1.09rem;
+    margin-left: -1.2rem;
+    margin-right: -1.2rem;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.ecoTips {
+    display: flex;
+    overflow: scroll;
+    margin: 1rem 3rem 1rem 3rem;
+    /* background-color: #178B7C; */
+    border-radius: 10px;
+    max-width: 90%;
+}
+
+.ecoContainer {
+    width: 45%;
+}
+
+.ecoHeader {
+    color: #FF9F1C;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+
+.leftArrow {
+    display: none;
+}
+
+.leftArrow:hover {
+    position: relative;
+    top: 15rem;
+    margin-left: 0rem;
+}
+
+.rightArrow {
+    display: none;
+}
+
+.rightArrow:hover {
+    position: relative;
+    top: 15rem;
+    margin-right: 1rem;
+}

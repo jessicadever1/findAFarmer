@@ -60,6 +60,7 @@
 .reviewTextArea {
     display: flex;
     flex-direction: column;
+    white-space: pre-wrap;
 }
 
 #submitReviewBtn {
@@ -82,7 +83,7 @@
     padding: .5rem;
     width: 10rem;
     height: 10rem;
-    border: double #FFBF69 5px;
+    border: solid white 5px;
     border-radius: 5px;
     background-color: white;
 }

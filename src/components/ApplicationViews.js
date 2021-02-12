@@ -39,6 +39,7 @@ export const ApplicationViews = () => {
                 </FarmProvider>
             </ReviewProvider>
         </UserProvider>
+
         </>
     )
 }

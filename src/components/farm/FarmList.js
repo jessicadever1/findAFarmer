@@ -1,5 +1,4 @@
 import React, { useContext, useEffect } from "react"
-import { useHistory } from "react-router-dom"
 import { FarmCard } from "./FarmCard"
 import { FarmContext } from "./FarmProvider"
 import "./Farm.css"
