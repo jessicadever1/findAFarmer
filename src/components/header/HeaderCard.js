@@ -2,22 +2,31 @@ import React from "react"
 import "./Header.css"
 import Pig from '../images/Pig.png'
 import {Link, useHistory} from 'react-router-dom'
+import { LogOutBtn } from "./LogOutBtn"
 
 /* -------------------- To give all pages a uniform header -------------------- */
 
 export const HeaderCard = () => {
 
-    const history = useHistory()
+    const currentUser = parseInt(localStorage.getItem("find-a-farm_user"))
 
-    const handleLogOutBtn = () => {
-        history.push(`/welcome`)
-        localStorage.clear()
-    }
+    const hideButtons = () => {
+        if (currentUser) {
+            return (
+                <>
+                    <LogOutBtn />
+                </>
+            )
+        }
+    } 
 
     return (
         <>
         <header>
-        <button onClick={handleLogOutBtn} className="logOutBtn">Log Out</button>
+            <div className="logOut">
+                {hideButtons()}
+            </div>
+        
             <h1 className="header">Find A Farmer</h1>
             <h2 className="h2">Where will you plop your slop?</h2>
             <div className="centerDefaultImg">
