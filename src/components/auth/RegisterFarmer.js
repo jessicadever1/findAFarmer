@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react"
 import { useHistory } from "react-router-dom"
+import { PigEdibles } from "../pigEdibles/PigEdibles"
 import "./Login.css"
 
 export const RegisterFarmer = (props) => {
@@ -14,6 +15,7 @@ export const RegisterFarmer = (props) => {
     const farmName = useRef()
     const website = useRef()
     const instructions = useRef()
+    const pigEdibles = useRef()
     const verifyPassword = useRef()
     const conflictDialog = useRef()
     const history = useHistory()
@@ -82,6 +84,7 @@ export const RegisterFarmer = (props) => {
                                 farmName: farmName.current.value,
                                 website: website.current.value,
                                 instructions: instructions.current.value,
+                                pigEdibles: [],
                                 imageURL: imageURL
                             })
                         })
@@ -174,6 +177,11 @@ export const RegisterFarmer = (props) => {
                                 <label htmlFor="website" className="website">Website URL</label>
                                 <input ref={website} type="text" name="website" id="websiteLabel" className="form-control zipCodeLabel" placeholder="Website URL" required />
                             </fieldset>
+                        </div>
+                        <div className="pigEdiblesDib">
+                            <h2>Which foods would you like to accept?</h2>
+                            <p>Please check the box for any item that you would like to include on your farm's "Include" list. All items with unchecked boxes, will automatically become your "Exclude" list.</p>
+                            <PigEdibles />
                         </div>
                 </section>
                             <fieldset className="loginBtnFieldset">
