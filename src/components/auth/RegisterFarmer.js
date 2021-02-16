@@ -9,6 +9,7 @@ export const RegisterFarmer = (props) => {
     const email = useRef()
     const streetAddress = useRef()
     const city = useRef()
+    const state = useRef()
     const zip = useRef()
     const farmName = useRef()
     const website = useRef()
@@ -140,7 +141,7 @@ export const RegisterFarmer = (props) => {
                             <div className="whiteSpace">
                                 <fieldset className="regInfoStack">
                                         <label htmlFor="instructions" className="instructions">Instructions</label>
-                                        <textarea white-space="pre-wrap" wrap="hard" ref={instructions} type="textarea" name="instructions" id="instructionsLabel" className="form-control instructionsLabel" placeholder="With as much clarity as possible, tell your visitors where and how to drop their slop at your farm." required />
+                                        <textarea white-space="pre-wrap" wrap="hard" ref={instructions} type="textarea" name="instructions" id="instructionsLabel" className="form-control instructionsLabel" placeholder="With as much clarity as possible, tell your visitors where and how to drop their slop at your farm." required  autoFocus/>
                                 </fieldset>
                             </div>
                         </div>

@@ -67,8 +67,8 @@ export const FarmDetail = () => {
             <div>
                 <section className="farm__instructionAndLists">
                     <article className="farm__instructionsSection">
-                        <h3>Instructions: </h3>
-                        <div className="farm__instructions">{farm.instructions}</div>
+                        <h3 className="centerInstructionsTitle">Instructions </h3>
+                        <div className="farm__instructions whiteSpace">{farm.instructions}</div>
                     </article>
                     <section className="includeExcludeDivs">
                         <div className="farm__includeList">
