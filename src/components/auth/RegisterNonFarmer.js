@@ -82,7 +82,7 @@ export const RegisterNonFarmer = (props) => {
     return (
         <>
         <section className="container--registerNonFarmer" style={{ textAlign: "center" }}>
-        <div className="leftSidePadding"></div>
+        <div className="leftSidePaddingNonFarmer"></div>
 
             <dialog className="dialog dialog--password" ref={conflictDialog}>
                 <div>Account with that email address already exists</div>
@@ -93,20 +93,20 @@ export const RegisterNonFarmer = (props) => {
                 
                 <h2 className="h3 mb-3 font-weight-normal">Get Started</h2>
                     <section className="form--regNonFarmer">
-                            <section className="firstNameLastName">
-                                <fieldset className="regInfoStack">
-                                    <label htmlFor="firstName" className="firstName"> First Name </label>
-                                    <input ref={firstName} id="firstNameLabel" type="text" name="firstName" className="form-control form-name firstNameLabel" placeholder="First name" required autoFocus />
+                            <section className="firstNameLastNameNonFarmer">
+                                <fieldset className="regInfoStackNonFarmer nameFieldSetNonFarmer">
+                                    <label htmlFor="firstName" className="firstNameNonFarmer"> First Name </label>
+                                    <input ref={firstName} id="firstNameLabelNonFarmer" type="text" name="firstName" className=" form-name firstNameLabel" placeholder="First name" required autoFocus />
                                 </fieldset>
-                                <fieldset className="regInfoStack">
-                                    <label htmlFor="lastName" className="lastName"> Last Name </label>
-                                    <input ref={lastName} id="lastNameLabel" type="text" name="lastName" className="form-control form-name lastNameLabel" placeholder="Last name" required />
+                                <fieldset className="regInfoStackNonFarmer nameFieldSetNonFarmer">
+                                    <label htmlFor="lastName" className="lastNameNonFarmer"> Last Name </label>
+                                    <input ref={lastName} id="lastNameLabelNonFarmer" type="text" name="lastName" className=" form-name lastNameLabelNonFarmer" placeholder="Last name" required />
                                 </fieldset>
                             </section>
                     </section>
-                    <section className="usernameImage">
-                        <div className="image">
-                            <div className="uploadImg">Upload Image</div>
+                    <section className="usernameImageNonFarmer">
+                        <div className="imageNonFarmer">
+                            <div className="uploadImgNonFarmer">Upload Image</div>
                                 <input className="chooseFileBtn" type="file" name="file" placeholder="Upload an image" onChange={uploadImage}/>
                                 {loading ? (
                                     <h3>Loading...</h3>
@@ -114,27 +114,27 @@ export const RegisterNonFarmer = (props) => {
                                         <img src={imageURL} style={{ width: "100px" }} />
                                     )}
                         </div>
-                        <div className="loginLeft">
-                            <fieldset className="regInfoStack">
-                                <label htmlFor="username" className="userName"> Username </label>
-                                <input ref={username} type="text" name="username" id="userNameLabel" className="form-control form-username userNameLabel" placeholder="Username" required />
+                        <div className="loginLeftNonFarmer">
+                            <fieldset className="regInfoStackNonFarmer">
+                                <label htmlFor="usernameNonFarmer" className="userNameNonFarmer"> Username </label>
+                                <input ref={username} type="text" name="usernameNonFarmer" id="userNameLabelNonFarmer" className=" form-username userNameLabelNonFarmer" placeholder="Username" required />
                             </fieldset>
-                            <fieldset className="regInfoStack">
-                                <label htmlFor="zip" className="zipCode">Zip Code</label>
-                                <input ref={zip} type="text" name="zip" id="zipCodeLabel" className="form-control zipCodeLabel" placeholder="Zip Code" required />
+                            <fieldset className="regInfoStackNonFarmer">
+                                <label htmlFor="zip" className="zipCodeNonFarmer">Zip Code</label>
+                                <input ref={zip} type="text" name="zip" id="zipCodeLabel" className=" zipCodeLabelNonFarmer" placeholder="Zip Code" required />
                             </fieldset>
-                            <fieldset className="regInfoStack">
-                                <label htmlFor="inputEmail" className="emailAddress"> Email address </label>
-                                <input ref={email} type="email" name="email" id="emailAddressLabel" className="form-control emailAddressLabel" placeholder="Email address" required />
+                            <fieldset className="regInfoStackNonFarmer">
+                                <label htmlFor="inputEmail" className="emailAddressNonFarmer"> Email address </label>
+                                <input ref={email} type="email" name="email" id="emailAddressLabel" className=" emailAddressLabelNonFarmer" placeholder="Email address" required />
                             </fieldset>
                         </div>
                 </section>
-                            <fieldset className="loginBtnFieldset">
-                                <button className="loginBtn" type="submit"> Register </button>
+                            <fieldset className="loginBtnFieldsetNonFarmer">
+                                <button className="loginBtnNonFarmer" type="submit"> Register </button>
                             </fieldset>
                 
             </form>
-        <div className="rightSidePadding"></div>
+        <div className="rightSidePaddingNonFarmer"></div>
         </section>
     </>
     )

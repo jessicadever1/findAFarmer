@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react"
 import { useHistory } from "react-router-dom"
-import "./Login.css"
+import "./RegisterFarmer.css"
 
 export const RegisterFarmer = (props) => {
     const firstName = useRef()
@@ -11,6 +11,8 @@ export const RegisterFarmer = (props) => {
     const city = useRef()
     const zip = useRef()
     const farmName = useRef()
+    const website = useRef()
+    const instructions = useRef()
     const verifyPassword = useRef()
     const conflictDialog = useRef()
     const history = useHistory()
@@ -75,7 +77,8 @@ export const RegisterFarmer = (props) => {
                                 streetAddress: streetAddress.current.value,
                                 city: city.current.value,
                                 farmName: farmName.current.value,
-                                
+                                website: website.current.value,
+                                instructions: instructions.current.value
                             })
                         })
                     )
@@ -98,6 +101,8 @@ export const RegisterFarmer = (props) => {
     return (
         <section className="container--register" style={{ textAlign: "center" }}>
 
+        <div className="leftSidePadding"></div>
+
             <dialog className="dialog dialog--password" ref={conflictDialog}>
                 <div>Account with that email address already exists</div>
                 <button className="button--close" onClick={e => conflictDialog.current.close()}>Close</button>
@@ -110,7 +115,7 @@ export const RegisterFarmer = (props) => {
                             <section className="firstNameLastName">
                                 <fieldset className="regInfoStack">
                                     <label htmlFor="firstName" className="firstName"> First Name </label>
-                                    <input ref={firstName} id="firstNameLabel" type="text" name="firstName" className="form-control form-name firstNameLabel" placeholder="First name" required autoFocus />
+                                    <input ref={firstName} id="firstNameLabelFarmer" type="text" name="firstName" className="form-control form-name firstNameLabelFarmer" placeholder="First name" required autoFocus />
                                 </fieldset>
                                 <fieldset className="regInfoStack">
                                     <label htmlFor="lastName" className="lastName"> Last Name </label>
@@ -119,14 +124,20 @@ export const RegisterFarmer = (props) => {
                             </section>
                     </section>
                     <section className="usernameImage">
-                        <div className="image">
-                            <div className="uploadImg">Upload Image</div>
-                                <input className="chooseFileBtn" type="file" name="file" placeholder="Upload an image" onChange={uploadImage}/>
-                                {loading ? (
-                                    <h3>Loading...</h3>
-                                ) : (
-                                        <img src={imageURL} style={{ width: "100px" }} />
-                                    )}
+                        <div className="imageInstructions">
+                            <div className="image">
+                                <div className="uploadImg">Upload Image</div>
+                                    <input className="chooseFileBtn" type="file" name="file" placeholder="Upload an image" onChange={uploadImage}/>
+                                    {loading ? (
+                                        <h3>Loading...</h3>
+                                    ) : (
+                                            <img src={imageURL} style={{ width: "100px" }} />
+                                        )}
+                            </div>
+                            <fieldset className="regInfoStack">
+                                    <label htmlFor="instructions" className="instructions">Instructions</label>
+                                    <textarea ref={instructions} type="textarea" name="instructions" id="instructionsLabel" className="form-control instructionsLabel" placeholder="With as much clarity as possible, tell your visitors where and how to drop their slop at your farm." required />
+                            </fieldset>
                         </div>
                         <div className="loginLeft">
                             <fieldset className="regInfoStack">
@@ -134,12 +145,12 @@ export const RegisterFarmer = (props) => {
                                 <input ref={username} type="text" name="username" id="userNameLabel" className="form-control form-username userNameLabel" placeholder="Username" required />
                             </fieldset>
                             <fieldset className="regInfoStack">
-                                <label htmlFor="zip" className="zipCode">Zip Code</label>
-                                <input ref={zip} type="text" name="zip" id="zipCodeLabel" className="form-control zipCodeLabel" placeholder="Zip Code" required />
-                            </fieldset>
-                            <fieldset className="regInfoStack">
                                 <label htmlFor="inputEmail" className="emailAddress"> Email address </label>
                                 <input ref={email} type="email" name="email" id="emailAddressLabel" className="form-control emailAddressLabel" placeholder="Email address" required />
+                            </fieldset>
+                            <fieldset className="regInfoStack">
+                                <label htmlFor="inputFarmName" className="farmName"> Farm name </label>
+                                <input ref={farmName} type="text" name="farmName" id="farmNameLabel" className="form-control farmNameLabel" placeholder="Farm name" required />
                             </fieldset>
                             <fieldset className="regInfoStack">
                                 <label htmlFor="inputStreetAddress" className="streetAddress"> Street address </label>
@@ -150,8 +161,12 @@ export const RegisterFarmer = (props) => {
                                 <input ref={city} type="text" name="city" id="cityLabel" className="form-control cityLabel" placeholder="City" required />
                             </fieldset>
                             <fieldset className="regInfoStack">
-                                <label htmlFor="inputFarmName" className="farmName"> Farm name </label>
-                                <input ref={city} type="text" name="city" id="cityLabel" className="form-control cityLabel" placeholder="City" required />
+                                <label htmlFor="zip" className="zipCode">Zip Code</label>
+                                <input ref={zip} type="text" name="zip" id="zipCodeLabel" className="form-control zipCodeLabel" placeholder="Zip Code" required />
+                            </fieldset>
+                            <fieldset className="regInfoStack">
+                                <label htmlFor="website" className="website">Website URL</label>
+                                <input ref={website} type="text" name="website" id="websiteLabel" className="form-control zipCodeLabel" placeholder="Website URL" required />
                             </fieldset>
                         </div>
                 </section>
@@ -160,6 +175,7 @@ export const RegisterFarmer = (props) => {
                             </fieldset>
                 
             </form>
+            <div className="rightSidePadding"></div>
         </section>
     )
 }
