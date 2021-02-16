@@ -19,18 +19,20 @@ export const FarmList = () => {
 
     return (
         <>
-        <div className="farmFilter">
-            <FarmFilter />
-            <AllFarmsBtn />
-        </div>
-        <div className="farms">
-            
-            {
-                farms.map(farm => {
-                    return <FarmCard key={farm.id} farm={farm} />
-            })
-            }
-        </div>
+            <div className="leftSidePaddingFarmList"></div>
+                <div className="farmFilter">
+                    <FarmFilter />
+                    <AllFarmsBtn />
+                </div>
+                <div className="farms">
+                    
+                    {
+                        farms.map(farm => {
+                            return <FarmCard key={farm.id} farm={farm} />
+                    })
+                    }
+                </div>
+            <div className="rightSidePaddingFarmList"></div>
         </>
     )
 }
