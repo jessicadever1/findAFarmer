@@ -78,7 +78,8 @@ export const RegisterFarmer = (props) => {
                                 city: city.current.value,
                                 farmName: farmName.current.value,
                                 website: website.current.value,
-                                instructions: instructions.current.value
+                                instructions: instructions.current.value,
+                                imageURL: imageURL
                             })
                         })
                     )
@@ -136,7 +137,7 @@ export const RegisterFarmer = (props) => {
                             </div>
                             <fieldset className="regInfoStack">
                                     <label htmlFor="instructions" className="instructions">Instructions</label>
-                                    <textarea ref={instructions} type="textarea" name="instructions" id="instructionsLabel" className="form-control instructionsLabel" placeholder="With as much clarity as possible, tell your visitors where and how to drop their slop at your farm." required />
+                                    <textarea white-space="pre-wrap" ref={instructions} type="textarea" name="instructions" id="instructionsLabel" className="form-control instructionsLabel" placeholder="With as much clarity as possible, tell your visitors where and how to drop their slop at your farm." required />
                             </fieldset>
                         </div>
                         <div className="loginLeft">
