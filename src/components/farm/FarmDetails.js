@@ -40,9 +40,9 @@ export const FarmDetail = () => {
 
 /* -------------------- To make sure every farm detail has a default profile pic, if no profile pic exists -------------------- */
 
-    if (farm.farmPic === "") {
+    if (farm.imageURL === "") {
         let defaultFarmPic = Pig
-        farm.farmPic = defaultFarmPic
+        farm.imageURL = defaultFarmPic
     }
 
 /* -------------------- The contents of all of the farm details for selected farm -------------------- */
@@ -50,10 +50,10 @@ export const FarmDetail = () => {
     return (
         <section className="farm">
             <div className="farm__upperBox">
-                <img src={farm.farmPic} alt="{farm.name} default pic" className="farmPic"></img>
+                <img src={farm.imageURL} alt="{farm.name} default pic" className="farmPic"></img>
                 <div className="farmCardRight">   
                     <section className="farm__info">
-                        <h2 className="farm__name">{farm.name}</h2>
+                        <h2 className="farm__name">{farm.farmName}</h2>
                         <div className="farm__street">{farm.streetAddress}</div>
                         <div className="farm__address">{farm.city} {farm.state} {farm.zip}</div>
                     </section>

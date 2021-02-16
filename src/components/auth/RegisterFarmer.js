@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react"
 import { useHistory } from "react-router-dom"
-import "./RegisterFarmer.css"
+import "./Login.css"
 
 export const RegisterFarmer = (props) => {
     const firstName = useRef()
@@ -76,6 +76,8 @@ export const RegisterFarmer = (props) => {
                             body: JSON.stringify({
                                 streetAddress: streetAddress.current.value,
                                 city: city.current.value,
+                                state: "TN",
+                                zip: zip.current.value,
                                 farmName: farmName.current.value,
                                 website: website.current.value,
                                 instructions: instructions.current.value,
@@ -135,10 +137,12 @@ export const RegisterFarmer = (props) => {
                                             <img src={imageURL} style={{ width: "100px" }} />
                                         )}
                             </div>
-                            <fieldset className="regInfoStack">
-                                    <label htmlFor="instructions" className="instructions">Instructions</label>
-                                    <textarea white-space="pre-wrap" ref={instructions} type="textarea" name="instructions" id="instructionsLabel" className="form-control instructionsLabel" placeholder="With as much clarity as possible, tell your visitors where and how to drop their slop at your farm." required />
-                            </fieldset>
+                            <div className="whiteSpace">
+                                <fieldset className="regInfoStack">
+                                        <label htmlFor="instructions" className="instructions">Instructions</label>
+                                        <textarea white-space="pre-wrap" wrap="hard" ref={instructions} type="textarea" name="instructions" id="instructionsLabel" className="form-control instructionsLabel" placeholder="With as much clarity as possible, tell your visitors where and how to drop their slop at your farm." required />
+                                </fieldset>
+                            </div>
                         </div>
                         <div className="loginLeft">
                             <fieldset className="regInfoStack">

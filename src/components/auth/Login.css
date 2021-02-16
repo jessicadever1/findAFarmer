@@ -328,5 +328,8 @@ fieldset {
 textarea {
     height: 17rem;
     width: 30rem;
+}
+
+.whiteSpace {
     white-space: pre-wrap;
 }
