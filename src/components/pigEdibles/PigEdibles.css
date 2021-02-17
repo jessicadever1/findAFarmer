@@ -1,0 +1,12 @@
+.checkListFieldset {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    max-height: 10rem;
+}
+
+.checklistDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

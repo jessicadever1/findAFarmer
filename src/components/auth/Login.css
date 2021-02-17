@@ -1,47 +1,8 @@
+/* CSS for all pages linked to Login.css */
+
 body {
     color: white;
 }
-
-.form--nonFarmerLogin {
-    background-color:white;
-    color:#178B7C;
-    width: 60%;
-    margin-right: 4rem;
-    margin-left: 3rem;
-}
-
-.firstNameLabel, .lastNameLabel, .userNameLabel, .zipCodeLabel, .emailAddressLabel {
-    border: .05rem dotted #178B7C;
-    width: 100%;
-    align-content: center;
-    margin-left: 0rem;
-}
-
-.firstName, .lastName {
-    text-align: left;
-    margin-bottom: 1rem;
-    margin-left: 1rem;
-}
-
-.userName, .zipCode, .emailAddress {
-    text-align: left;
-    margin-bottom: 1rem;
-    margin-left: 1rem;
-}
-
-.zipCodeLabel {
-    margin-left: -3rem;
-}
-
-#userNameLabel, #firstNameLabel, #lastNameLabel {
-    margin-left: 1rem;
-    min-width: 17rem;
-}
-
-input#file-upload-button {
-    border: none;
-}
-input { border: none }
 
 fieldset, input, button {
     border: none;
@@ -60,15 +21,199 @@ fieldset {
     border-radius: 5px;
 }
 
-label {
-    margin-top: .25rem;
-    font-size: 1.25rem;
-    text-align: center;
+.loginBtn {
+    border-radius: 5px;
+    color: #178B7C; 
+    min-width: 45%;
+    min-height: 2rem;
+    text-decoration: none;
 }
 
-.form-name {
+.chooseFileBtn {
+    display: flex;
+    justify-content: center;
+    margin-left: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS for RegisterNonFarmer.js */
+
+.leftSidePaddingNonFarmer {
+    width: 20%;
+    background-color: #178B7C;
+    margin-top: -10rem;
+    margin-bottom: -20rem;
+}
+
+.form--nonFarmerLogin {
+    background-color:white;
+    color:#178B7C;
+    width: 60%;
+    margin-right: 4rem;
     margin-left: 3rem;
 }
+
+.rightSidePaddingNonFarmer {
+    width: 20%;
+    background-color: #178B7C;
+    margin-top: -10rem;
+    margin-bottom: -20rem;
+}
+
+.container--registerNonFarmer {
+    display: flex;
+    justify-content: center;
+}
+
+.firstNameLastNameNonFarmer {
+    display: flex;
+}
+
+.firstNameNonFarmer, .lastNameNonFarmer {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.nameFieldSetNonFarmer {
+    width: 50%;
+}
+
+#firstNameLabelNonFarmer, .lastNameLabelNonFarmer, .userNameLabelNonFarmer, .zipCodeLabelNonFarmer, .emailAddressLabelNonFarmer {
+    border: .05rem dotted #178B7C;
+    width: 100%;
+    min-height: 2rem;
+    border-radius: 5px;
+}
+
+.loginLeftNonFarmer {
+    width: 50%;
+}
+
+.usernameImageNonFarmer {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.userNameNonFarmer, .zipCodeNonFarmer, .emailAddressNonFarmer {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.userNameNonFarmer, .zipCodeNonFarmer, .emailAddressNonFarmer, .uploadImg {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.uploadImgNonFarmer {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    text-align: left;
+}
+
+.imageNonFarmer {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 40%;
+    width: 48%;
+    margin-left: 1rem;
+}
+
+.loginBtnNonFarmer {
+    border-radius: 5px;
+    color: #178B7C; 
+    min-width: 45%;
+    min-height: 2rem;
+    text-decoration: none;
+}
+
+.loginBtnFieldsetNonFarmer {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.regInfoStackNonFarmer {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS for RegisterFarmer.js */
 
 .reg {
     display: flex;
@@ -82,13 +227,6 @@ label {
     justify-content: left;
 }
 
-.loginBtn {
-    border-radius: 5px;
-    color: #178B7C; 
-    min-width: 45%;
-    min-height: 2rem;
-    text-decoration: none;
-}
 
 .form--heading {
     display: flex;
@@ -149,60 +287,55 @@ label {
 .regInfoStack {
     display: flex;
     flex-direction: column;
-    width: 50%;
     text-align: left;
 }
 
-.firstNameLastName {
-    display: flex;
+
+
+.imageInstructions {
+    width: 50%;
 }
 
-.rightSidePadding {
-    width: 20%;
-    background-color: #178B7C;
-    margin-top: -10rem;
-    margin-bottom: -20rem;
-}
 
-.leftSidePadding {
-    width: 20%;
-    background-color: #178B7C;
-    margin-top: -10rem;
-    margin-bottom: -20rem;
-}
-
-.container--registerNonFarmer {
+.container--register {
     display: flex;
     justify-content: center;
 }
 
-#zipCodeLabel, #emailAddressLabel {
+#websiteLabel, #cityLabel {
     margin-left: 1rem;
     width: 18.5rem;
 }
 
-.usernameImage {
-    display: flex;
-    flex-direction: row-reverse;
-}
 
-.loginLeft {
+
+
+
+
+
+.zipCodeLabel, .emailAddressLabel, .websiteLabel, .cityLabel, .streetAddressLabel, .farmNameLabel {
+    border: .05rem dotted #178B7C;
     width: 100%;
+    min-height: 2rem;
+    border-radius: 5px;
 }
 
-.image {
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-}
-
-.uploadImg {
+.website, .city, .streetAddress, .farmName, .instructions, .uploadImg {
+    text-align: left;
     margin-bottom: 1rem;
 }
 
-.chooseFileBtn {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 1rem;
+textarea {
+    height: 17rem;
+    width: 30rem;
+}
+
+.whiteSpace, .instructionsLabel {
+    white-space: pre-wrap;
+}
+
+checkbox {
+    margin: 0px 10px 0px !important;
+    border: solid 1px #178B7C;
+    background-color: #FF9F1C;
 }

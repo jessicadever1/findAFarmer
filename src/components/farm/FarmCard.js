@@ -8,21 +8,23 @@ import { ReviewContext } from "../reviews/ReviewProvider"
 
 /* -------------------- To always have a default farm picture available, if user doesn't have a farm pic -------------------- */
 
-export const FarmCard = ( { farm, review } ) =>  {
-    if (farm.farmPic === "") {
+export const FarmCard = ( { farm } ) =>  {
+    if (farm.imageURL === "") {
         let defaultFarmPic = Pig
-        farm.farmPic = defaultFarmPic
+        farm.imageURL = defaultFarmPic
     }
+
+
     
 /* -------------------- The content of individual farm cards -------------------- */
 
     return (
         <section className="farm">
             <div className="farm__upperBox">
-                <img src={farm.farmPic} width="100" height="100" alt="{farm.name} default pic" className="farmPic"></img>
+                <img src={farm.imageURL} width="100" height="100" alt="{farm.name} default pic" className="farmPic"></img>
                 <div className="farmCardRight">   
                     <section className="farm__info">
-                        <h2 className="farm__name">{farm.name}</h2>
+                        <h2 className="farm__name">{farm.farmName}</h2>
                         <div className="farm__street">{farm.streetAddress}</div>
                         <div className="farm__address">{farm.city} {farm.state} {farm.zip}</div>
                     </section>

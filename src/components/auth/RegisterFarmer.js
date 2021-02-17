@@ -1,14 +1,45 @@
-import React, { useRef } from "react"
+import React, { useRef, useState } from "react"
 import { useHistory } from "react-router-dom"
+import { PigEdibles } from "../pigEdibles/PigEdibles"
 import "./Login.css"
 
 export const RegisterFarmer = (props) => {
     const firstName = useRef()
     const lastName = useRef()
+    const username = useRef()
     const email = useRef()
+    const streetAddress = useRef()
+    const city = useRef()
+    const state = useRef()
+    const zip = useRef()
+    const farmName = useRef()
+    const website = useRef()
+    const instructions = useRef()
+    const pigEdibles = useRef()
     const verifyPassword = useRef()
     const conflictDialog = useRef()
     const history = useHistory()
+
+    const [imageURL, setImageURL] = useState("")
+
+    const [loading, setLoading] = useState(false)
+    const uploadImage = async e => {
+        const files = e.target.files
+        const data = new FormData()
+        data.append("file", files[0])
+        data.append("upload_preset", "FindAFarmer")
+        setLoading(true)
+        const response = await fetch(
+            "https://api.cloudinary.com/v1_1/jessicadever1/image/upload",
+            {
+                method: "POST",
+                body: data
+            }
+        )
+        const file = await response.json()
+        setImageURL(file.secure_url)
+        setLoading(false)
+    }
 
 /* -------------------- To check if user already exists -------------------- */
 
@@ -33,9 +64,31 @@ export const RegisterFarmer = (props) => {
                         },
                         body: JSON.stringify({
                             email: email.current.value,
-                            name: `${firstName.current.value} ${lastName.current.value}`
+                            name: `${firstName.current.value} ${lastName.current.value}`,
+                            imageURL: imageURL,
+                            username: username.current.value,
+                            zip: zip.current.value
                         })
                     })
+                    .then(
+                        fetch("http://localhost:8014/farms", {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json"
+                            },
+                            body: JSON.stringify({
+                                streetAddress: streetAddress.current.value,
+                                city: city.current.value,
+                                state: "TN",
+                                zip: zip.current.value,
+                                farmName: farmName.current.value,
+                                website: website.current.value,
+                                instructions: instructions.current.value,
+                                pigEdibles: [],
+                                imageURL: imageURL
+                            })
+                        })
+                    )
                     .then(res => res.json())
                     .then(createdUser => {
                         if (createdUser.hasOwnProperty("id")) {
@@ -55,33 +108,88 @@ export const RegisterFarmer = (props) => {
     return (
         <section className="container--register" style={{ textAlign: "center" }}>
 
+        <div className="leftSidePadding"></div>
+
             <dialog className="dialog dialog--password" ref={conflictDialog}>
                 <div>Account with that email address already exists</div>
                 <button className="button--close" onClick={e => conflictDialog.current.close()}>Close</button>
             </dialog>
 
-            <form className="form--login" onSubmit={handleRegister}>
-                <section className="reg">
+            <form className="form--nonFarmerLogin" onSubmit={handleRegister}>
+                
                 <h2 className="h3 mb-3 font-weight-normal">Get Started</h2>
-                    <section className="form--reg">
-                        <fieldset>
-                            <label htmlFor="firstName"> First Name </label>
-                            <input ref={firstName} type="text" name="firstName" className="form-control form-name" placeholder="First name" required autoFocus />
-                        </fieldset>
-                        <fieldset>
-                            <label htmlFor="lastName"> Last Name </label>
-                            <input ref={lastName} type="text" name="lastName" className="form-control form-name" placeholder="Last name" required />
-                        </fieldset>
-                        <fieldset>
-                            <label htmlFor="inputEmail"> Email address </label>
-                            <input ref={email} type="email" name="email" className="form-control" placeholder="Email address" required />
-                        </fieldset>
-                        <fieldset className="loginBtnFieldset">
-                            <button className="loginBtn" type="submit"> Log in </button>
-                        </fieldset>
+                    <section className="form--regNonFarmer">
+                            <section className="firstNameLastName">
+                                <fieldset className="regInfoStack">
+                                    <label htmlFor="firstName" className="firstName"> First Name </label>
+                                    <input ref={firstName} id="firstNameLabelFarmer" type="text" name="firstName" className="form-control form-name firstNameLabelFarmer" placeholder="First name" required autoFocus />
+                                </fieldset>
+                                <fieldset className="regInfoStack">
+                                    <label htmlFor="lastName" className="lastName"> Last Name </label>
+                                    <input ref={lastName} id="lastNameLabel" type="text" name="lastName" className="form-control form-name lastNameLabel" placeholder="Last name" required />
+                                </fieldset>
+                            </section>
                     </section>
+                    <section className="usernameImage">
+                        <div className="imageInstructions">
+                            <div className="image">
+                                <div className="uploadImg">Upload Image</div>
+                                    <input className="chooseFileBtn" type="file" name="file" placeholder="Upload an image" onChange={uploadImage}/>
+                                    {loading ? (
+                                        <h3>Loading...</h3>
+                                    ) : (
+                                            <img src={imageURL} style={{ width: "100px" }} />
+                                        )}
+                            </div>
+                            <div className="whiteSpace">
+                                <fieldset className="regInfoStack">
+                                        <label htmlFor="instructions" className="instructions">Instructions</label>
+                                        <textarea white-space="pre-wrap" wrap="hard" ref={instructions} type="textarea" name="instructions" id="instructionsLabel" className="form-control instructionsLabel" placeholder="With as much clarity as possible, tell your visitors where and how to drop their slop at your farm." required  autoFocus/>
+                                </fieldset>
+                            </div>
+                        </div>
+                        <div className="loginLeft">
+                            <fieldset className="regInfoStack">
+                                <label htmlFor="username" className="userName"> Username </label>
+                                <input ref={username} type="text" name="username" id="userNameLabel" className="form-control form-username userNameLabel" placeholder="Username" required />
+                            </fieldset>
+                            <fieldset className="regInfoStack">
+                                <label htmlFor="inputEmail" className="emailAddress"> Email address </label>
+                                <input ref={email} type="email" name="email" id="emailAddressLabel" className="form-control emailAddressLabel" placeholder="Email address" required />
+                            </fieldset>
+                            <fieldset className="regInfoStack">
+                                <label htmlFor="inputFarmName" className="farmName"> Farm name </label>
+                                <input ref={farmName} type="text" name="farmName" id="farmNameLabel" className="form-control farmNameLabel" placeholder="Farm name" required />
+                            </fieldset>
+                            <fieldset className="regInfoStack">
+                                <label htmlFor="inputStreetAddress" className="streetAddress"> Street address </label>
+                                <input ref={streetAddress} type="text" name="streetAddress" id="streetAddressLabel" className="form-control streetAddressLabel" placeholder="Street address" required />
+                            </fieldset>
+                            <fieldset className="regInfoStack">
+                                <label htmlFor="inputCity" className="city"> City </label>
+                                <input ref={city} type="text" name="city" id="cityLabel" className="form-control cityLabel" placeholder="City" required />
+                            </fieldset>
+                            <fieldset className="regInfoStack">
+                                <label htmlFor="zip" className="zipCode">Zip Code</label>
+                                <input ref={zip} type="text" name="zip" id="zipCodeLabel" className="form-control zipCodeLabel" placeholder="Zip Code" required />
+                            </fieldset>
+                            <fieldset className="regInfoStack">
+                                <label htmlFor="website" className="website">Website URL</label>
+                                <input ref={website} type="text" name="website" id="websiteLabel" className="form-control zipCodeLabel" placeholder="Website URL" required />
+                            </fieldset>
+                        </div>
+                        <div className="pigEdiblesDib">
+                            <h2>Which foods would you like to accept?</h2>
+                            <p>Please check the box for any item that you would like to include on your farm's "Include" list. All items with unchecked boxes, will automatically become your "Exclude" list.</p>
+                            <PigEdibles />
+                        </div>
                 </section>
+                            <fieldset className="loginBtnFieldset">
+                                <button className="loginBtn" type="submit"> Register </button>
+                            </fieldset>
+                
             </form>
+            <div className="rightSidePadding"></div>
         </section>
     )
 }

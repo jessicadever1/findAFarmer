@@ -231,3 +231,7 @@ ul {
     padding-left: 5rem;
     padding-right: 5rem;
 }
+
+.centerInstructionsTitle {
+    text-align: center;
+}
