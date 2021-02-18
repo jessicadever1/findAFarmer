@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react"
 import { useHistory } from "react-router-dom"
-import { PigEdibles } from "../pigEdibles/PigEdibles"
+import { PigEdiblesCard } from "../pigEdibles/PigEdiblesCard"
 import "./Login.css"
 
 export const RegisterFarmer = (props) => {
@@ -182,7 +182,7 @@ export const RegisterFarmer = (props) => {
                         <div className="pigEdiblesDib">
                             <h2>Which foods would you like to accept?</h2>
                             <p>Please check the box for any item that you would like to include on your farm's "Include" list. All items with unchecked boxes, will automatically become your "Exclude" list.</p>
-                            <PigEdibles />
+                            <PigEdiblesCard />
                         </div>
                             <fieldset className="loginBtnFieldsetFarmer">
                                 <button className="loginBtn" type="submit"> Register </button>

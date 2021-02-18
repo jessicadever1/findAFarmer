@@ -445,12 +445,6 @@ textarea {
     white-space: pre-wrap;
 }
 
-checkbox {
-    margin: 0px 10px 0px !important;
-    border: solid 1px #178B7C;
-    background-color: #FF9F1C;
-}
-
 .loginBtnFieldsetFarmer {
     display: flex;
     justify-content: center;
