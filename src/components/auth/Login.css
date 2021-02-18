@@ -14,6 +14,46 @@ fieldset {
     justify-content: center;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS for Login.js */
+
 .form-control {
     margin-left: 1rem;
     min-width: 50%;
@@ -34,6 +74,111 @@ fieldset {
     justify-content: center;
     margin-left: 1rem;
 }
+
+.form--heading {
+    display: flex;
+    justify-content: center;
+}
+
+.loginBtnFieldset {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.loginBtnWB {
+    border-radius: 5px;
+    color: #178B7C; 
+    min-width: 45%;
+    min-height: 2rem;
+    text-decoration: none;
+}
+
+.userEntrance {
+    align-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS for InitialRegister.js */
+
+.getStarted {
+    text-align: center;
+}
+
+.notAFarmer {
+    border-radius: 5px;
+    color: #178B7C; 
+    min-width: 45%;
+    min-height: 2rem;
+    text-decoration: none;
+    margin: 1rem;
+}
+
+.iAmAFarmer {
+    border-radius: 5px;
+    color: #178B7C; 
+    min-width: 45%;
+    min-height: 2rem;
+    text-decoration: none;
+    margin: 1rem;
+}
+
+.initialLoginBtns {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+
 
 
 
@@ -213,104 +358,62 @@ fieldset {
 
 
 
+
+
+
+
+
 /* CSS for RegisterFarmer.js */
 
-.reg {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-}
-
-.form--reg {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-}
-
-
-.form--heading {
+.container--registerFarmer {
     display: flex;
     justify-content: center;
 }
 
-.loginBtnFieldset {
+.firstNameLastNameFarmer {
     display: flex;
-    justify-content: center;
-    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
-.loginBtnWB {
-    border-radius: 5px;
-    color: #178B7C; 
-    min-width: 45%;
-    min-height: 2rem;
-    text-decoration: none;
-}
-
-.userEntrance {
-    align-content: center;
-}
-
-.getStarted {
-    text-align: center;
-}
-
-.notAFarmer {
-    border-radius: 5px;
-    color: #178B7C; 
-    min-width: 45%;
-    min-height: 2rem;
-    text-decoration: none;
-    margin: 1rem;
-}
-
-.iAmAFarmer {
-    border-radius: 5px;
-    color: #178B7C; 
-    min-width: 45%;
-    min-height: 2rem;
-    text-decoration: none;
-    margin: 1rem;
-}
-
-.initialLoginBtns {
+.nameFieldSetFarmer {
+    width: 50%;
     display: flex;
     flex-direction: column;
-    align-content: center;
 }
 
-.center {
+.firstNameLabelFarmer, .lastNameLabelFarmer {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.firstNameFarmerInput, .lastNameFarmerInput {
+    border: .05rem dotted #178B7C;
+    width: 100%;
+    min-height: 2rem;
+    border-radius: 5px;
+}
+
+.userinfoImageFarmerColumns {
     display: flex;
-    justify-content: center;
+    flex-direction: row-reverse;    
 }
 
-.regInfoStack {
+.loginLeftFarmer {
+    width: 50%;
+}
+
+
+
+
+.regInfoStackFarmer {
     display: flex;
     flex-direction: column;
     text-align: left;
 }
 
-
-
-.imageInstructions {
+.imageInstructionsFarmer {
     width: 50%;
 }
-
-
-.container--register {
-    display: flex;
-    justify-content: center;
-}
-
-#websiteLabel, #cityLabel {
-    margin-left: 1rem;
-    width: 18.5rem;
-}
-
-
-
-
-
 
 
 .zipCodeLabel, .emailAddressLabel, .websiteLabel, .cityLabel, .streetAddressLabel, .farmNameLabel {
@@ -338,4 +441,10 @@ checkbox {
     margin: 0px 10px 0px !important;
     border: solid 1px #178B7C;
     background-color: #FF9F1C;
+}
+
+.loginBtnFieldsetFarmer {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
 }
