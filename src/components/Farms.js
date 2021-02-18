@@ -8,6 +8,8 @@ import { EcoList } from "./eco/EcoList";
 import { EcoProvider } from "./eco/EcoProvider";
 import { RegisterFarmer } from "./auth/RegisterFarmer"
 import { RegisterNonFarmer } from "./auth/RegisterNonFarmer"
+import { PigEdiblesProvider } from "./pigEdibles/PigEdiblesProvider";
+import { FarmProvider } from "./farm/FarmProvider";
 
 export const Farms = () => (
 
@@ -35,10 +37,14 @@ export const Farms = () => (
             </section>
         </Route>  
     </EcoProvider>
-    <Route exact path="/registerFarmer">
-        <HeaderCard />
-        <RegisterFarmer />
-    </Route>
+    <FarmProvider>
+        <PigEdiblesProvider>
+            <Route exact path="/registerFarmer">
+                <HeaderCard />
+                <RegisterFarmer />
+            </Route>
+        </PigEdiblesProvider>
+    </FarmProvider>
     <Route exact path="/registerNonFarmer">
         <HeaderCard />
         <RegisterNonFarmer />

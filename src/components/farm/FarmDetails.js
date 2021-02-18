@@ -1,10 +1,9 @@
 import React, { useContext, useEffect, useState } from "react"
 import { FarmContext } from "./FarmProvider"
 import "./Farm.css"
-import { useParams, useHistory } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import { Link } from "react-router-dom"
 import Pig from "../images/Pig.png"
-import user from "../images/user.png"
 import { ReviewContext } from "../reviews/ReviewProvider"
 import { ReviewCard } from "../reviews/ReviewCard"
 

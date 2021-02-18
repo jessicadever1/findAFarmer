@@ -7,7 +7,7 @@ export const PigEdiblesProvider = (props) => {
     const [pigEdibles, setPigEdibles] = useState([])
 
     const getPigEdibles = () => {
-        return fetch("http://localhost:8014/pigEdibles?_embed=farm")
+        return fetch("http://localhost:8014/pigEdibles")
         .then(res => res.json())
         .then(setPigEdibles)
     }

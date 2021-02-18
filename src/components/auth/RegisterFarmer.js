@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react"
 import { useHistory } from "react-router-dom"
-import { PigEdiblesCard } from "../pigEdibles/PigEdiblesCard"
+import { PigEdiblesList } from "../pigEdibles/PigEdiblesList"
 import "./Login.css"
 
 export const RegisterFarmer = (props) => {
@@ -19,6 +19,7 @@ export const RegisterFarmer = (props) => {
     const verifyPassword = useRef()
     const conflictDialog = useRef()
     const history = useHistory()
+    let farmId = localStorage.getItem("find-a-farm_user")
 
     const [imageURL, setImageURL] = useState("")
 
@@ -182,7 +183,7 @@ export const RegisterFarmer = (props) => {
                         <div className="pigEdiblesDib">
                             <h2>Which foods would you like to accept?</h2>
                             <p>Please check the box for any item that you would like to include on your farm's "Include" list. All items with unchecked boxes, will automatically become your "Exclude" list.</p>
-                            <PigEdiblesCard />
+                            <PigEdiblesList />
                         </div>
                             <fieldset className="loginBtnFieldsetFarmer">
                                 <button className="loginBtn" type="submit"> Register </button>

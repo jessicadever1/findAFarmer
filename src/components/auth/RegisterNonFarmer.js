@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react"
 import { useHistory } from "react-router-dom"
 import "./Login.css"
-import {Image, Video, Transformation, CloudinaryContext} from 'cloudinary-react';
 
 
 export const RegisterNonFarmer = (props) => {
