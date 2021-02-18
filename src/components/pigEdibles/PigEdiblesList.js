@@ -10,11 +10,6 @@ export const PigEdiblesList = () => {
         getPigEdibles()
     }, [])
 
-    const includeList = () => {
-
-    }
-    const excludeList = () => {}
-
     return (
         <div className="pigEdiblesList">
             {

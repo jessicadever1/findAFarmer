@@ -51,9 +51,12 @@ export const FarmDetail = () => {
                 <img src={farm.imageURL} alt="{farm.name} default pic" className="farmPic"></img>
                 <div className="farmCardRight">   
                     <section className="farm__info">
-                        <h2 className="farm__name">{farm.farmName}</h2>
-                        <div className="farm__street">{farm.streetAddress}</div>
-                        <div className="farm__address">{farm.city} {farm.state} {farm.zip}</div>
+                        <h2 className="farm__name">{farm.farmName}</h2> 
+                        
+                            <div className="farm__street">{farm.streetAddress}</div>
+                            <div className="farm__address">{farm.city} {farm.state} {farm.zip}</div>
+                       
+                        <button className="farmWebsite"><a href={farm.website}>Website</a></button>
                     </section>
                 </div>
             </div>

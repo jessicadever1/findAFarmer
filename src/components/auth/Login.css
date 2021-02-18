@@ -425,6 +425,10 @@ fieldset {
     margin-bottom: 1rem;
 }
 
+img {
+    margin: 1rem;
+}
+
 .imageFarmer {
     margin-bottom: 1rem;
     margin-left: 1rem;
