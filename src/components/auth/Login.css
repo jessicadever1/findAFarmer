@@ -396,14 +396,12 @@ fieldset {
 .userinfoImageFarmerColumns {
     display: flex;
     flex-direction: row-reverse;    
+    margin-bottom: 2rem;
 }
 
 .loginLeftFarmer {
     width: 50%;
 }
-
-
-
 
 .regInfoStackFarmer {
     display: flex;
@@ -415,22 +413,32 @@ fieldset {
     width: 50%;
 }
 
-
-.zipCodeLabel, .emailAddressLabel, .websiteLabel, .cityLabel, .streetAddressLabel, .farmNameLabel {
+.userNameInput, .emailAddressInput, .farmNameInput, .streetAddressInput, .cityInput, .zipCodeInput, .websiteInput {
     border: .05rem dotted #178B7C;
     width: 100%;
     min-height: 2rem;
     border-radius: 5px;
 }
 
-.website, .city, .streetAddress, .farmName, .instructions, .uploadImg {
+.userNameLabel, .emailAddressLabel, .farmNameLabel, .streetAddressLabel, .cityLabel, .zipCodeLabel, .websiteLabel {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.imageFarmer {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    text-align: left;
+}
+
+.instructions, .uploadImgFarmer {
     text-align: left;
     margin-bottom: 1rem;
 }
 
 textarea {
-    height: 17rem;
-    width: 30rem;
+    height: 20rem;
+    width: 100%;
 }
 
 .whiteSpace, .instructionsLabel {

@@ -132,8 +132,8 @@ export const RegisterFarmer = (props) => {
                     </section>
                     <section className="userinfoImageFarmerColumns">
                         <div className="imageInstructionsFarmer">
-                            <div className="image">
-                                <div className="uploadImg">Upload Image</div>
+                            <div className="imageFarmer">
+                                <div className="uploadImgFarmer">Upload Image</div>
                                     <input className="chooseFileBtn" type="file" name="file" placeholder="Upload an image" onChange={uploadImage}/>
                                     {loading ? (
                                         <h3>Loading...</h3>
@@ -150,32 +150,32 @@ export const RegisterFarmer = (props) => {
                         </div>
                         <div className="loginLeftFarmer">
                             <fieldset className="regInfoStackFarmer">
-                                <label htmlFor="username" className="userName"> Username </label>
-                                <input ref={username} type="text" name="username" id="userNameLabel" className="form-control form-username userNameLabel" placeholder="Username" required />
+                                <label htmlFor="username" className="userNameLabel"> Username </label>
+                                <input ref={username} type="text" name="username" id="userNameLabel" className="userNameInput" placeholder="Username" required />
                             </fieldset>
                             <fieldset className="regInfoStackFarmer">
-                                <label htmlFor="inputEmail" className="emailAddress"> Email address </label>
-                                <input ref={email} type="email" name="email" id="emailAddressLabel" className="form-control emailAddressLabel" placeholder="Email address" required />
+                                <label htmlFor="inputEmail" className="emailAddressLabel"> Email address </label>
+                                <input ref={email} type="email" name="email" id="emailAddressInput" className="emailAddressInput" placeholder="Email address" required />
                             </fieldset>
                             <fieldset className="regInfoStackFarmer">
-                                <label htmlFor="inputFarmName" className="farmName"> Farm name </label>
-                                <input ref={farmName} type="text" name="farmName" id="farmNameLabel" className="form-control farmNameLabel" placeholder="Farm name" required />
+                                <label htmlFor="inputFarmName" className="farmNameLabel"> Farm name </label>
+                                <input ref={farmName} type="text" name="farmName" id="farmNameInput" className="farmNameInput" placeholder="Farm name" required />
                             </fieldset>
                             <fieldset className="regInfoStackFarmer">
-                                <label htmlFor="inputStreetAddress" className="streetAddress"> Street address </label>
-                                <input ref={streetAddress} type="text" name="streetAddress" id="streetAddressLabel" className="form-control streetAddressLabel" placeholder="Street address" required />
+                                <label htmlFor="inputStreetAddress" className="streetAddressLabel"> Street address </label>
+                                <input ref={streetAddress} type="text" name="streetAddress" id="streetAddressInput" className="streetAddressInput" placeholder="Street address" required />
                             </fieldset>
                             <fieldset className="regInfoStackFarmer">
-                                <label htmlFor="inputCity" className="city"> City </label>
-                                <input ref={city} type="text" name="city" id="cityLabel" className="form-control cityLabel" placeholder="City" required />
+                                <label htmlFor="inputCity" className="cityLabel"> City </label>
+                                <input ref={city} type="text" name="city" id="cityInput" className="cityInput" placeholder="City" required />
                             </fieldset>
                             <fieldset className="regInfoStackFarmer">
-                                <label htmlFor="zip" className="zipCode">Zip Code</label>
-                                <input ref={zip} type="text" name="zip" id="zipCodeLabel" className="form-control zipCodeLabel" placeholder="Zip Code" required />
+                                <label htmlFor="zip" className="zipCodeLabel">Zip Code</label>
+                                <input ref={zip} type="text" name="zip" id="zipCodeInput" className="zipCodeInput" placeholder="Zip Code" required />
                             </fieldset>
                             <fieldset className="regInfoStackFarmer">
-                                <label htmlFor="website" className="website">Website URL</label>
-                                <input ref={website} type="text" name="website" id="websiteLabel" className="form-control zipCodeLabel" placeholder="Website URL" required />
+                                <label htmlFor="website" className="websiteLabel">Website URL</label>
+                                <input ref={website} type="text" name="website" id="websiteInput" className="websiteInput" placeholder="Website URL" required />
                             </fieldset>
                         </div>
                 </section>
