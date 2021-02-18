@@ -10,7 +10,7 @@ export const ReviewEditForm = () => {
 /* -------------------- To have access to farms and reviews -------------------- */
 
     const { getReviewById, editReview } = useContext(ReviewContext)
-    const { farms, getFarms, getFarmById } = useContext(FarmContext)
+    const { farms, getFarms } = useContext(FarmContext)
 
 /* -------------------- To access userId, and set userId to each review -------------------- */
 
@@ -25,8 +25,6 @@ export const ReviewEditForm = () => {
         "reviewText": "",
         "farm": ""
     })
-
-    const [isLoading, setIsLoading] = useState(true)
 
 /* -------------------- To have access individual farm that has been selected -------------------- */
 
@@ -71,7 +69,6 @@ export const ReviewEditForm = () => {
 /* -------------------- To save all of the reviews and then send the user back to the farm they reviewed -------------------- */
 
     const handleClickSaveReview = () => {
-        // setIsLoading(true)
 
         if (reviewId) {
             editReview(
@@ -116,7 +113,6 @@ export const ReviewEditForm = () => {
                 </fieldset>
                 <div className="centerReviewSubmitBtn">
                     <button id={review.farm.id} className="btn btn-primary"
-                        // disabled={isLoading}
                         onClick={ event => {
                             event.preventDefault()
                             handleClickSaveReview()

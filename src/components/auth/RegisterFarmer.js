@@ -10,16 +10,12 @@ export const RegisterFarmer = (props) => {
     const email = useRef()
     const streetAddress = useRef()
     const city = useRef()
-    const state = useRef()
     const zip = useRef()
     const farmName = useRef()
     const website = useRef()
     const instructions = useRef()
-    const pigEdibles = useRef()
-    const verifyPassword = useRef()
     const conflictDialog = useRef()
     const history = useHistory()
-    let farmId = localStorage.getItem("find-a-farm_user")
 
     const [imageURL, setImageURL] = useState("")
 

@@ -1,11 +1,9 @@
 import React, { useRef } from "react"
 import { useHistory } from "react-router-dom"
-import { Link } from "react-router-dom"
 import "./Login.css"
 
 export const Login = props => {
     const email = useRef()
-    const password = useRef()
     const existDialog = useRef()
     const history = useHistory()
 

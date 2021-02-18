@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState } from "react"
+import React, {useContext, useEffect } from "react"
 import { PigEdiblesContext } from "./PigEdiblesProvider"
 import { PigEdiblesCard } from "./PigEdiblesCard"
 import "./PigEdibles.css"
@@ -11,7 +11,7 @@ export const PigEdiblesList = () => {
     }, [])
 
     const includeList = () => {
-        
+
     }
     const excludeList = () => {}
 

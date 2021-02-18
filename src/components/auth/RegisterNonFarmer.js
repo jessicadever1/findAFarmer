@@ -9,7 +9,6 @@ export const RegisterNonFarmer = (props) => {
     const username = useRef()
     const email = useRef()
     const zip = useRef()
-    const verifyPassword = useRef()
     const conflictDialog = useRef()
     const history = useHistory()
 

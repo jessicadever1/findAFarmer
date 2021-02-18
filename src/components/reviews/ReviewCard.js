@@ -1,37 +1,14 @@
-import React, { useContext, useEffect, useState } from "react"
+import React from "react"
 import "./Review.css"
 import userPicture from "../images/user.png"
-import trashIcon from "../images/trash.png"
-import editIcon from "../images/editIcon.png"
-import { ReviewContext } from "./ReviewProvider"
-import { useHistory } from "react-router-dom"
 import { ReviewBtns } from "./ReviewBtns"
 
 export const ReviewCard = ({ review, user, farm }) => {
 
 /* -------------------- Provide reviews for each farm, and delete them upon click -------------------- */
 
-    const { deleteReview } = useContext(ReviewContext)
-
-    const userPic = userPicture
     const currentUser = parseInt(localStorage.getItem("find-a-farm_user"))
-    const history = useHistory()
 
-    const handleClickDeleteReview = () => {
-        
-        if (currentUser === review.userId) {
-            deleteReview(review.id)
-            .then(() => {
-                history.push(`/farms/detail/${farm.id}`)
-            })
-        }
-    }
-
-    const handleClickEditReview = () => {
-        if (currentUser === review.userId) {
-            history.push(`/reviews/edit/${review.id}`)
-        }
-    }
 
     const hideButtons = () => {
         if (currentUser === review.userId) {

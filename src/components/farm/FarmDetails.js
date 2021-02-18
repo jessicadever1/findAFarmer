@@ -16,7 +16,6 @@ export const FarmDetail = () => {
     const [ farm, setFarm ] = useState({})
     const { reviews, getReviews } = useContext(ReviewContext)
     const { farmId } = useParams()
-    let userId = localStorage.getItem("find-a-farm_user")
 
 /* -------------------- To be able to see only the reviews associated with current farm -------------------- */
 

@@ -107,7 +107,7 @@ export const ReviewForm = () => {
                         <div className="">
                             <label htmlFor="reviewText">Share your experience:</label>
                         </div>
-                        <textarea white-space="pre-wrap" wrap="hard" wrap="hard" type="textarea" id="reviewText" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Tell us all about it!" value={review.reviewText}/>
+                        <textarea white-space="pre-wrap" wrap="hard" type="textarea" id="reviewText" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Tell us all about it!" value={review.reviewText}/>
                     </div>
                 </fieldset>
                 <div className="centerReviewSubmitBtn">

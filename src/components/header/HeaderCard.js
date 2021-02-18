@@ -1,7 +1,6 @@
 import React from "react"
 import "./Header.css"
 import Pig from '../images/Pig.png'
-import {Link, useHistory} from 'react-router-dom'
 import { LogOutBtn } from "./LogOutBtn"
 
 /* -------------------- To give all pages a uniform header -------------------- */
