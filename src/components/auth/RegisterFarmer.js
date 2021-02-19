@@ -4,6 +4,7 @@ import { PigEdiblesList } from "../pigEdibles/PigEdiblesList"
 import "./Login.css"
 
 export const RegisterFarmer = (props) => {
+    const id = useRef()
     const firstName = useRef()
     const lastName = useRef()
     const username = useRef()
@@ -13,6 +14,7 @@ export const RegisterFarmer = (props) => {
     const zip = useRef()
     const farmName = useRef()
     const website = useRef()
+    const pigEdibleInclude = useRef()
     const instructions = useRef()
     const conflictDialog = useRef()
     const history = useHistory()
@@ -64,7 +66,8 @@ export const RegisterFarmer = (props) => {
                             name: `${firstName.current.value} ${lastName.current.value}`,
                             imageURL: imageURL,
                             username: username.current.value,
-                            zip: zip.current.value
+                            zip: zip.current.value,
+                            id: id
                         })
                     })
                     .then(
@@ -81,8 +84,9 @@ export const RegisterFarmer = (props) => {
                                 farmName: farmName.current.value,
                                 website: website.current.value,
                                 instructions: instructions.current.value,
-                                pigEdibles: [],
-                                imageURL: imageURL
+                                imageURL: imageURL,
+                                pigEdibleInclude: [],
+                                pigEdibleExclude: []
                             })
                         })
                     )

@@ -1,36 +1,35 @@
-import React, { useContext, useEffect } from "react"
-import { FarmContext } from "../farm/FarmProvider"
+import React, { useContext, useEffect, useState } from "react"
+import { PigEdiblesContext } from "./PigEdiblesProvider"
 import "./PigEdibles.css"
 
 export const PigEdiblesCard = ({ pigEdible }) => {
 
-    let user = parseInt(localStorage.getItem("find-a-farm_user"))
-    const {farms, getFarms} = useContext(FarmContext)
+    const { pigEdibles, getPigEdibles } = useContext(PigEdiblesContext)
 
-    useEffect(() => {
-        getFarms()
+    // const [pigEdible, setPigEdible] = useState({
+    //     "id": 0,
+    //     "name": "",
+    //     "checked": false
+    // })
+
+    useEffect(()=> {
+        getPigEdibles()
     }, [])
 
-    const currentFarm = farms.filter((currentFarm) => {
-        return currentFarm.userId === user
-    } )
-
-
-
     const handleCheckBox = (event) => {
-        if (event.target.checked === true) {
-            currentFarm.pigEdibles.include.push(pigEdible)
-        } else if (event.target.checked === false) {
-            currentFarm.pigEdibles.exclude.push(pigEdible)
-        }
+        // const newPigEdible = {...pigEdible}
+        // let selectedVal = event.target.checked
+        // newPigEdible[event.target.checked] =selectedVal
+        // setPigEdible(newPigEdible)
+        console.log("nothing works.")
     }
-
+    
     return (
         <>
             <div className="checklistDiv">
                 <fieldset className="checkListFieldset" >
                     <label htmlFor="checkboxLabel" className="checkboxLabel"> {pigEdible.name}</label>
-                    <input value="on" type="checkbox" name="checkbox" id="checkbox" className="checkbox" onChange={handleCheckBox}/>
+                    <input value={pigEdible.checked} type="checkbox" name="checkboxLabel" id="checkboxLabel" className="checkbox" onChange={handleCheckBox}/>
                 </fieldset>
             </div>    
         </>

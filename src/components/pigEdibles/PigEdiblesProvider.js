@@ -5,6 +5,7 @@ export const PigEdiblesContext = createContext()
 export const PigEdiblesProvider = (props) => {
 
     const [pigEdibles, setPigEdibles] = useState([])
+    const [farmEdibles, setFarmEdibles] = useState([])
 
     const getPigEdibles = () => {
         return fetch("http://localhost:8014/pigEdibles")
@@ -23,9 +24,15 @@ export const PigEdiblesProvider = (props) => {
         .then(getPigEdibles)
     }
 
+    const getFarmEdibles = () => {
+        return fetch("http://localhost:8014/farmEdibles")
+        .then(res => res.json())
+        .then(setFarmEdibles)
+    }
+
     return (
         <PigEdiblesContext.Provider value={{
-            pigEdibles, getPigEdibles, addPigEdibles
+            pigEdibles, getPigEdibles, addPigEdibles, farmEdibles, getFarmEdibles
         }}>
             {props.children}
         </PigEdiblesContext.Provider>

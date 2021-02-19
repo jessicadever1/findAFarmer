@@ -10,6 +10,7 @@ export const PigEdiblesList = () => {
         getPigEdibles()
     }, [])
 
+
     return (
         <div className="pigEdiblesList">
             {
