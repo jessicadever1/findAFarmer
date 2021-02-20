@@ -66,7 +66,27 @@ written.
  <img src="http://blog.dbdiagram.io/content/images/2020/04/dbdiagram_logo_text_720.png" alt="dbDiagram Logo"  width="200"/> <img src="https://mms.businesswire.com/media/20190619005152/en/728506/23/pm-logo-vert%402x-100.jpg" alt="Postman Logo" width="200" />
 
 
+## Instructions for Installing Find A Farmer
+To launch the Simplified Supper app, you will need to have access to 
+command line tools, node package manager, JSON Server. If you do not 
+have access to any of these tools, you can find instructions for 
+installing them in the Appendix.
 
+Clone this repo on you personal machine using the following command
 
+  git clone git@github.com:jessicadever1/findAFarmer.git
+  
+Install the NPM dependencies for this project using the following commands
 
+  cd find-a-farmer
+  npm install
+  
+From your terminal window, type
 
+  npm start
+  
+Now that the server is up and running, you can open an internet browser and access the application
+
+  http://localhost:8014/
+
+Congratulations you are now experiencing Find A Farmer!
