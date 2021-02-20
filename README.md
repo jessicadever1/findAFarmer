@@ -95,3 +95,47 @@ Now that the server is up and running, you can open an internet browser and acce
 ### Congratulations you are now experiencing Find A Farmer!
 
 
+## Appendix 1: Planning Documentation
+
+  ### Entity Relationship Diagram
+  ![Find A Farmer ERD](/src/components/images/FindAFarmer_ERD.png)
+
+  ### Wireframes/ Mockups
+  <img src="./src/images/wireframe_1.png" width="45%"></img> <img src="./src/images/wireframe_2.png" width="45%"></img>
+  <img src="./src/images/wireframe_3.png" width="45%"></img> <img src="./src/images/wireframe_4.png" width="45%"></img>
+  <img src="./src/images/wireframe_5.png" width="45%"></img> <img src="./src/images/wireframe_6.png" width="45%"></img>
+
+
+  ## Appendix 2: Set Up Instructions
+
+  You will need to have command line tools installed for your computer to use terminal commands.
+
+  Linux/ Windows users, please visit the [Git page](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and follow the instructions for set up
+
+  Mac users follow the instructions below
+
+  Open your terminal and type
+  ```sh
+    git --version
+  ```
+
+  You will now need to configure your git account. In the terminal window, type:
+  ```sh
+    git config -global user.name "Your Name"
+    git config -global user.email "Your Email"
+  ```
+
+  If you do not have Node.js installed on your machine, visit the [Node.js Download Page](https://nodejs.org/en/download/) and  follow the instructions. To ensure that it is installed correctly, in your terminal window, type
+  ```sh
+    echo $PATH
+  ```
+  Ensure that the result has the following in the $PATH
+  ```sh
+    /usr/local/bin
+    or
+    /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+  ```
+
+  Now you can follow the [installation instructions](#instructions-for-installing-simplified-supper) to get Simplified Supper up and running on your machine.
+
+  This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
