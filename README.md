@@ -52,7 +52,7 @@ written.
 
 
 ## Technologies Used
-![GitHub Logo](/images/logo.png)
+![React Logo](https://miro.medium.com/max/1000/1*Yafu7ihc1LFuP4azerAa4w.png)
 Format: ![Alt Text](url)
 
 ### Development Languages and Libraries
