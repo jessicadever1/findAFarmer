@@ -73,20 +73,25 @@ have access to any of these tools, you can find instructions for
 installing them in the Appendix.
 
 Clone this repo on you personal machine using the following command
-
+```sh
   git clone git@github.com:jessicadever1/findAFarmer.git
+ ```
   
 Install the NPM dependencies for this project using the following commands
-
+```sh
   cd find-a-farmer
   npm install
-  
+ ```
+ 
 From your terminal window, type
-
+```sh
   npm start
-  
+```
+
 Now that the server is up and running, you can open an internet browser and access the application
-
+```sh
   http://localhost:8014/
+```
+### Congratulations you are now experiencing Find A Farmer!
 
-Congratulations you are now experiencing Find A Farmer!
+
