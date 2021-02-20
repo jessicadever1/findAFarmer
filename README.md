@@ -52,7 +52,8 @@ written.
 
 
 ## Technologies Used
-<img src="https://miro.medium.com/max/1000/1*Yafu7ihc1LFuP4azerAa4w.png" width="250")> ![CSS Logo] (https://www.logolynx.com/images/logolynx/ee/ee6197d1b17644329226e0587dce4a9c.png)
+<img src="https://miro.medium.com/max/1000/1*Yafu7ihc1LFuP4azerAa4w.png" width="250")/> 
+<img src="https://www.logolynx.com/images/logolynx/ee/ee6197d1b17644329226e0587dce4a9c.png" />
 
 
 ### Development Languages and Libraries
