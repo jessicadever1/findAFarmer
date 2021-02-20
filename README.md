@@ -52,7 +52,7 @@ written.
 
 
 ## Technologies Used
-![React Logo](https://miro.medium.com/max/1000/1*Yafu7ihc1LFuP4azerAa4w.png =20x20) ![CSS Logo] (https://www.logolynx.com/images/logolynx/ee/ee6197d1b17644329226e0587dce4a9c.png)
+![React Logo](https://miro.medium.com/max/1000/1*Yafu7ihc1LFuP4azerAa4w.png =250x) ![CSS Logo] (https://www.logolynx.com/images/logolynx/ee/ee6197d1b17644329226e0587dce4a9c.png)
 
 
 ### Development Languages and Libraries
