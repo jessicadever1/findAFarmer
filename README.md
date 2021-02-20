@@ -42,6 +42,8 @@ to the details page of the farm they have just reviewed.
 ## Technologies Used
 ### Development Languages and Libraries
 
+<img src="./src/components/images/editIcon.png" alt="GitHub Logo">
+
 ### Development Tools
 
 
