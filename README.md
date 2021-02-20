@@ -53,8 +53,12 @@ written.
 
 ## Technologies Used
 <img src="https://miro.medium.com/max/1000/1*Yafu7ihc1LFuP4azerAa4w.png" alt="react logo" width="200"/> 
-<img src="https://www.logolynx.com/images/logolynx/ee/ee6197d1b17644329226e0587dce4a9c.png" />
-
+<img src="https://www.logolynx.com/images/logolynx/ee/ee6197d1b17644329226e0587dce4a9c.png" alt="CSS Logo" width="200"/>
+<img src="http://res.cloudinary.com/cloudinary/image/upload/new_cloudinary_logo_square.png" alt="Cloudinary Logo"  width="200"/>
+<img src="" alt=""  width="200"/>
+<img src="" alt=""  width="200"/>
+<img src="" alt=""  width="200"/>
+<img src="" alt=""  width="200"/>
 
 ### Development Languages and Libraries
 
