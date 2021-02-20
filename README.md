@@ -52,6 +52,8 @@ written.
 
 
 ## Technologies Used
+![GitHub Logo](/images/logo.png)
+Format: ![Alt Text](url)
 
 ### Development Languages and Libraries
 
