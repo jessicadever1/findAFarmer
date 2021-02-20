@@ -53,17 +53,14 @@ written.
 
 ## Technologies Used
 <img src="https://miro.medium.com/max/1000/1*Yafu7ihc1LFuP4azerAa4w.png" alt="react logo" width="200"/> <img src="https://www.logolynx.com/images/logolynx/ee/ee6197d1b17644329226e0587dce4a9c.png" alt="CSS Logo" width="200"/> <img src="http://res.cloudinary.com/cloudinary/image/upload/new_cloudinary_logo_square.png" alt="Cloudinary Logo"  width="200"/>
-<img src="https://www.generalcatalyst.com/wp-content/uploads/2019/05/canva-logo-1.jpg" alt="Canva Logo"  width="200"/>
-<img src="http://blog.dbdiagram.io/content/images/2020/04/dbdiagram_logo_text_720.png" alt="dbDiagram Logo"  width="200"/>
-<img src="https://i0.wp.com/publicmediastack.com/wp-content/uploads/2020/04/FIGMA.png?fit=1200%2C675&ssl=1" alt="Figma Logo"  width="200"/>
-<img src="https://www.evernote.design/assets/images/coolors.jpg" alt="Coolers Logo"  width="200"/>
+<img src="https://www.generalcatalyst.com/wp-content/uploads/2019/05/canva-logo-1.jpg" alt="Canva Logo"  width="200"/> <img src="https://i0.wp.com/publicmediastack.com/wp-content/uploads/2020/04/FIGMA.png?fit=1200%2C675&ssl=1" alt="Figma Logo"  width="200"/> <img src="https://www.evernote.design/assets/images/coolors.jpg" alt="Coolers Logo"  width="200"/>
 
 ### Development Languages and Libraries
 
 
 ### Development Tools
 
-
+<img src="http://blog.dbdiagram.io/content/images/2020/04/dbdiagram_logo_text_720.png" alt="dbDiagram Logo"  width="200"/> <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo"  width="200"/> <img src="https://secrethub.io/img/vs-code.svg" alt="VS Code Logo" width="200" /> <img src="https://mms.businesswire.com/media/20190619005152/en/728506/23/pm-logo-vert%402x-100.jpg" alt="Postman Logo" width="200" />
 
 
 
