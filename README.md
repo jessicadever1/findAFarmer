@@ -52,7 +52,7 @@ written.
 
 
 ## Technologies Used
-![React Logo](https://miro.medium.com/max/1000/1*Yafu7ihc1LFuP4azerAa4w.png) ![CSS Logo](https://e7.pngegg.com/pngimages/893/87/png-clipart-cascading-style-sheets-logo-css3-html-css3-logo-blue-angle.png)
+![React Logo](https://miro.medium.com/max/1000/1*Yafu7ihc1LFuP4azerAa4w.png) ![CSS Logo]height: 20px (https://www.logolynx.com/images/logolynx/ee/ee6197d1b17644329226e0587dce4a9c.png)
 
 
 ### Development Languages and Libraries
