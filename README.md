@@ -52,7 +52,7 @@ written.
 
 
 ## Technologies Used
-<img src="https://miro.medium.com/max/1000/1*Yafu7ihc1LFuP4azerAa4w.png" width="250")/> 
+<img src="https://miro.medium.com/max/1000/1*Yafu7ihc1LFuP4azerAa4w.png" style="width:200px;")/> 
 <img src="https://www.logolynx.com/images/logolynx/ee/ee6197d1b17644329226e0587dce4a9c.png" />
 
 
