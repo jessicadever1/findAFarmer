@@ -98,7 +98,7 @@ Now that the server is up and running, you can open an internet browser and acce
 ## Appendix 1: Planning Documentation
 
   ### Entity Relationship Diagram
-  ![Find A Farmer ERD](/src/components/images/FindAFarmer_ERD.png)
+  ![Find A Farmer ERD](./src/components/images/FindAFarmer_ERD.png)
 
   ### Wireframes/ Mockups
   <img src="./src/images/wireframe_1.png" width="45%"></img> <img src="./src/images/wireframe_2.png" width="45%"></img>
