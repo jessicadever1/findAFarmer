@@ -71,6 +71,15 @@
     text-decoration: none;
 }
 
+.farmWebsite {
+    border-radius: 5px;
+    color: #178B7C; 
+    min-width: 15%;
+    min-height: 2rem;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
 #reviewText {
     min-height: 9rem;
     margin-top: .5rem;

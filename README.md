@@ -54,7 +54,6 @@ to the details page of the farm they have just reviewed.
 Users are given the option to edit or delete the reviews that they have
 written.
 
-
 ## Technologies Used
 
 ### Development Languages and Libraries

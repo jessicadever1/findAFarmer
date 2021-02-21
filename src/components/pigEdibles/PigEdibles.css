@@ -3,10 +3,75 @@
     flex-direction: row-reverse;
     flex-wrap: wrap;
     max-height: 10rem;
+    margin: .5rem;
 }
 
 .checklistDiv {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    margin: .5rem;
+    color: white;
+    font-size: 2rem;
+}
+
+.checkbox {
+    border: white solid 2px;
+    margin-top: .4rem;
+    margin-right: .4rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 5px;
+}
+
+input {
+    border: none;
+    text-decoration: none;
+}
+
+.pigEdiblesList {
+    background-color: #FFBF69;
+    border-radius: 10px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin: 1rem;
+}
+
+.pigEdiblesDiv {
+    color: #178B7C;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    margin: 1rem;
+}
+
+.leftSidePadding {
+        width: 20%;
+        margin-top: -10rem;
+        margin-bottom: -20rem;
+}
+
+.rightSidePadding {
+    width: 20%;
+    margin-top: -10rem;
+    margin-bottom: -20rem;
+}
+
+.checkListDisplay {
+    display: flex;
+}
+
+.completeRegBtnDiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.completeRegBtn {
+    border-radius: 5px;
+    color: #178B7C; 
+    min-width: 100%;
+    min-height: 2rem;
+    text-decoration: none;
+    margin-top: 1rem;
 }

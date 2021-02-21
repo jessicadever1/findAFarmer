@@ -1,22 +1,19 @@
 import React, { useRef, useState } from "react"
 import { useHistory } from "react-router-dom"
-import { PigEdibles } from "../pigEdibles/PigEdibles"
 import "./Login.css"
 
 export const RegisterFarmer = (props) => {
+    const id = useRef()
     const firstName = useRef()
     const lastName = useRef()
     const username = useRef()
     const email = useRef()
     const streetAddress = useRef()
     const city = useRef()
-    const state = useRef()
     const zip = useRef()
     const farmName = useRef()
     const website = useRef()
     const instructions = useRef()
-    const pigEdibles = useRef()
-    const verifyPassword = useRef()
     const conflictDialog = useRef()
     const history = useHistory()
 
@@ -84,7 +81,6 @@ export const RegisterFarmer = (props) => {
                                 farmName: farmName.current.value,
                                 website: website.current.value,
                                 instructions: instructions.current.value,
-                                pigEdibles: [],
                                 imageURL: imageURL
                             })
                         })
@@ -93,7 +89,7 @@ export const RegisterFarmer = (props) => {
                     .then(createdUser => {
                         if (createdUser.hasOwnProperty("id")) {
                             localStorage.setItem("find-a-farm_user", createdUser.id)
-                            history.push("/farms")
+                            history.push("/farmerRegistrationStepTwo")
                         }
                     })
                 }
@@ -106,7 +102,7 @@ export const RegisterFarmer = (props) => {
 /* -------------------- The contents of the register user box -------------------- */
 
     return (
-        <section className="container--register" style={{ textAlign: "center" }}>
+        <section className="container--registerFarmer" style={{ textAlign: "center" }}>
 
         <div className="leftSidePadding"></div>
 
@@ -119,21 +115,21 @@ export const RegisterFarmer = (props) => {
                 
                 <h2 className="h3 mb-3 font-weight-normal">Get Started</h2>
                     <section className="form--regNonFarmer">
-                            <section className="firstNameLastName">
-                                <fieldset className="regInfoStack">
-                                    <label htmlFor="firstName" className="firstName"> First Name </label>
-                                    <input ref={firstName} id="firstNameLabelFarmer" type="text" name="firstName" className="form-control form-name firstNameLabelFarmer" placeholder="First name" required autoFocus />
+                            <section className="firstNameLastNameFarmer">
+                                <fieldset className="nameFieldSetFarmer">
+                                    <label htmlFor="firstName" className="firstNameLabelFarmer"> First Name </label>
+                                    <input ref={firstName} id="firstNameLabelFarmer" type="text" name="firstName" className="firstNameFarmerInput" placeholder="First name" required autoFocus />
                                 </fieldset>
-                                <fieldset className="regInfoStack">
-                                    <label htmlFor="lastName" className="lastName"> Last Name </label>
-                                    <input ref={lastName} id="lastNameLabel" type="text" name="lastName" className="form-control form-name lastNameLabel" placeholder="Last name" required />
+                                <fieldset className="nameFieldSetFarmer">
+                                    <label htmlFor="lastName" className="lastNameLabelFarmer"> Last Name </label>
+                                    <input ref={lastName} id="lastNameLabel" type="text" name="lastName" className="lastNameFarmerInput" placeholder="Last name" required />
                                 </fieldset>
                             </section>
                     </section>
-                    <section className="usernameImage">
-                        <div className="imageInstructions">
-                            <div className="image">
-                                <div className="uploadImg">Upload Image</div>
+                    <section className="userinfoImageFarmerColumns">
+                        <div className="imageInstructionsFarmer">
+                            <div className="imageFarmer">
+                                <div className="uploadImgFarmer">Upload Image</div>
                                     <input className="chooseFileBtn" type="file" name="file" placeholder="Upload an image" onChange={uploadImage}/>
                                     {loading ? (
                                         <h3>Loading...</h3>
@@ -142,49 +138,45 @@ export const RegisterFarmer = (props) => {
                                         )}
                             </div>
                             <div className="whiteSpace">
-                                <fieldset className="regInfoStack">
+                                <fieldset className="regInfoStackFarmer">
                                         <label htmlFor="instructions" className="instructions">Instructions</label>
                                         <textarea white-space="pre-wrap" wrap="hard" ref={instructions} type="textarea" name="instructions" id="instructionsLabel" className="form-control instructionsLabel" placeholder="With as much clarity as possible, tell your visitors where and how to drop their slop at your farm." required  autoFocus/>
                                 </fieldset>
                             </div>
                         </div>
-                        <div className="loginLeft">
-                            <fieldset className="regInfoStack">
-                                <label htmlFor="username" className="userName"> Username </label>
-                                <input ref={username} type="text" name="username" id="userNameLabel" className="form-control form-username userNameLabel" placeholder="Username" required />
+                        <div className="loginLeftFarmer">
+                            <fieldset className="regInfoStackFarmer">
+                                <label htmlFor="username" className="userNameLabel"> Username </label>
+                                <input ref={username} type="text" name="username" id="userNameLabel" className="userNameInput" placeholder="Username" required />
                             </fieldset>
-                            <fieldset className="regInfoStack">
-                                <label htmlFor="inputEmail" className="emailAddress"> Email address </label>
-                                <input ref={email} type="email" name="email" id="emailAddressLabel" className="form-control emailAddressLabel" placeholder="Email address" required />
+                            <fieldset className="regInfoStackFarmer">
+                                <label htmlFor="inputEmail" className="emailAddressLabel"> Email address </label>
+                                <input ref={email} type="email" name="email" id="emailAddressInput" className="emailAddressInput" placeholder="Email address" required />
                             </fieldset>
-                            <fieldset className="regInfoStack">
-                                <label htmlFor="inputFarmName" className="farmName"> Farm name </label>
-                                <input ref={farmName} type="text" name="farmName" id="farmNameLabel" className="form-control farmNameLabel" placeholder="Farm name" required />
+                            <fieldset className="regInfoStackFarmer">
+                                <label htmlFor="inputFarmName" className="farmNameLabel"> Farm name </label>
+                                <input ref={farmName} type="text" name="farmName" id="farmNameInput" className="farmNameInput" placeholder="Farm name" required />
                             </fieldset>
-                            <fieldset className="regInfoStack">
-                                <label htmlFor="inputStreetAddress" className="streetAddress"> Street address </label>
-                                <input ref={streetAddress} type="text" name="streetAddress" id="streetAddressLabel" className="form-control streetAddressLabel" placeholder="Street address" required />
+                            <fieldset className="regInfoStackFarmer">
+                                <label htmlFor="inputStreetAddress" className="streetAddressLabel"> Street address </label>
+                                <input ref={streetAddress} type="text" name="streetAddress" id="streetAddressInput" className="streetAddressInput" placeholder="Street address" required />
                             </fieldset>
-                            <fieldset className="regInfoStack">
-                                <label htmlFor="inputCity" className="city"> City </label>
-                                <input ref={city} type="text" name="city" id="cityLabel" className="form-control cityLabel" placeholder="City" required />
+                            <fieldset className="regInfoStackFarmer">
+                                <label htmlFor="inputCity" className="cityLabel"> City </label>
+                                <input ref={city} type="text" name="city" id="cityInput" className="cityInput" placeholder="City" required />
                             </fieldset>
-                            <fieldset className="regInfoStack">
-                                <label htmlFor="zip" className="zipCode">Zip Code</label>
-                                <input ref={zip} type="text" name="zip" id="zipCodeLabel" className="form-control zipCodeLabel" placeholder="Zip Code" required />
+                            <fieldset className="regInfoStackFarmer">
+                                <label htmlFor="zip" className="zipCodeLabel">Zip Code</label>
+                                <input ref={zip} type="text" name="zip" id="zipCodeInput" className="zipCodeInput" placeholder="Zip Code" required />
                             </fieldset>
-                            <fieldset className="regInfoStack">
-                                <label htmlFor="website" className="website">Website URL</label>
-                                <input ref={website} type="text" name="website" id="websiteLabel" className="form-control zipCodeLabel" placeholder="Website URL" required />
+                            <fieldset className="regInfoStackFarmer">
+                                <label htmlFor="website" className="websiteLabel">Website URL</label>
+                                <input ref={website} type="text" name="website" id="websiteInput" className="websiteInput" placeholder="Website URL" required />
                             </fieldset>
-                        </div>
-                        <div className="pigEdiblesDib">
-                            <h2>Which foods would you like to accept?</h2>
-                            <p>Please check the box for any item that you would like to include on your farm's "Include" list. All items with unchecked boxes, will automatically become your "Exclude" list.</p>
-                            <PigEdibles />
                         </div>
                 </section>
-                            <fieldset className="loginBtnFieldset">
+                        
+                            <fieldset className="loginBtnFieldsetFarmer">
                                 <button className="loginBtn" type="submit"> Register </button>
                             </fieldset>
                 

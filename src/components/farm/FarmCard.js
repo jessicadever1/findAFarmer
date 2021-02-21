@@ -1,10 +1,7 @@
 import React from "react"
 import "./Farm.css"
 import { Link } from "react-router-dom"
-import {useHistory } from "react-router-dom"
-
 import Pig from '../images/Pig.png'
-import { ReviewContext } from "../reviews/ReviewProvider"
 
 /* -------------------- To always have a default farm picture available, if user doesn't have a farm pic -------------------- */
 

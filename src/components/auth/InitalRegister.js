@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import "./Login.css"
 
 export const RegisterBtns = () => {
+
     return (
         <>
         <section className="containter--initialRegister">

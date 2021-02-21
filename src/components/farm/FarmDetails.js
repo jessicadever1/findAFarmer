@@ -1,10 +1,9 @@
 import React, { useContext, useEffect, useState } from "react"
 import { FarmContext } from "./FarmProvider"
 import "./Farm.css"
-import { useParams, useHistory } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import { Link } from "react-router-dom"
 import Pig from "../images/Pig.png"
-import user from "../images/user.png"
 import { ReviewContext } from "../reviews/ReviewProvider"
 import { ReviewCard } from "../reviews/ReviewCard"
 
@@ -17,7 +16,6 @@ export const FarmDetail = () => {
     const [ farm, setFarm ] = useState({})
     const { reviews, getReviews } = useContext(ReviewContext)
     const { farmId } = useParams()
-    let userId = localStorage.getItem("find-a-farm_user")
 
 /* -------------------- To be able to see only the reviews associated with current farm -------------------- */
 
@@ -53,9 +51,12 @@ export const FarmDetail = () => {
                 <img src={farm.imageURL} alt="{farm.name} default pic" className="farmPic"></img>
                 <div className="farmCardRight">   
                     <section className="farm__info">
-                        <h2 className="farm__name">{farm.farmName}</h2>
-                        <div className="farm__street">{farm.streetAddress}</div>
-                        <div className="farm__address">{farm.city} {farm.state} {farm.zip}</div>
+                        <h2 className="farm__name">{farm.farmName}</h2> 
+                        
+                            <div className="farm__street">{farm.streetAddress}</div>
+                            <div className="farm__address">{farm.city} {farm.state} {farm.zip}</div>
+                       
+                        <button className="farmWebsite"><a href={farm.website}>Website</a></button>
                     </section>
                 </div>
             </div>
