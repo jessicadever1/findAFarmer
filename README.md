@@ -10,24 +10,30 @@ from going to landfills, while helping the farmer supply the pigs with a
 nutritious diet.
 
 ## Table of Contents
-
+* [Project Requirements and Features List](#project-requirements-and-features-list)
+* [Technologies Used](#technologies-used)
+* [Installing and Launching Find A Farmer](#instructions-for-installing-find-a-farmer)
+* [Appendix 1: Planning Documentation](#appendix-1-planning-documentation)
+    * [Entity Relationship Diagrams](#entity-relationship-diagram)
+    * [Wireframes](#wireframes)
+ * [Appendix 2: Set Up Instructions](#appendix-2-set-up-instructions)
+ 
 ## Project Requirements and Features List
-
-When a user registers an account, or logs in from a previously registered
-account, they are shown a list of all of the farms in the Middle TN area
-that have opted into Find A Farmer. The are given the option to find a farm
-in their preferred county, and then shown a list of only farms in that area.
-They can then choose an individual farm to learn more about.
-
-## Two Types of Users
+### Two Types of Users
 
 Users are offered two registration options. If they are not a farmer, they
 register with just their name, username, email, profile picture and zip code.
 As a farmer, they also are required to fill out information on their farm,
 including the address, website (if applicable), and their farm's name.
 
-## Farm Details
+### Get Started
+When a user registers an account, or logs in from a previously registered
+account, they are shown a list of all of the farms in the Middle TN area
+that have opted into Find A Farmer. The are given the option to find a farm
+in their preferred county, and then shown a list of only farms in that area.
+They can then choose an individual farm to learn more about.
 
+### Farm Details
 When the user has selected a farm, they are shown the farm's address, the
 instructions provided for dropping off their food waste, a list of items 
 they are welcome to include, and a list of items they are asked to exclude.
@@ -35,8 +41,7 @@ They are given reviews for that farm, listed from most recent to least
 recent, and the option to add their own review. Last, they are also given 
 the option to go back to the list of all of the farms.
 
-## Farm Review
-
+### Farm Review
 When the user has clicked on the 'Add Review' button (on either the farm
 details page, or from the list of farms), they are taken to a form that
 allows them to write their own review. The title of the review includes
@@ -45,8 +50,7 @@ farm. They are asked to give their review a title, the date they visited,
 and the review itself. Once they submit their review, they are redirected
 to the details page of the farm they have just reviewed.
 
-## Edit and Delete Review
-
+### Edit and Delete Review
 Users are given the option to edit or delete the reviews that they have
 written.
 
@@ -88,7 +92,8 @@ From your terminal window, type
   npm start
 ```
 
-Now that the server is up and running, you can open an internet browser and access the application
+Now that the server is up and running, you can open an internet browser 
+and access the application
 ```sh
   http://localhost:8014/
 ```
@@ -106,10 +111,10 @@ Now that the server is up and running, you can open an internet browser and acce
   <img src="./src/components/images/StretchGoalWireFrame.png" width="50%"></img>
   
 
+## Appendix 2: Set Up Instructions
 
-  ## Appendix 2: Set Up Instructions
-
-  You will need to have command line tools installed for your computer to use terminal commands.
+  You will need to have command line tools installed for your computer 
+  to use terminal commands.
 
   Linux/ Windows users, please visit the [Git page](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and follow the instructions for set up
 
@@ -137,5 +142,6 @@ Now that the server is up and running, you can open an internet browser and acce
     /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
   ```
 
-  Now you can follow the [installation instructions](#instructions-for-installing-Find-A-Farmer) to get Find A Farmer up and running on your machine.
+  Now you can follow the [installation instructions](#instructions-for-installing-Find-A-Farmer) 
+  to get Find A Farmer up and running on your machine.
 
