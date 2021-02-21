@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react"
 import { useHistory } from "react-router-dom"
-import { PigEdiblesList } from "../pigEdibles/PigEdiblesList"
 import "./Login.css"
 
 export const RegisterFarmer = (props) => {
@@ -14,7 +13,6 @@ export const RegisterFarmer = (props) => {
     const zip = useRef()
     const farmName = useRef()
     const website = useRef()
-    const pigEdibleInclude = useRef()
     const instructions = useRef()
     const conflictDialog = useRef()
     const history = useHistory()
@@ -66,8 +64,7 @@ export const RegisterFarmer = (props) => {
                             name: `${firstName.current.value} ${lastName.current.value}`,
                             imageURL: imageURL,
                             username: username.current.value,
-                            zip: zip.current.value,
-                            id: id
+                            zip: zip.current.value
                         })
                     })
                     .then(
@@ -84,9 +81,7 @@ export const RegisterFarmer = (props) => {
                                 farmName: farmName.current.value,
                                 website: website.current.value,
                                 instructions: instructions.current.value,
-                                imageURL: imageURL,
-                                pigEdibleInclude: [],
-                                pigEdibleExclude: []
+                                imageURL: imageURL
                             })
                         })
                     )
@@ -94,7 +89,7 @@ export const RegisterFarmer = (props) => {
                     .then(createdUser => {
                         if (createdUser.hasOwnProperty("id")) {
                             localStorage.setItem("find-a-farm_user", createdUser.id)
-                            history.push("/farms")
+                            history.push("/farmerRegistrationStepTwo")
                         }
                     })
                 }
@@ -180,11 +175,7 @@ export const RegisterFarmer = (props) => {
                             </fieldset>
                         </div>
                 </section>
-                        <div className="pigEdiblesDib">
-                            <h2>Which foods would you like to accept?</h2>
-                            <p>Please check the box for any item that you would like to include on your farm's "Include" list. All items with unchecked boxes, will automatically become your "Exclude" list.</p>
-                            <PigEdiblesList />
-                        </div>
+                        
                             <fieldset className="loginBtnFieldsetFarmer">
                                 <button className="loginBtn" type="submit"> Register </button>
                             </fieldset>

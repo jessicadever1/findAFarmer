@@ -7,6 +7,8 @@ import { ReviewProvider } from "./reviews/ReviewProvider"
 import { ReviewForm } from "./reviews/ReviewForm"
 import { UserProvider } from "./users/UserProvider"
 import { ReviewEditForm } from "./reviews/ReviewEditForm"
+import { PigEdiblesProvider } from "./pigEdibles/PigEdiblesProvider"
+import { PigEdiblesList } from "./pigEdibles/PigEdiblesList"
 
 export const ApplicationViews = () => {
     
@@ -39,6 +41,17 @@ export const ApplicationViews = () => {
             </ReviewProvider>
         </UserProvider>
 
+        <UserProvider>
+            <FarmProvider>
+                <PigEdiblesProvider>
+
+                    <Route exact path="/farmerRegistrationStepTwo">
+                        <PigEdiblesList />
+                    </Route>
+
+                </PigEdiblesProvider>
+            </FarmProvider>
+        </UserProvider>
         </>
     )
 }
