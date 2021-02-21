@@ -10,17 +10,30 @@ from going to landfills, while helping the farmer supply the pigs with a
 nutritious diet.
 
 ## Table of Contents
-
+* [Project Requirements and Features List](#project-requirements-and-features-list)
+* [Technologies Used](#technologies-used)
+* [Installing and Launching Find A Farmer](#instructions-for-installing-find-a-farmer)
+* [Appendix 1: Planning Documentation](#appendix-1-planning-documentation)
+    * [Entity Relationship Diagrams](#entity-relationship-diagram)
+    * [Wireframes](#wireframes)
+ * [Appendix 2: Set Up Instructions](#appendix-2-set-up-instructions)
+ 
 ## Project Requirements and Features List
+### Two Types of Users
 
+Users are offered two registration options. If they are not a farmer, they
+register with just their name, username, email, profile picture and zip code.
+As a farmer, they also are required to fill out information on their farm,
+including the address, website (if applicable), and their farm's name.
+
+### Get Started
 When a user registers an account, or logs in from a previously registered
 account, they are shown a list of all of the farms in the Middle TN area
 that have opted into Find A Farmer. The are given the option to find a farm
 in their preferred county, and then shown a list of only farms in that area.
 They can then choose an individual farm to learn more about.
 
-## Farm Details
-
+### Farm Details
 When the user has selected a farm, they are shown the farm's address, the
 instructions provided for dropping off their food waste, a list of items 
 they are welcome to include, and a list of items they are asked to exclude.
@@ -28,8 +41,7 @@ They are given reviews for that farm, listed from most recent to least
 recent, and the option to add their own review. Last, they are also given 
 the option to go back to the list of all of the farms.
 
-## Farm Review
-
+### Farm Review
 When the user has clicked on the 'Add Review' button (on either the farm
 details page, or from the list of farms), they are taken to a form that
 allows them to write their own review. The title of the review includes
@@ -38,96 +50,97 @@ farm. They are asked to give their review a title, the date they visited,
 and the review itself. Once they submit their review, they are redirected
 to the details page of the farm they have just reviewed.
 
+### Edit and Delete Review
+Users are given the option to edit or delete the reviews that they have
+written.
 
 ## Technologies Used
-### Development Languages and Libraries
 
-<img src="./src/components/images/editIcon.png" alt="GitHub Logo">
+### Development Languages and Libraries
+<img src="https://miro.medium.com/max/1000/1*Yafu7ihc1LFuP4azerAa4w.png" alt="react logo" width="200"/><img src="https://www.logolynx.com/images/logolynx/ee/ee6197d1b17644329226e0587dce4a9c.png" alt="CSS Logo" width="200"/><img src="http://res.cloudinary.com/cloudinary/image/upload/new_cloudinary_logo_square.png" alt="Cloudinary Logo"  width="200"/>
+
+<img src="https://www.generalcatalyst.com/wp-content/uploads/2019/05/canva-logo-1.jpg" alt="Canva Logo"  width="200"/><img src="https://i0.wp.com/publicmediastack.com/wp-content/uploads/2020/04/FIGMA.png?fit=1200%2C675&ssl=1" alt="Figma Logo"  width="200"/><img src="https://www.evernote.design/assets/images/coolors.jpg" alt="Coolers Logo"  width="200"/>
+
 
 ### Development Tools
 
+ <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo"  width="200"/> <img src="https://secrethub.io/img/vs-code.svg" alt="VS Code Logo" width="200" /> 
+ 
+ <img src="http://blog.dbdiagram.io/content/images/2020/04/dbdiagram_logo_text_720.png" alt="dbDiagram Logo"  width="200"/> <img src="https://mms.businesswire.com/media/20190619005152/en/728506/23/pm-logo-vert%402x-100.jpg" alt="Postman Logo" width="200" />
 
 
+## Instructions for Installing Find A Farmer
+To launch the Simplified Supper app, you will need to have access to 
+command line tools, node package manager, JSON Server. If you do not 
+have access to any of these tools, you can find instructions for 
+installing them in the Appendix.
+
+Clone this repo on you personal machine using the following command
+```sh
+  git clone git@github.com:jessicadever1/findAFarmer.git
+ ```
+  
+Install the NPM dependencies for this project using the following commands
+```sh
+  cd find-a-farmer
+  npm install
+ ```
+ 
+From your terminal window, type
+```sh
+  npm start
+```
+
+Now that the server is up and running, you can open an internet browser 
+and access the application
+```sh
+  http://localhost:8014/
+```
+### Congratulations you are now experiencing Find A Farmer!
 
 
+## Appendix 1: Planning Documentation
 
+  ### Entity Relationship Diagram
+  ![Find A Farmer ERD](/src/components/images/FindAFarmer_ERD.png)
 
+  ### Wireframes
+  <img src="./src/components/images/MVP WireFrame.png" width="90%"></img> 
+  
+  <img src="./src/components/images/StretchGoalWireFrame.png" width="50%"></img>
+  
 
+## Appendix 2: Set Up Instructions
 
+  You will need to have command line tools installed for your computer 
+  to use terminal commands.
 
+  Linux/ Windows users, please visit the [Git page](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and follow the instructions for set up
 
+  Mac users follow the instructions below
 
+  Open your terminal and type
+  ```sh
+    git --version
+  ```
 
+  You will now need to configure your git account. In the terminal window, type:
+  ```sh
+    git config -global user.name "Your Name"
+    git config -global user.email "Your Email"
+  ```
 
+  If you do not have Node.js installed on your machine, visit the [Node.js Download Page](https://nodejs.org/en/download/) and  follow the instructions. To ensure that it is installed correctly, in your terminal window, type
+  ```sh
+    echo $PATH
+  ```
+  Ensure that the result has the following in the $PATH
+  ```sh
+    /usr/local/bin
+    or
+    /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+  ```
 
+  Now you can follow the [installation instructions](#instructions-for-installing-Find-A-Farmer) 
+  to get Find A Farmer up and running on your machine.
 
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
