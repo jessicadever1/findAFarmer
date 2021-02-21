@@ -98,12 +98,13 @@ Now that the server is up and running, you can open an internet browser and acce
 ## Appendix 1: Planning Documentation
 
   ### Entity Relationship Diagram
-  ![Find A Farmer ERD](./src/components/images/FindAFarmer_ERD.png)
+  ![Find A Farmer ERD](/src/components/images/FindAFarmer_ERD.png)
 
   ### Wireframes/ Mockups
-  <img src="./src/images/wireframe_1.png" width="45%"></img> <img src="./src/images/wireframe_2.png" width="45%"></img>
-  <img src="./src/images/wireframe_3.png" width="45%"></img> <img src="./src/images/wireframe_4.png" width="45%"></img>
-  <img src="./src/images/wireframe_5.png" width="45%"></img> <img src="./src/images/wireframe_6.png" width="45%"></img>
+  <img src="./src/components/images/MVP WireFrame.png" width="90%"></img> 
+  
+  <img src="./src/components/images/StretchGoalWireFrame.png" width="50%"></img>
+  
 
 
   ## Appendix 2: Set Up Instructions
@@ -136,6 +137,5 @@ Now that the server is up and running, you can open an internet browser and acce
     /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
   ```
 
-  Now you can follow the [installation instructions](#instructions-for-installing-simplified-supper) to get Simplified Supper up and running on your machine.
+  Now you can follow the [installation instructions](#instructions-for-installing-Find-A-Farmer) to get Find A Farmer up and running on your machine.
 
-  This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
