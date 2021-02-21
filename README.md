@@ -19,6 +19,11 @@ nutritious diet.
  * [Appendix 2: Set Up Instructions](#appendix-2-set-up-instructions)
  
 ## Project Requirements and Features List
+
+### Capstone Proposal 
+
+<a href="https://docs.google.com/document/d/1_DBYvVhPBYSS-iqIhTRL5AhblDsksLGiowp0H7CbCWU/edit">Proposal</a>
+
 ### Two Types of Users
 
 Users are offered two registration options. If they are not a farmer, they

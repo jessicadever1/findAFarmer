@@ -41,6 +41,10 @@ body {
     flex-direction: column;
 }
 
+.farmPageContent {
+    width: 60%;
+}
+
 .farm__name {
     margin-top: 0;
 }
@@ -234,4 +238,26 @@ ul {
 
 .centerInstructionsTitle {
     text-align: center;
+}
+
+.farmListCSS {
+    display: flex;
+    justify-content: center;
+}
+
+.pageWrap {
+    width: 60%;
+}
+
+.farmDetailsPageWrap {
+    display: flex;
+    justify-content: center;
+}
+
+.leftSidePaddingFarmList {
+    width: 10%;
+}
+
+.rightSidePaddingFarmList {
+    width: 10%;
 }

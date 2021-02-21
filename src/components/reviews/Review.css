@@ -7,6 +7,7 @@
 .formCenterDiv {
     display: flex;
     justify-content: center;
+    width: 60%;
 }
 .reviewForm {
     background-color: #178B7C;
@@ -51,7 +52,7 @@
 }
 
 .reviews {
-    max-height: 20rem;
+    max-height: 40rem;
     overflow: scroll;
     display: flex;
     flex-direction: column-reverse;
@@ -61,6 +62,11 @@
     display: flex;
     flex-direction: column;
     white-space: pre-wrap;
+    margin-right: 1.5rem;
+}
+
+.reviewTextAreaDiv {
+    margin-right: 1.5rem;
 }
 
 #submitReviewBtn {
@@ -98,7 +104,7 @@
 }
 
 .review {
-    background-color: #178B7C;
+    background-color: #5BC9B9;
     color: white;
     border-radius: 5px;
     margin: 1rem;
@@ -142,7 +148,7 @@ a:visited, a:active, .a:visited, .a:active, .farmDetailsBtn {
 }
 
 .trashBtn, .editBtn {
-    background-color: #178B7C;
+    background-color: #5BC9B9;
     height: 20%;
     border: #178B7C;
     display: flex;
@@ -167,4 +173,9 @@ button:focus {outline:0;}
 
 .reviewBtnsDiv {
     width: 10%;
+}
+
+.centerReviewForm {
+    display: flex;
+    justify-content: center;
 }

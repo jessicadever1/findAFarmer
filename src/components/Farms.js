@@ -10,6 +10,7 @@ import { RegisterFarmer } from "./auth/RegisterFarmer"
 import { RegisterNonFarmer } from "./auth/RegisterNonFarmer"
 import { PigEdiblesProvider } from "./pigEdibles/PigEdiblesProvider";
 import { FarmProvider } from "./farm/FarmProvider";
+import { Footer } from "./footer/Footer"
 
 export const Farms = () => (
 
@@ -28,26 +29,36 @@ export const Farms = () => (
             }
         }}
     />
-    <EcoProvider>
-        <Route path="/welcome">
-            <HeaderCard />
-            <section className="landingPageLeftAndRight">
-                <EcoList />
-                <WelcomePage /> 
-            </section>
-        </Route>  
-    </EcoProvider>
-    <FarmProvider>
-        <PigEdiblesProvider>
-            <Route exact path="/registerFarmer">
+
+    
+    
+        <EcoProvider>
+            <Route path="/welcome">
                 <HeaderCard />
-                <RegisterFarmer />
-            </Route>
-        </PigEdiblesProvider>
-    </FarmProvider>
-    <Route exact path="/registerNonFarmer">
-        <HeaderCard />
-        <RegisterNonFarmer />
-    </Route>
+                <div className="emptySpaceWelcomeDiv">
+                    <div className="emptySpaceWelcomeContent"></div>
+                    <section className="landingPageLeftAndRight">
+                        <EcoList />
+                        <WelcomePage /> 
+                    </section>
+                    <div className="emptySpaceWelcomeContent"></div>
+                </div>
+            </Route>  
+        </EcoProvider>
+        <FarmProvider>
+            <PigEdiblesProvider>
+                <Route exact path="/registerFarmer">
+                    <HeaderCard />
+                    <RegisterFarmer />
+                </Route>
+            </PigEdiblesProvider>
+        </FarmProvider>
+        <Route exact path="/registerNonFarmer">
+            <HeaderCard />
+            <RegisterNonFarmer />
+        </Route>
+    
+    <Footer />
+
     </>
 )
