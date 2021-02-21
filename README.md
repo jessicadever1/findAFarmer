@@ -15,7 +15,7 @@ nutritious diet.
 * [Installing and Launching Find A Farmer](#instructions-for-installing-find-a-farmer)
 * [Appendix 1: Planning Documentation](#appendix-1-planning-documentation)
     * [Entity Relationship Diagrams](#entity-relationship-diagram)
-    * [Wireframes](#wireframes/-mockups)
+    * [Wireframes](#wireframes)
  * [Appendix 2: Set Up Instructions](#appendix-2-set-up-instructions)
  
 ## Project Requirements and Features List
