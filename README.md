@@ -105,7 +105,7 @@ and access the application
   ### Entity Relationship Diagram
   ![Find A Farmer ERD](/src/components/images/FindAFarmer_ERD.png)
 
-  ### Wireframes/ Mockups
+  ### Wireframes
   <img src="./src/components/images/MVP WireFrame.png" width="90%"></img> 
   
   <img src="./src/components/images/StretchGoalWireFrame.png" width="50%"></img>
