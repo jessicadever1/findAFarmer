@@ -41,6 +41,10 @@ body {
     flex-direction: column;
 }
 
+.farmPageContent {
+    width: 60%;
+}
+
 .farm__name {
     margin-top: 0;
 }

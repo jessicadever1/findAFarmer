@@ -88,6 +88,8 @@ export const ReviewEditForm = () => {
 /* -------------------- The contents of the form -------------------- */
 
     return (
+        <section className="centerReviewForm">
+        <div className="reviewFormEmptySpace"></div>
         <div className="formCenterDiv">
             <form className="reviewForm" id={farms.id}>
                 <h2 className="reviewForm__title">{farm.name} Review</h2>
@@ -122,5 +124,7 @@ export const ReviewEditForm = () => {
                 </div>
             </form> 
         </div>
+        <div className="reviewFormEmptySpace"></div>
+        </section>
     )
 }

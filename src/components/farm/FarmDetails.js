@@ -49,7 +49,7 @@ export const FarmDetail = () => {
         <>
         <section className="farmDetailsPageWrap">
         <div className="leftSidePaddingFarmList"></div>
-        <section className="farm">
+        <section className="farm farmPageContent">
             <div className="farm__upperBox">
                 <img src={farm.imageURL} alt="{farm.name} default pic" className="farmPic"></img>
                 <div className="farmCardRight">   

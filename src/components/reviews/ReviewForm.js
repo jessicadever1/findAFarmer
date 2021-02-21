@@ -87,6 +87,8 @@ export const ReviewForm = () => {
 /* -------------------- The contents of the form -------------------- */
 
     return (
+        <section className="centerReviewForm">
+        <div className="reviewFormEmptySpace"></div>
         <div className="formCenterDiv">
             <form className="reviewForm" id={farms.id}>
                 <h2 className="reviewForm__title">{farm.name} Review</h2>
@@ -104,7 +106,7 @@ export const ReviewForm = () => {
                 </fieldset>
                 <fieldset>
                     <div className="form-group reviewTextArea">
-                        <div className="">
+                        <div className="reviewTextAreaDiv">
                             <label htmlFor="reviewText">Share your experience:</label>
                         </div>
                         <textarea white-space="pre-wrap" wrap="hard" type="textarea" id="reviewText" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Tell us all about it!" value={review.reviewText}/>
@@ -120,5 +122,7 @@ export const ReviewForm = () => {
                 </div>
             </form> 
         </div>
+        <div className="reviewFormEmptySpace"></div>
+        </section>
     )
 }
