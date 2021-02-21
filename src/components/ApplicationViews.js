@@ -45,7 +45,7 @@ export const ApplicationViews = () => {
             <FarmProvider>
                 <PigEdiblesProvider>
 
-                    <Route exact path="/farmerRegistrationStepTwo">
+                    <Route exact path="/farmerRegistrationStepTwo/:id(\d+)">
                         <PigEdiblesList />
                     </Route>
 

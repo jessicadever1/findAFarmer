@@ -1,27 +1,35 @@
 import React, { useContext, useEffect, useState } from "react"
-import { PigEdiblesContext } from "./PigEdiblesProvider"
+import { FarmEdiblesContext } from "../farmEdibles/FarmEdiblesProvider"
 import "./PigEdibles.css"
 
 export const PigEdiblesCard = ({ pigEdible }) => {
 
-    const { pigEdibles, getPigEdibles } = useContext(PigEdiblesContext)
+    const {farmEdibles, getFarmEdibles} = useContext(FarmEdiblesContext)
 
-    // const [pigEdible, setPigEdible] = useState({
-    //     "id": 0,
-    //     "name": "",
-    //     "checked": false
-    // })
-
-    useEffect(()=> {
-        getPigEdibles()
+    useEffect(() => {
+        getFarmEdibles()
+        .then((farmEdible) => {
+            setFarmEdibles(farmEdible)
+        })
     }, [])
 
+    const [farmEdible, setFarmEdibles] = useState({
+        "id": 0,
+        "farmId": 0,
+        "pigEdibleId": 0
+    })
+
+    let farm = []
+
     const handleCheckBox = (event) => {
-        // const newPigEdible = {...pigEdible}
-        // let selectedVal = event.target.checked
-        // newPigEdible[event.target.checked] =selectedVal
-        // setPigEdible(newPigEdible)
-        console.log("nothing works.")
+        if (event.target.checked === true) {
+            farmEdible.push(
+                
+                `${pigEdible.id}`
+            
+            )
+            console.log("name of thing checked", farmEdible)
+        }
     }
     
     return (

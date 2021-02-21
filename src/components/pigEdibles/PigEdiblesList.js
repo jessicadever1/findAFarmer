@@ -1,7 +1,7 @@
 import React, {useContext, useEffect } from "react"
 import { PigEdiblesContext } from "./PigEdiblesProvider"
 import { PigEdiblesCard } from "./PigEdiblesCard"
-import { Link } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import "./PigEdibles.css"
 
 export const PigEdiblesList = () => {
@@ -11,6 +11,16 @@ export const PigEdiblesList = () => {
         getPigEdibles()
     }, [])
 
+    const currentUser = localStorage.getItem("find-a-farm_user")
+    const { userId } = useParams()
+
+    const handleClickSaveRegBtn = () => {
+        console.log("currentUser", currentUser)
+        console.log("userId", userId)
+        if (currentUser === userId) {
+            console.log("id", currentUser)
+        }
+    }
 
     return (
         <>
@@ -29,7 +39,9 @@ export const PigEdiblesList = () => {
                             }
                         </div>
                         <div className="completeRegBtnDiv">
-                            <Link to="/farms"><button className="completeRegBtn">Save</button></Link>
+                            <Link to="/farms">
+                                <button className="completeRegBtn" onClick={handleClickSaveRegBtn}>Save</button>
+                            </Link>
                         </div>
                     </section>
                 <div className="rightSidePadding"></div>

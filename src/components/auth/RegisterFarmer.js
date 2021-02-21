@@ -81,7 +81,10 @@ export const RegisterFarmer = (props) => {
                                 farmName: farmName.current.value,
                                 website: website.current.value,
                                 instructions: instructions.current.value,
-                                imageURL: imageURL
+                                imageURL: imageURL,
+                                pigEdibleInclude: [],
+                                pigEdibleExclude: [],
+                                id: id
                             })
                         })
                     )
@@ -89,7 +92,7 @@ export const RegisterFarmer = (props) => {
                     .then(createdUser => {
                         if (createdUser.hasOwnProperty("id")) {
                             localStorage.setItem("find-a-farm_user", createdUser.id)
-                            history.push("/farmerRegistrationStepTwo")
+                            history.push(`/farmerRegistrationStepTwo/${createdUser.id}`)
                         }
                     })
                 }
