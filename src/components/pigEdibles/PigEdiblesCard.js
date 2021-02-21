@@ -4,14 +4,14 @@ import "./PigEdibles.css"
 
 export const PigEdiblesCard = ({ pigEdible }) => {
 
-    const {farmEdibles, getFarmEdibles} = useContext(FarmEdiblesContext)
+    // const { getFarmEdibles } = useContext(FarmEdiblesContext)
 
-    useEffect(() => {
-        getFarmEdibles()
-        .then((farmEdible) => {
-            setFarmEdibles(farmEdible)
-        })
-    }, [])
+    // useEffect(() => {
+    //     getFarmEdibles()
+    //     .then((farmEdible) => {
+    //         setFarmEdibles(farmEdible)
+    //     })
+    // }, [])
 
     const [farmEdible, setFarmEdibles] = useState({
         "id": 0,

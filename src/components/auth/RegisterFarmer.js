@@ -4,6 +4,7 @@ import "./Login.css"
 
 export const RegisterFarmer = (props) => {
     const id = useRef()
+    const userId = useRef()
     const firstName = useRef()
     const lastName = useRef()
     const username = useRef()
@@ -65,6 +66,7 @@ export const RegisterFarmer = (props) => {
                             imageURL: imageURL,
                             username: username.current.value,
                             zip: zip.current.value
+                            
                         })
                     })
                     .then(
@@ -84,7 +86,6 @@ export const RegisterFarmer = (props) => {
                                 imageURL: imageURL,
                                 pigEdibleInclude: [],
                                 pigEdibleExclude: [],
-                                id: id
                             })
                         })
                     )
