@@ -46,6 +46,9 @@ export const FarmDetail = () => {
 /* -------------------- The contents of all of the farm details for selected farm -------------------- */
 
     return (
+        <>
+        <section className="farmDetailsPageWrap">
+        <div className="leftSidePaddingFarmList"></div>
         <section className="farm">
             <div className="farm__upperBox">
                 <img src={farm.imageURL} alt="{farm.name} default pic" className="farmPic"></img>
@@ -55,7 +58,7 @@ export const FarmDetail = () => {
                         
                             <div className="farm__street">{farm.streetAddress}</div>
                             <div className="farm__address">{farm.city} {farm.state} {farm.zip}</div>
-                       
+
                         <button className="farmWebsite"><a href={farm.website}>Website</a></button>
                     </section>
                 </div>
@@ -131,6 +134,9 @@ export const FarmDetail = () => {
                 </article>
             </div>
         </section>
+        <div className="rightSidePaddingFarmList"></div>
+        </section>
+        </>
     )
 }
 

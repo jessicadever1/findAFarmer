@@ -19,7 +19,9 @@ export const FarmList = () => {
 
     return (
         <>
+        <div className="farmListCSS">
             <div className="leftSidePaddingFarmList"></div>
+                <section className="pageWrap">
                 <div className="farmFilter">
                     <FarmFilter />
                     <AllFarmsBtn />
@@ -32,7 +34,9 @@ export const FarmList = () => {
                     })
                     }
                 </div>
+                </section>
             <div className="rightSidePaddingFarmList"></div>
+        </div>       
         </>
     )
 }

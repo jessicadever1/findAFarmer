@@ -8,6 +8,8 @@ import "./WelcomePage.css"
 
 export const WelcomePage = () => {
     return (
+        <>
+        
         <section className="welcome">
             <>
 
@@ -18,5 +20,7 @@ export const WelcomePage = () => {
 
             </>
         </section>
+    
+    </>
     )
 }

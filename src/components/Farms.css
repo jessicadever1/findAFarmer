@@ -9,4 +9,18 @@
     justify-content: center;
     padding-left: 5rem;
     padding-right: 5rem;
+    width: 60%;
 }
+
+.welcomePageCSS {
+    display: flex;
+}
+
+.emptySpaceWelcomeDiv {
+    display: flex;
+}
+
+.emptySpaceWelcomeContent {
+    width: 20%;
+}
+
