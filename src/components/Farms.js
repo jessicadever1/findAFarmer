@@ -10,6 +10,7 @@ import { RegisterFarmer } from "./auth/RegisterFarmer"
 import { RegisterNonFarmer } from "./auth/RegisterNonFarmer"
 import { PigEdiblesProvider } from "./pigEdibles/PigEdiblesProvider";
 import { FarmProvider } from "./farm/FarmProvider";
+import { Footer } from "./footer/Footer"
 
 export const Farms = () => (
 
@@ -57,7 +58,7 @@ export const Farms = () => (
             <RegisterNonFarmer />
         </Route>
     
-    
+    <Footer />
 
     </>
 )

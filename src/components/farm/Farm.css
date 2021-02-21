@@ -39,7 +39,6 @@ body {
     margin: .5rem;
     display: flex;
     flex-direction: column;
-    width: 60%;
 }
 
 .farm__name {
