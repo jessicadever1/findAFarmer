@@ -13,11 +13,28 @@ export const FarmEdiblesProvider = (props) => {
         .then(setFarmEdibles)
     }
 
+    const getFarmEdibleById = (id) => {
+        return fetch(`http://localhost:8014/farmEdibles/${id}`)
+        .then(res => res.json())
+    }
+
+    const addFarmEdible = farmEdibleObj => {
+        return fetch(`http://localhost:8014/farmEdibles`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(farmEdibleObj)
+        })
+        .then(response => response.json())
+        .then(getFarmEdibles)
+    }
+
 /* -------------------- To make the farmEdibles available to other components -------------------- */
 
     return (
         <FarmEdiblesContext.Provider value={{
-            farmEdibles, getFarmEdibles
+            farmEdibles, getFarmEdibles, getFarmEdibleById, addFarmEdible
         }}>
             {props.children}
         </FarmEdiblesContext.Provider>

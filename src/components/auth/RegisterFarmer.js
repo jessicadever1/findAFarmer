@@ -69,6 +69,14 @@ export const RegisterFarmer = (props) => {
                             
                         })
                     })
+                    .then(res => res.json())
+                    .then(createdUser => {
+                        debugger
+                        if (createdUser.hasOwnProperty("id")) {
+
+                            localStorage.setItem("find-a-farm_user", createdUser.id)
+                        }
+                    })
                     .then(
                         fetch("http://localhost:8014/farms", {
                             method: "POST",
@@ -88,14 +96,15 @@ export const RegisterFarmer = (props) => {
                                 pigEdibleExclude: [],
                             })
                         })
+                        .then(res => res.json())
+                        .then(createdFarm => {
+                            debugger
+                            if (createdFarm.hasOwnProperty("id")) {
+                                history.push(`/farmerRegistrationStepTwo/${createdFarm.id}`)
+                            }
+                        })
                     )
-                    .then(res => res.json())
-                    .then(createdUser => {
-                        if (createdUser.hasOwnProperty("id")) {
-                            localStorage.setItem("find-a-farm_user", createdUser.id)
-                            history.push(`/farmerRegistrationStepTwo/${createdUser.id}`)
-                        }
-                    })
+                    
                 }
                 else {
                     conflictDialog.current.showModal()
