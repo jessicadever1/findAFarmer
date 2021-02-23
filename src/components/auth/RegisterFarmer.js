@@ -71,7 +71,7 @@ export const RegisterFarmer = (props) => {
                     })
                     .then(res => res.json())
                     .then(createdUser => {
-                        debugger
+                        
                         if (createdUser.hasOwnProperty("id")) {
 
                             localStorage.setItem("find-a-farm_user", createdUser.id)
@@ -98,9 +98,10 @@ export const RegisterFarmer = (props) => {
                         })
                         .then(res => res.json())
                         .then(createdFarm => {
-                            debugger
+                            
                             if (createdFarm.hasOwnProperty("id")) {
-                                history.push(`/farmerRegistrationStepTwo/${createdFarm.id}`)
+                                // history.push(`/farmerRegistrationStepTwo/${createdFarm.id}`)
+                                history.push(`/farms`)
                             }
                         })
                     )
