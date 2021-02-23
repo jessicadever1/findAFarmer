@@ -9,6 +9,7 @@ import { UserProvider } from "./users/UserProvider"
 import { ReviewEditForm } from "./reviews/ReviewEditForm"
 import { PigEdiblesProvider } from "./pigEdibles/PigEdiblesProvider"
 import { PigEdiblesList } from "./pigEdibles/PigEdiblesList"
+import { FarmEdiblesProvider } from "./farmEdibles/FarmEdiblesProvider"
 
 export const ApplicationViews = () => {
     
@@ -44,11 +45,13 @@ export const ApplicationViews = () => {
         <UserProvider>
             <FarmProvider>
                 <PigEdiblesProvider>
+                    <FarmEdiblesProvider>
 
-                    <Route exact path="/farmerRegistrationStepTwo">
-                        <PigEdiblesList />
-                    </Route>
+                        {/* <Route exact path="/farmerRegistrationStepTwo/:farmId(\d+)">
+                            <PigEdiblesList />
+                        </Route> */}
 
+                    </FarmEdiblesProvider>
                 </PigEdiblesProvider>
             </FarmProvider>
         </UserProvider>

@@ -4,6 +4,7 @@ import "./Login.css"
 
 export const RegisterFarmer = (props) => {
     const id = useRef()
+    const userId = useRef()
     const firstName = useRef()
     const lastName = useRef()
     const username = useRef()
@@ -65,7 +66,16 @@ export const RegisterFarmer = (props) => {
                             imageURL: imageURL,
                             username: username.current.value,
                             zip: zip.current.value
+                            
                         })
+                    })
+                    .then(res => res.json())
+                    .then(createdUser => {
+                        
+                        if (createdUser.hasOwnProperty("id")) {
+
+                            localStorage.setItem("find-a-farm_user", createdUser.id)
+                        }
                     })
                     .then(
                         fetch("http://localhost:8014/farms", {
@@ -81,17 +91,21 @@ export const RegisterFarmer = (props) => {
                                 farmName: farmName.current.value,
                                 website: website.current.value,
                                 instructions: instructions.current.value,
-                                imageURL: imageURL
+                                imageURL: imageURL,
+                                pigEdibleInclude: [],
+                                pigEdibleExclude: [],
                             })
                         })
+                        .then(res => res.json())
+                        .then(createdFarm => {
+                            
+                            if (createdFarm.hasOwnProperty("id")) {
+                                // history.push(`/farmerRegistrationStepTwo/${createdFarm.id}`)
+                                history.push(`/farms`)
+                            }
+                        })
                     )
-                    .then(res => res.json())
-                    .then(createdUser => {
-                        if (createdUser.hasOwnProperty("id")) {
-                            localStorage.setItem("find-a-farm_user", createdUser.id)
-                            history.push("/farmerRegistrationStepTwo")
-                        }
-                    })
+                    
                 }
                 else {
                     conflictDialog.current.showModal()
