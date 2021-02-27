@@ -91,17 +91,14 @@ export const RegisterFarmer = (props) => {
                                 farmName: farmName.current.value,
                                 website: website.current.value,
                                 instructions: instructions.current.value,
-                                imageURL: imageURL,
-                                pigEdibleInclude: [],
-                                pigEdibleExclude: [],
+                                imageURL: imageURL
                             })
                         })
                         .then(res => res.json())
                         .then(createdFarm => {
                             
                             if (createdFarm.hasOwnProperty("id")) {
-                                // history.push(`/farmerRegistrationStepTwo/${createdFarm.id}`)
-                                history.push(`/farms`)
+                                history.push(`/farmerRegistrationStepTwo/${createdFarm.id}`)
                             }
                         })
                     )
