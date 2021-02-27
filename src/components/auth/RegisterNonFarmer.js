@@ -65,7 +65,7 @@ export const RegisterNonFarmer = (props) => {
                     .then(createdUser => {
                         if (createdUser.hasOwnProperty("id")) {
                             localStorage.setItem("find-a-farm_user", createdUser.id)
-                            history.push("/farms")
+                            history.push(`/farms/${createdUser.id}`)
                         }
                     })
                 }

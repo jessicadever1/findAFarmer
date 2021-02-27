@@ -20,13 +20,12 @@ export const LogOutBtn = () => {
 
     return (
         <>
-        
                 <button onClick={()=> {
                 notePlayer()    
                 handleLogOutBtn()
                 }}className="logOutBtn">
                     Log Out</button>
-            
+        
         </>
     )
 }

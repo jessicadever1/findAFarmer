@@ -11,6 +11,7 @@ import { RegisterNonFarmer } from "./auth/RegisterNonFarmer"
 import { PigEdiblesProvider } from "./pigEdibles/PigEdiblesProvider";
 import { FarmProvider } from "./farm/FarmProvider";
 import { Footer } from "./footer/Footer"
+import { UserProvider } from "./users/UserProvider";
 
 export const Farms = () => (
 
@@ -20,8 +21,10 @@ export const Farms = () => (
                 if (localStorage.getItem("find-a-farm_user")) {
                     return (
                         <>
+                        <UserProvider>
                             <HeaderCard />
                             <ApplicationViews />
+                        </UserProvider>
                         </>
                     );
             } else {
@@ -31,7 +34,7 @@ export const Farms = () => (
     />
 
     
-    
+    <UserProvider>
         <EcoProvider>
             <Route path="/welcome">
                 <HeaderCard />
@@ -57,7 +60,7 @@ export const Farms = () => (
             <HeaderCard />
             <RegisterNonFarmer />
         </Route>
-    
+    </UserProvider>
     <Footer />
 
     </>

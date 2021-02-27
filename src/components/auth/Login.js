@@ -24,7 +24,7 @@ export const Login = props => {
             .then(exists => {
                 if (exists) {
                     localStorage.setItem("find-a-farm_user", exists.id)
-                    history.push(`/farms`)
+                    history.push(`/farms/${exists.id}`)
                 } else {
                     existDialog.current.showModal()
                 }

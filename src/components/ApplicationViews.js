@@ -22,7 +22,7 @@ export const ApplicationViews = () => {
             <ReviewProvider>
                 <FarmProvider>
 
-                    <Route exact path="/farms">
+                    <Route exact path="/farms/:userId(\d+)">
                         <FarmList />
                     </Route>
 
