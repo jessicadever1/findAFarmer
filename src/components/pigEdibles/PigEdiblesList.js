@@ -2,22 +2,22 @@ import React, {useContext, useEffect, useState } from "react"
 import { PigEdiblesContext } from "./PigEdiblesProvider"
 import { PigEdiblesCard } from "./PigEdiblesCard"
 import { FarmEdiblesContext } from "../farmEdibles/FarmEdiblesProvider"
-import { Link, useParams } from "react-router-dom"
+import { Link, useParams, useHistory } from "react-router-dom"
 import "./PigEdibles.css"
 
 export const PigEdiblesList = () => {
     const { pigEdibles, getPigEdibles } = useContext(PigEdiblesContext)
+    const { addFarmEdible } = useContext(FarmEdiblesContext)
+    
+    const [farmEdibles, setFarmEdibles] = useState([])
+    const [farm, setFarm] = useState({})
+
+    const { farmId } = useParams()
+    const history = useHistory()
 
     useEffect(()=> {
         getPigEdibles()
     }, [])
-
-    const currentUser = localStorage.getItem("find-a-farm_user")
-    const { farmId } = useParams()
-
-    const { addFarmEdible } = useContext(FarmEdiblesContext)
-
-    const [farmEdibles, setFarmEdibles] = useState([])
 
     const handleCheckBox = (event) => {
         if (event.target.checked === true){
@@ -41,9 +41,16 @@ export const PigEdiblesList = () => {
         }
     }
 
-    const handleClickSaveRegBtn = () => {
-        console.log("farmEdibles", farmEdibles)
-        //use forEach to save every object of farmEdible, and invoke addFarmEdible inside it, and then push()
+    const handleClickSaveRegBtn = (event) => {    
+        event.preventDefault()
+
+        pigEdibles.forEach(pigEdible => {
+            addFarmEdible({
+                farmId: parseInt(farmId),
+                pigEdibleId: pigEdible.id
+            })
+            .then(() => history.push(`/farms/`))
+        } )
     }
 
     return (

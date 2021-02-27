@@ -93,6 +93,7 @@ a:visited, a:active, .a:visited, .a:active {
 a {
     min-width: 33%;
     text-decoration: none;
+    color: #178B7C;
 }
 
 .farmDetailsBtn {
