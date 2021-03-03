@@ -33,13 +33,13 @@ including the address, website (if applicable), and their farm's name.
 
 
 
-<a href="https://www.youtube.com/watch?v=bFiWECmYMVs"><img src="NonFarmerReg.png" alt="Non Farmer Screen Shot" width="500"></img></a>
+<a href="https://www.youtube.com/watch?v=bFiWECmYMVs"><img src="NonFarmerReg.png" alt="Non Farmer Screen Shot" width="100%"></img></a>
                            
 Click to watch
 
 
 
-<a href="https://youtu.be/lLhfd0g3Udo"><img src="FarmerReg.png" alt="Non Farmer Screen Shot" width="500"></img></a>
+<a href="https://youtu.be/lLhfd0g3Udo"><img src="FarmerReg.png" alt="Non Farmer Screen Shot" width="100%"></img></a>
                            
 Click to watch
 
