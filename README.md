@@ -32,11 +32,12 @@ As a farmer, they also are required to fill out information on their farm,
 including the address, website (if applicable), and their farm's name.
 
 
-Click on picture to watch Non-Farmer Login
-<a href="https://www.youtube.com/watch?v=bFiWECmYMVs"><img src="NonFarmerReg.png" alt="Non Farmer Screen Shot" width="500"></img></a>
 
-Click on picture to watch Farmer Login
-<a href=""><img src="FarmerReg.png" alt="Non Farmer Screen Shot" width="500"></img></a>
+<a href="https://www.youtube.com/watch?v=bFiWECmYMVs"><img src="NonFarmerReg.png" alt="Non Farmer Screen Shot" width="500"></img></a>
+                           Click to watch
+
+<a href="https://youtu.be/lLhfd0g3Udo"><img src="FarmerReg.png" alt="Non Farmer Screen Shot" width="500"></img></a>
+                           Click to watch
 
 ### Get Started
 When a user registers an account, or logs in from a previously registered
