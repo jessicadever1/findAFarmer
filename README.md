@@ -37,8 +37,11 @@ including the address, website (if applicable), and their farm's name.
                            
 Click to watch
 
+
+
 <a href="https://youtu.be/lLhfd0g3Udo"><img src="FarmerReg.png" alt="Non Farmer Screen Shot" width="500"></img></a>
-                           Click to watch
+                           
+Click to watch
 
 ### Get Started
 When a user registers an account, or logs in from a previously registered
