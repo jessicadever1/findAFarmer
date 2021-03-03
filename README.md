@@ -31,7 +31,12 @@ register with just their name, username, email, profile picture and zip code.
 As a farmer, they also are required to fill out information on their farm,
 including the address, website (if applicable), and their farm's name.
 
+
+Click on picture to watch Non-Farmer Login
 <a href="https://www.youtube.com/watch?v=bFiWECmYMVs"><img src="NonFarmerReg.png" alt="Non Farmer Screen Shot" width="500"></img></a>
+
+Click on picture to watch Farmer Login
+<a href=""><img src="FarmerReg.png" alt="Non Farmer Screen Shot" width="500"></img></a>
 
 ### Get Started
 When a user registers an account, or logs in from a previously registered
