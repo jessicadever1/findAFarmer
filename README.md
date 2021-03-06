@@ -70,6 +70,8 @@ to the details page of the farm they have just reviewed.
 Users are given the option to edit or delete the reviews that they have
 written.
 
+<a href="https://youtu.be/PRfWl9qae9Q"><img src="EditDeleteReview.png" alt="Farm Edit/Delete Review Screen Shot" width="100%"></img></a>
+
 ## Technologies Used
 
 ### Development Languages and Libraries
