@@ -53,7 +53,7 @@ They are given reviews for that farm, listed from most recent to least
 recent, and the option to add their own review. Last, they are also given 
 the option to go back to the list of all of the farms.
 
-<a href="https://youtu.be/zyerSAX9VIQ"><img src="FarmDetails.png" alt="Farm List Screen Shot" width="100%"></img></a>
+<a href="https://youtu.be/zyerSAX9VIQ"><img src="FarmDeails.png" alt="Farm List Screen Shot" width="100%"></img></a>
 
 ### Farm Review
 When the user has clicked on the 'Add Review' button (on either the farm
