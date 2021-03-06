@@ -30,8 +30,7 @@ Users are offered two registration options. If they are not a farmer, they
 register with just their name, username, email, profile picture and zip code.
 As a farmer, they also are required to fill out information on their farm,
 including the address, website (if applicable), and their farm's name.
-
-#### Click pictures to watch both user types register.
+###### Click picture to watch features
 
 <a href="https://www.youtube.com/watch?v=bFiWECmYMVs"><img src="NonFarmerReg.png" alt="Non Farmer Screen Shot" width="100%"></img></a>
                            
@@ -43,6 +42,8 @@ account, they are shown a list of all of the farms in the Middle TN area
 that have opted into Find A Farmer. The are given the option to find a farm
 in their preferred county, and then shown a list of only farms in that area.
 They can then choose an individual farm to learn more about.
+
+<a href="https://youtu.be/5kBMo1OtAyE"><img src="" alt="Farm List Screen Shot" width="100%"></img></a>
 
 ### Farm Details
 When the user has selected a farm, they are shown the farm's address, the
