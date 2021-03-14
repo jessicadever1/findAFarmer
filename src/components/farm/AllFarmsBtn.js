@@ -1,6 +1,6 @@
 import "./Farm.css"
 import { FarmContext } from "./FarmProvider"
-import React, { useContext, useEffect, useState } from "react"
+import React, { useContext, useState } from "react"
 
 export const AllFarmsBtn = () => {
 

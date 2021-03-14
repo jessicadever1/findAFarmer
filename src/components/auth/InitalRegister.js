@@ -2,6 +2,8 @@ import React from "react"
 import { Link } from "react-router-dom"
 import "./Login.css"
 
+/* -------------------- These Buttons give the user to self select to register as a farmer, or not -------------------- */
+
 export const RegisterBtns = () => {
 
     return (

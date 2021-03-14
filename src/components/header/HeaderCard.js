@@ -1,9 +1,9 @@
-import React, {useEffect, useContext} from "react"
+import React from "react"
 import "./Header.css"
 import Pig from '../images/Pig.png'
-import UserPic from "../images/user.png"
+
 import { LogOutBtn } from "./LogOutBtn"
-import { UserContext } from "../users/UserProvider"
+
 
 /* -------------------- To give all pages a uniform header -------------------- */
 
@@ -11,6 +11,7 @@ export const HeaderCard = () => {
 
     const currentUser = parseInt(localStorage.getItem("find-a-farm_user"))
     
+/* -------------------- To be able to offer the Login Button ONLY when a user is logged in -------------------- */
 
     const hideButtons = () => {
         if (currentUser) {
@@ -21,6 +22,8 @@ export const HeaderCard = () => {
             )
         }
     } 
+
+/* -------------------- The contents of the header -------------------- */
 
     return (
         <>

@@ -3,6 +3,8 @@ import "./Eco.css"
 import leftArrow from "../images/leftArrow.png"
 import rightArrow from "../images/rightArrow.png"
 
+/* -------------------- To give even non-users tangible tips they can implement to contribute to planet health -------------------- */
+
 export const EcoCard = ({ecoTip}) => {
     return (
         <>

@@ -3,8 +3,9 @@ import { useHistory } from "react-router-dom"
 import "./Login.css"
 
 export const RegisterFarmer = (props) => {
-    const id = useRef()
-    const userId = useRef()
+    
+/* -------------------- To use the entered information, to build a new user -------------------- */
+
     const firstName = useRef()
     const lastName = useRef()
     const username = useRef()
@@ -17,6 +18,8 @@ export const RegisterFarmer = (props) => {
     const instructions = useRef()
     const conflictDialog = useRef()
     const history = useHistory()
+
+/* -------------------- To be able to use Cloudinary to store and display images -------------------- */
 
     const [imageURL, setImageURL] = useState("")
 

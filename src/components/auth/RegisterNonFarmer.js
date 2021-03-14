@@ -4,6 +4,9 @@ import "./Login.css"
 
 
 export const RegisterNonFarmer = (props) => {
+
+/* -------------------- To use the entered information, to build a new user -------------------- */
+
     const firstName = useRef()
     const lastName = useRef()
     const username = useRef()
@@ -12,6 +15,8 @@ export const RegisterNonFarmer = (props) => {
     const conflictDialog = useRef()
     const history = useHistory()
 
+/* -------------------- To be able to use Cloudinary to store and display images -------------------- */
+    
     const [imageURL, setImageURL] = useState("")
 
     const [loading, setLoading] = useState(false)

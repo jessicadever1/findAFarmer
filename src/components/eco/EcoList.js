@@ -5,6 +5,8 @@ import "./Eco.css"
 
 export const EcoList = () => {
 
+/* -------------------- To use the built-in Eco Tips and dipsplay them on the welcome page -------------------- */
+
     const { ecoTips, getEcoTips } = useContext(EcoContext)
 
     useEffect(() => {  

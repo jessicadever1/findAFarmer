@@ -7,6 +7,9 @@ import "./Header.css"
 export const LogOutBtn = () => {
 
     const history = useHistory()
+
+/* -------------------- To display user name in the header -------------------- */
+
     const currentUser = parseInt(localStorage.getItem("find-a-farm_user"))
     const { users, getUsers } = useContext(UserContext)
 
@@ -15,7 +18,8 @@ export const LogOutBtn = () => {
     }, [])
 
     const loggedInUser = users.find(u => u.id === currentUser)
-    console.log(loggedInUser)
+
+/* -------------------- When user is logged out, return them to the Welcome page and clear their user information from Local Storage -------------------- */
 
     const handleLogOutBtn = () => {
         history.push(`/welcome`)
@@ -23,6 +27,8 @@ export const LogOutBtn = () => {
 
     }
     
+/* -------------------- Provides a fun surprise sound on Logging Out -------------------- */
+
     const notePlayer = () => {
         const audio = new Audio('/pigGrunt.mp3')
         audio.play();

@@ -5,6 +5,8 @@ import { FarmEdiblesContext } from "../farmEdibles/FarmEdiblesProvider"
 import { Link, useParams, useHistory } from "react-router-dom"
 import "./PigEdibles.css"
 
+/* -------------------- In progess, with the goal to be to give farmers to choose which food items they accept -------------------- */
+
 export const PigEdiblesList = () => {
     const { pigEdibles, getPigEdibles } = useContext(PigEdiblesContext)
     const { addFarmEdible } = useContext(FarmEdiblesContext)
