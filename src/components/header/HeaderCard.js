@@ -10,12 +10,7 @@ import { UserContext } from "../users/UserProvider"
 export const HeaderCard = () => {
 
     const currentUser = parseInt(localStorage.getItem("find-a-farm_user"))
-    const { users, getUsers } = useContext(UserContext)
-    const user = users.find(u => u.id === currentUser)
-
-    useEffect(() => {
-        getUsers()
-    }, [])
+    
 
     const hideButtons = () => {
         if (currentUser) {
@@ -31,13 +26,6 @@ export const HeaderCard = () => {
         <>
         <header>
         <div className="welcomeGoodByeDiv">
-                <div className="welcomeDiv">
-                    <img className="welcomeUserProfilePic" src={UserPic} alt="user profile picture"></img>
-                    <div className="welcomeMsg">
-                        <h6 className="welcomeH6">Great to see you, </h6>
-                        <h6 className="welcomeH6">USERNAME PLACEHOLDER!</h6>
-                    </div>
-                </div>
             <div className="logOut">
                 {hideButtons()}
             </div>

@@ -50,10 +50,15 @@ header {
     position: absolute;
     top: 1rem;
     right: 1rem;
+    min-width: 10rem;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
 }
 
 .welcomeDiv {
     display: flex;
+    justify-content: center;
 }
 
 .welcomeH6 {
