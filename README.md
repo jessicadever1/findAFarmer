@@ -88,7 +88,7 @@ written.
 
 
 ## Instructions for Installing Find A Farmer
-To launch the Simplified Supper app, you will need to have access to 
+To launch the Find A Farmer app, you will need to have access to 
 command line tools, node package manager, JSON Server. If you do not 
 have access to any of these tools, you can find instructions for 
 installing them in the Appendix.
